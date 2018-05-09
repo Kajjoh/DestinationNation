@@ -1,0 +1,12 @@
+h1{
+    text-align: center;
+    font-size: 60px;
+    color: rgb(235, 57, 57);
+}
+
+h2{
+    font-size: 40px;
+    color: rgb(235, 57, 57);
+    border-bottom: rgb(235, 57, 57) solid;
+    text-align: center;
+}
