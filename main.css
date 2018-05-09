@@ -10,5 +10,17 @@ h2{
     border-bottom: rgb(235, 57, 57) solid;
     text-align: center;
 }
+<<<<<<< HEAD
 
+=======
+.p1{
+    text-align: center;
+    color: rgb(235, 57, 57);
+    font-size: 35px;
+}
+
+form{
+    text-align: center;
+}
+>>>>>>> e1c96b0736d24014c3c73042c6a1d878a960b4cd
 
