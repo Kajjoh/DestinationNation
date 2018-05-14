@@ -5,14 +5,20 @@
 		<link href="main.css" rel="stylesheet">
 		<meta charset="utf-8">
 	</head>
+	
 	<body>
+	
+		<!-- Det här är sidhuvudet, det ska ligga högst upp på varje sida. -->
 		<div id="sidhuvud">
        		<img src="images/headbackground.jpg" alt="Red board" width=100% height="40">
     	</div>
+		
 		<div id="header">
 			<h1>DestinationNation</h1>
 			<h2>Din guide i Uppsalas studentliv</h2>
 		</div>
+		
+		<!-- I den här menyn väljer man vart man ska. Ska ligga högst upp på majoriteten av sidorna. -->
 		<div class="Meny">
 			<ul>
 			  <li id="lista"><a href="startsidaStudent.html">Start</a></li>
@@ -21,45 +27,58 @@
 			  <li style="float:right" id="lista"><a href="OmOss.html">Om Oss</a></li>
 			</ul>
 		</div>
+		
+		<!-- Här börjar innehållet.  -->
+		<!-- Informationen som kommer ligga under personuppgifter till vänster på sidan. -->		
 		<div class="formular">
 			<form name="personuppgifter" method="GET"  action="process-data.php">
+					
 					<div class="persUppgifter">
 						<p class="persUppgifter">
 							<label>Personuppgifter:</label>
 						</p>
+						
 						<p class="persUppgifter">
 							<label for="namn">Namn<br></label>
 							<output type="text" name="dittnamn"></output>
 						</p>
+						
 						<p class="persUppgifter">
 							<label for="persnummer">Personnummer<br></label>
 							<output type="text" name="dittpersnr"></output>
 						</p>
+						
 						<p class="persUppgifter">
 							<label for="Student-id">Student-id<br></label>
 							<output type="text" name="studentid"></output>
 						</p>
+						
 						<p class="persUppgifter">
 							<label for="Adress">Adress<br></label>
 							<output type="text" name="Adress"></output>
 						</p>
+						
 						<p class="persUppgifter">
 							<label for="E-mail">E-mail<br></label>
 							<output type="text" name="E-mail"></output>
 						</p>
+						
 						<p class="persUppgifter">
 							<label for="Ort">Ort<br></label>
 							<output type="text" name="Ort"></output>
 							<label for="Postkod">Postkod<br></label>
 							<output type="text" name="Postkod"></output>
 						</p>
+						
 						<p class="persUppgifter">
 							Byt lösenord:
 						</p>
+						
 						<p class="persUppgifter">
 							<label for="Nyttlosen">Nytt lösenord<br></label>
 							<output type="text" name="Nyttlosen"></output>
 						</p>
+						
 						<p class="persUppgifter">
 							<label for="Upprepalosen">Upprepa lösenord<br></label>
 							<output type="text" name="Upprepalosen"></output>
@@ -68,8 +87,9 @@
 
 			</form>	
 		</div>
+		
+		<!-- Här följer sidfoten som ska ligga på alla sidor. --> 
 		<div id="sidfot">
-
 	    	<div class="nationsloggor">
 	            <img src="images/logo-gh.jpg" alt="gh" width="100" height="100">
 	            <img src="images/logo-goteborgs.jpg" alt="gote" width="75" height="85">
@@ -89,11 +109,8 @@
 	        <div id="footer">
 	            <img src="images/headbackground.jpg" alt="Red board" width=100% height="20">
 	        </div>
-	    
 	    </div>
 			
-		
 	</body>
-	
 </html>
 	
