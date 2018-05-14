@@ -13,6 +13,9 @@ h2{
     color: #C00000;
     padding: 0px;
 }
+.formular {
+	text-align: center;
+}
 
 #sidhuvud {
     margin: auto;
@@ -33,9 +36,9 @@ h2{
 }
 
 
-form{
-    text-align: center;
-}
+
+
+
 
 .boxes {
     padding: 10px;
