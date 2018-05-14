@@ -110,6 +110,7 @@ h2{
     width: 60px;
     background-color: #E8E8E8;
     padding: 8px;
+    width: 125px;
 }
 .nuvarande{
     background-color: blue;
@@ -118,6 +119,9 @@ h2{
 #lista:hover{
 background-color: #555;
     color: white;
+}
+#persUppgifter{
+    text-align: center;
 }
 
 
