@@ -62,7 +62,7 @@ h2{
     margin-right: 16px;
 }
 
-li a:hover{
+#attributAkt:hover{
     background-color: #555
 }
 
@@ -87,8 +87,6 @@ li a:hover{
 #nationsattr:hover{
     background-color: #555;
 }
-
-
 
 
 .boxes {
