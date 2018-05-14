@@ -35,9 +35,58 @@ h2{
     text-align: center;
 }
 
+#filter{
+    margin-left: 150px;
+}
+
+#filterlista{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+#aktiviteter{
+    float: left;
+    background-color: #E8E8E8;
+    border-bottom: solid #C00000;
+    width: 170px;
+}
+
+#attributAkt{
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 16px 30px;
+    text-decoration: none;
+    margin-left: 14px;
+    margin-right: 16px;
+}
+
+#attributAkt:hover{
+    background-color: #555
+}
 
 
 
+.nationsMeny{
+    width: 150px;
+    color: #E8E8E8;
+}
+
+#nationsattr{
+    background-color: #E8E8E8;
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    border-bottom: solid #C00000;
+    height: 40px;
+    
+}
+
+#nationsattr:hover{
+    background-color: #555;
+}
 
 
 .boxes {
@@ -56,7 +105,7 @@ h2{
     margin: 0;
     padding: 0;
 }
-li {
+#lista {
     display: inline;
     width: 60px;
     background-color: #E8E8E8;
@@ -66,8 +115,9 @@ li {
     background-color: blue;
     color: #E8E8E8;
 }
-li:hover{
+#lista:hover{
 background-color: #555;
     color: white;
 }
+
 
