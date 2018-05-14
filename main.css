@@ -35,7 +35,53 @@ h2{
     text-align: center;
 }
 
+ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
 
+li{
+    float: left;
+}
+
+li a{
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 16px 30px;
+    text-decoration: none;
+    margin-left: 14px;
+    margin-right: 16px;
+}
+
+li a:hover{
+    background-color: #555
+}
+
+#filter{
+    color: #555;
+}
+
+
+
+
+.nationsMeny{
+    width: 150px;
+}
+
+.nationsMeny a{
+    background-color: #E8E8E8;
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    border-bottom: solid #C00000;
+}
+
+.nationsMeny a:hover{
+    background-color: #555;
+}
 
 
 
@@ -70,4 +116,5 @@ li:hover{
 background-color: #555;
     color: white;
 }
+
 
