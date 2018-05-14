@@ -35,17 +35,24 @@ h2{
     text-align: center;
 }
 
-ul{
+#filter{
+    margin-left: 150px;
+}
+
+#filterlista{
     list-style-type: none;
     padding: 0px;
     margin: 0px;
 }
 
-li{
+#aktiviteter{
     float: left;
+    background-color: #E8E8E8;
+    border-bottom: solid #C00000;
+    width: 170px;
 }
 
-li a{
+#attributAkt{
     display: block;
     color: black;
     text-align: center;
@@ -59,27 +66,25 @@ li a:hover{
     background-color: #555
 }
 
-#filter{
-    color: #555;
-}
-
-
 
 
 .nationsMeny{
     width: 150px;
+    color: #E8E8E8;
 }
 
-.nationsMeny a{
+#nationsattr{
     background-color: #E8E8E8;
     color: black;
     display: block;
     padding: 12px;
     text-decoration: none;
     border-bottom: solid #C00000;
+    height: 40px;
+    
 }
 
-.nationsMeny a:hover{
+#nationsattr:hover{
     background-color: #555;
 }
 
