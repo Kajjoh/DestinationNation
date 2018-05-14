@@ -62,7 +62,7 @@ h2{
     margin-right: 16px;
 }
 
-li a:hover{
+#attributAkt:hover{
     background-color: #555
 }
 
@@ -89,8 +89,6 @@ li a:hover{
 }
 
 
-
-
 .boxes {
     padding: 10px;
     margin: 5px;
@@ -112,6 +110,7 @@ li a:hover{
     width: 60px;
     background-color: #E8E8E8;
     padding: 8px;
+    width: 125px;
 }
 .nuvarande{
     background-color: blue;
@@ -120,6 +119,9 @@ li a:hover{
 #lista:hover{
 background-color: #555;
     color: white;
+}
+#persUppgifter{
+    text-align: center;
 }
 
 
