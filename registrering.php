@@ -3,6 +3,7 @@
 <head>
     <title>DestinationNation</title>
     <link href="main.css" rel="stylesheet">
+	<script src="registrering.js"></script>
     <meta charset="UTF-8">
 </head>
     
@@ -25,7 +26,7 @@
         <div class="formular">
 
         <!-- Här börjar formuläret för att registrera sig.    --> 
-        <form name="registrera" method="POST" action="registreringsprocess.php">
+        <form name="registrera" method="POST" action="registreringsprocess.php" onsubmit="sendForm()">
             
             <p class="boxes">
                 <label for="prsnummer">Personnummer:<br></label>
