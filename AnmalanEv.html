@@ -1,7 +1,7 @@
 <DOCTYPE html>
 <html>
 	
-<head>
+	<head>
 		<title>AnmalanEv</title>
 		<meta charset="utf-8">
 		<link href="main.css" rel="stylesheet">
@@ -29,10 +29,8 @@
 		</div>
 
 		<!-- Här börjar innehållssidan. --> 
-		<div id="rubrik">
-			<h3>Anmälan till "Gasque"</h3>
-		</div>
 
+<<<<<<< HEAD
 		<!-- Här följer ett formulär för anmälan till evenemang. --> 
 		<div class="formular">
 			<form id="AnmalanEv" method="Post" action="AnmalanEv.php">
@@ -46,47 +44,81 @@
 					<label for="Mail">E-post</label><br>
 					<input type="text" id="Mail"><br>
 				</p>
+=======
+		<div class="formAnmalan">
+
+			<div id="rubrik">
+				<h2>Anmälan till "Gasque"</h2>
+			</div>
+
+			<!-- Här följer ett formulär för anmälan till evenemang. --> 
+			<div class="formular">
+				<form id="AnmalanEv" method="Post" action="">
+>>>>>>> be08da59669a8348a87ed13eeb2b5af5b18f42ef
 				
-				<p class="boxes">
-					<label for="Man" id="labelMan">Man</label><label for="Kvinna" id="labelKvinna">Kvinna<label><br>
-					<input type="checkbox" id="Man">
-					<input type="checkbox" id="Kvinna">
-				</p>
+					<div class="formTop">
+					
+						<p class="boxes">
+						<label for="Namn">Namn</label><br>
+						<input type="text" id="Namn"><br>
+					</p>
 				
-				<p class="boxes">
-					<p id="infoMat">Mat</p>
-					<label for="Inga">Inga Preferenser</label>
-					<input type="checkbox" id="inga"><br>
-					<label for="Veg">Vegetariskt</label>
-					<input type="checkbox" id="Veg"><br>
-					<label for="Vegan">Veganskt</label>
-					<input type="checkbox" id="Vegan"><br>
-					<label for="Allegri">Allergi</label></br>
-					<textarea placeholder="Skriv in eventuella allergier" id="Allergi"></textarea>
-				</p>
+					<p class="boxes">
+						<label for="Mail">E-post</label><br>
+						<input type="text" id="Mail"><br>
+					</p>
 				
-				<p class="boxes">
-					<p id="infoDryck">Dryck</p>
-					<label for="Alkofritt">Alkoholfritt</label>
-					<input type="checkbox" id="Alkofritt"><br>
-					<label for="Vin">Vin till maten</label>
-					<input type="checkbox" id="Vin"><br>
-					<label for="CidochVin">Cider & Vin</label>
-					<input type="checkbox" id="CidochVin"><br>
-					<label for "OlochVin">Öl & Vin</label>
-					<input type="checkbox" id="OlochVin">
-				</p>
+					<p class="boxes">
+						<label for="Man" id="labelMan">Man</label><label for="Kvinna" id="labelKvinna">Kvinna<label><br>
+						<input type="checkbox" id="Man">
+						<input type="checkbox" id="Kvinna">
+					</p>
+
+					<p class="boxes">
+							<label for="Sallskap">Sällskap</label><br>
+								<input type="text" id="Sallskap"><br>
+						</p>
+					</div>
+					
+					<div class="formLeft">
 				
-				<p class="boxes">
-					<label for="Sallskap">Sällskap</label><br>
-					<input type="text" id="Sallskap"><br>
-				</p>
+					<p class="boxes">
+						<p id="infoMat">Mat</p>
+						<label for="Inga">Inga Preferenser</label>
+							<input type="checkbox" id="inga"><br>
+						<label for="Veg">Vegetariskt</label>
+							<input type="checkbox" id="Veg"><br>
+						<label for="Vegan">Veganskt</label>
+							<input type="checkbox" id="Vegan"><br>
+						<label for="Allegri">Allergi</label></br>
+							<textarea placeholder="Skriv in eventuella allergier" id="Allergi"></textarea>
+					</p>
 				
-				<p class="boxes">
-					<input type="submit" value="Skicka" id="submit">
-				</p>
-			</form>
-		</div>
+					</div>
+
+					<div class="formRight">
+
+					<p class="boxes">
+						<p id="infoDryck">Dryck</p>
+						<label for="Alkofritt">Alkoholfritt</label>
+							<input type="checkbox" id="Alkofritt"><br>
+						<label for="Vin">Vin till maten</label>
+							<input type="checkbox" id="Vin"><br>
+						<label for="CidochVin">Cider & Vin</label>
+							<input type="checkbox" id="CidochVin"><br>
+						<label for "OlochVin">Öl & Vin</label>
+							<input type="checkbox" id="OlochVin">
+					</p>
+
+					</div>
+
+					<p class="boxes">
+						<input type="submit" value="Skicka" id="submit">
+					</p>
+				</form>
+			</div>
+		</div> 
+
 
 		<!-- Här följer sidfoten som ska ligga på alla sidor. --> 
 		<div id="sidfot">
