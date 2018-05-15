@@ -35,6 +35,14 @@ h2{
     margin-right: auto;
 }
 
+.huvudMeny{
+    border: 2px solid #C00000;
+    background-color:  #E8E8E8;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+
+}
 
 
 
@@ -120,12 +128,7 @@ h2{
     text-align: center;
     margin-top: 40px;
 }
-.Meny{
-    border: 1px solid #555;
-    margin: 0;
-    padding: 0;
-    background-color:  #E8E8E8;
-}
+
 #lista {
     display: inline;
     width: 60px;
@@ -158,19 +161,20 @@ background-color: #555;
 .formTop {
     float: left;
     width: 60%;
-    margin-left: 30%;
+    margin-left: 20%;
+    text-align: center;
 }
 
 .formLeft {
     float: left;
-    width: 15%;
-    margin-left: 35%;
+    width: 30%;
+    margin-left: 20%;
 }
 
 .formRight {
     float: left;
-    width: 15%;
-    margin-right: 35%;
+    width: 35%;
+    margin-right: 15%;
 }
 
 .formBottom {
