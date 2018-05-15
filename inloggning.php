@@ -1,13 +1,3 @@
-<?php
-$uname = "root";
-$pass = "";
-$host = "localhost";
-$dbname = "svensknatur";
-
-$connection = new mysqli($host, $uname, $pass, $dbname);
-
-
-?>
 <!DOCTYPE html>
 <html>
 	<head>
