@@ -27,39 +27,39 @@
 	//valideringen
 	if (empty($persnr) || !preg_match($pernrmatch, $persnr))
 	{
-		header("Location: registrering.html");
+		header("Location: registrering.php");
 		die();
 	}
 	if (empty($emejl) || !preg_match($emailmatch, $emejl))
 	{
-		header("Location: registrering.html");
+		header("Location: registrering.php");
 		die();
 		
 	}
 	if (empty($foefNamn))
 	{
-		header("Location: registrering.html");
+		header("Location: registrering.php");
 		die();
 		
 	}
 	if (empty($stdId) || !preg_match($stdIdmatch, $stdId))
 	{
-		header("Location: registrering.html");
+		header("Location: registrering.php");
 		die();
 	}
 	if (empty($adress))
 	{
-		header("Location: registrering.html");
+		header("Location: registrering.php");
 		die();
 	}
 	if (empty($ort))
 	{
-		header("Location: registrering.html");
+		header("Location: registrering.php");
 		die();
 	}
 	if (empty($pstnr) || !preg_match($pstnrmatch, $pstnr))
 	{
-		header("Location: registrering.html");
+		header("Location: registrering.php");
 		die();
 	}
 	else
