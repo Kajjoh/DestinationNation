@@ -16,6 +16,8 @@ h2{
     padding: 0px;
 }
 
+/* Det som följer tillhör vårt sidhuvud */
+
 #sidhuvud {
     margin: auto;
 }
@@ -35,26 +37,47 @@ h2{
     margin-right: auto;
 }
 
+/* Det som följer tillhör menyn som tillhör sidhuvudet. */
 .huvudMeny{
     border: 2px solid #C00000;
     background-color:  #E8E8E8;
     font-size: 20px;
     font-weight: bold;
     color: black;
+}
 
+#listaMeny {
+    display: inline;
+    width: 60px;
+    background-color: #E8E8E8;
+    padding: 8px;
+    width: 125px;
+}
+
+#listaMeny:hover{
+    background-color: whitesmoke;
+    color: white;
+    }
+
+
+/* What is this?   */ 
+.nuvarande{
+    background-color: blue;
+    color: #E8E8E8;
 }
 
 
-
+/* Den här är grunden för alla formulär vi gjort. Vi kanske ska döpa om så varje formulär får ett eget namn. */
+.formular {
+	text-align: center;
+}
 
 
 /* VILKEN FIL TILLHÖR DE? */
 
 
 
-.formular {
-	text-align: center;
-}
+
 
 
 
@@ -129,21 +152,7 @@ h2{
     margin-top: 40px;
 }
 
-#lista {
-    display: inline;
-    width: 60px;
-    background-color: #E8E8E8;
-    padding: 8px;
-    width: 125px;
-}
-.nuvarande{
-    background-color: blue;
-    color: #E8E8E8;
-}
-#lista:hover{
-background-color: #555;
-    color: white;
-}
+
 #persUppgifter{
     text-align: center;
 }
