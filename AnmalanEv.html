@@ -43,62 +43,64 @@
 					<div class="formTop">
 					
 						<p class="boxes">
-						<label for="Namn">Namn</label><br>
-						<input type="text" id="Namn"><br>
-					</p>
+							<label for="Namn">Namn</label><br>
+								<input type="text" id="Namn"><br>
+						</p>
 				
-					<p class="boxes">
-						<label for="Mail">E-post</label><br>
-						<input type="text" id="Mail"><br>
-					</p>
+						<p class="boxes">
+							<label for="Mail">E-post</label><br>
+								<input type="text" id="Mail"><br>
+						</p>
 				
-					<p class="boxes">
-						<label for="Man" id="labelMan">Man</label><label for="Kvinna" id="labelKvinna">Kvinna<label><br>
-						<input type="checkbox" id="Man">
-						<input type="checkbox" id="Kvinna">
-					</p>
+						<p class="boxes">
+							<label for="Kön">Kön</label><br>
+							<select name="kon">
+							  <option value="Man">Man</option>
+							  <option value="Kvinna">Kvinna</option>
+							</select>
+						</p>
 
-					<p class="boxes">
+						<p class="boxes">
 							<label for="Sallskap">Sällskap</label><br>
 								<input type="text" id="Sallskap"><br>
 						</p>
 					</div>
 					
 					<div class="formLeft">
-				
-					<p class="boxes">
-						<p id="infoMat">Mat</p>
-						<label for="Inga">Inga Preferenser</label>
-							<input type="checkbox" id="inga"><br>
-						<label for="Veg">Vegetariskt</label>
-							<input type="checkbox" id="Veg"><br>
-						<label for="Vegan">Veganskt</label>
-							<input type="checkbox" id="Vegan"><br>
-						<label for="Allegri">Allergi</label></br>
-							<textarea placeholder="Skriv in eventuella allergier" id="Allergi"></textarea>
-					</p>
-				
+						
+
+
+						<p class="boxes">
+							<label for="Mat">Matpreferens</label><br>
+							<select name="mat">
+							  <option value="Inga">Inga preferenser</option>
+							  <option value="Vegi">Vegetariskt</option>
+							  <option value="Veg">Vegan</option>
+							</select>
+							<br>
+
+							<label for="Allegri">Allergi</label></br>
+								<textarea placeholder="Skriv in eventuella allergier" id="Allergi"></textarea>
+						</p>
 					</div>
 
 					<div class="formRight">
-
-					<p class="boxes">
-						<p id="infoDryck">Dryck</p>
-						<label for="Alkofritt">Alkoholfritt</label>
-							<input type="checkbox" id="Alkofritt"><br>
-						<label for="Vin">Vin till maten</label>
-							<input type="checkbox" id="Vin"><br>
-						<label for="CidochVin">Cider & Vin</label>
-							<input type="checkbox" id="CidochVin"><br>
-						<label for "OlochVin">Öl & Vin</label>
-							<input type="checkbox" id="OlochVin">
-					</p>
-
+						<p class="boxes">
+							<label for="Dryck">Måltidsdryck</label><br>
+							<select name="dryck">
+							  <option value="alko">Alkoholfritt</option>
+							  <option value="vin">Vin till maten</option>
+							  <option value="cider">Cider & Vin</option>
+							  <option value="ol">Öl & Vin</option>
+							</select>
 					</div>
 
-					<p class="boxes">
-						<input type="submit" value="Skicka" id="submit">
-					</p>
+					<div class="formBottom">
+						<p class="boxes">
+							<input type="submit" value="Skicka" id="submit">
+						</p>
+					</div>
+				
 				</form>
 			</div>
 		</div> 
