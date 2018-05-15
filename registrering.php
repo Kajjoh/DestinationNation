@@ -3,7 +3,6 @@
 <head>
     <title>DestinationNation</title>
     <link href="main.css" rel="stylesheet">
-	<script src="registrering.js"></script>
     <meta charset="UTF-8">
 </head>
     
@@ -94,6 +93,6 @@
             </div>
     
         </div>
-
+		<script src="registrering.js"></script>
     </body>
 </html>
