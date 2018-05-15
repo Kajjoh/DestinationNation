@@ -18,47 +18,32 @@ sedan skickas tillbaka till startsidan.*/
 
 $person = mysqli_real_escape_string($conn, trim($_POST['Namn']));
 $email = mysqli_real_escape_string($conn, trim($_POST['Mail']));
-$manlig = ($_POST['Man']);
-$kvinnlig = ($_POST['Kvinna']);
-$ingaPref = ($_POST['inga']);
-$vegeterian = ($_POST['Veg']);
-$vegan = ($_POST['Vegan']);
-$allergisk = ($_POST['Allergi']);
-$ingenAlkohol = ($_POST['Alkofritt']);
-$vin = ($_POST['Vin']);
-$ciderOvin = ($_POST['CidochVin']);
-$oloVin = ($_POST['OlochVin']);
-$personErr = "";
-$emailErr = "";
-$konErr = "";
-$matErr = "";
-$drickErr = "";
+$kon = ($_POST['kon']);
+$matpref = ($_POST['mat']);
+$drickpref = ($_POST['dryck']);
+$allergi = ($_POST['Allergi']);
+$kompis = ($_POST['Sallskap']);
+/*$personErr = "";
+$emailErr = "";*/
 
-//Tar hand om fallen för fält och boxar som inte får vara tomma. 
+//Tar hand om fallen för fält som inte får vara tomma. 
 
-if(empty($person){
-    $personErr = "OBS! Obligatoriskt fält.";
-    die();
-}
+if(empty($person)){
+    echo 'OBS! Fyll i ditt för- och efternamn.'
+} 
 
 if(empty($email) || preg_match("/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/", $email)){
-    $emailErr = "OBS! Obligatoriskt fält.";
+    //$emailErr = "OBS! Obligatoriskt fält.";
+    echo 'OBS! Fyll i en giltig e-postadress.';
     die();
 }
 
-if(empty($kvinnlig) && empty($manlig)){
-    $konErr = "OBS! Ange ett kön.";
-    die();
 }
-
-if(empty($ingaPref) && empty($vegeterian) && empty($vegan)){
-    $matErr = "OBS! Ange en matpreferens.";
-    die();
-}
-
-if(empty($ingenAlkohol) && empty($vin) && empty($ciderOvin) && empty($oloVin)){
-    $drickErr = "OBS! Ange en dryckpreferens.";
-    die();
+else{
+    $sql = "INSERT INTO anmalan (namn, mail, kon, mat, allergi, dryck, sallskap)
+    VALUES ('$person', '$email', '$kon', '$matpref', '$allergi', '$drickpref', '$kompis')";
+    $conn->query($sql);
+    echo 'Tack för din anmälan!'
 }
 
 $conn->close();
