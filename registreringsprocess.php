@@ -27,39 +27,39 @@
 	//valideringen
 	if (empty($persnr) || !preg_match($pernrmatch, $persnr))
 	{
-		header("Location: registrering.php");
+		echo 'inkorrekt personnummer';
 		die();
 	}
 	if (empty($emejl) || !preg_match($emailmatch, $emejl))
 	{
-		header("Location: registrering.php");
+		echo 'inkorrekt emailadress';
 		die();
 		
 	}
 	if (empty($foefNamn))
 	{
-		header("Location: registrering.php");
+		echo 'Namnet kan inte vara tomt';
 		die();
 		
 	}
 	if (empty($stdId) || !preg_match($stdIdmatch, $stdId))
 	{
-		header("Location: registrering.php");
+		echo 'Inkorrekt studentid';
 		die();
 	}
 	if (empty($address))
 	{
-		header("Location: registrering.php");
+		echo 'vänligen fyll i adress';
 		die();
 	}
 	if (empty($oort))
 	{
-		header("Location: registrering.php");
+		echo 'vänligen fyll i ort';
 		die();
 	}
 	if (empty($pstnr) || !preg_match($pstnrmatch, $pstnr))
 	{
-		header("Location: registrering.php");
+		echo 'inkorrekt postnummer';
 		die();
 	}
 	else
@@ -68,9 +68,10 @@
 		$sql = "INSERT INTO registrering (perNr, studID, namn, mail, adress, ort, postNr)
 		VALUES ('$persnr', '$stdId', '$foefNamn', '$emejl', $address', '$oort', '$pstnr')";
 		$connection->query($sql);
+		echo 'Du är nu registrerad';
 	}
 	$connection->close();
 	
-	include 'inloggning.php';
+
 	
 ?>
