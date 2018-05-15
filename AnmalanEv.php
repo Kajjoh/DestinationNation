@@ -58,6 +58,10 @@ if(empty($ingaPref) && empty($vegeterian) && empty($vegan)){
 
 if(empty($ingenAlkohol) && empty($vin) && empty($ciderOvin) && empty($oloVin)){
     $drickErr = "OBS! Ange en dryckpreferens.";
+    die();
 }
+
+$conn->close();
+?>
 
 
