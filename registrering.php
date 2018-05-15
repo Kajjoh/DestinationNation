@@ -18,7 +18,7 @@
     	</div>
 
         <!-- Här börjar innehållet. -->
-        <div id="rubrik">
+        <div id="rubrikRegistrering">
             <h3> Registrera ett konto:</h3>
         </div>
 
