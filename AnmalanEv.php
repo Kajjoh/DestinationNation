@@ -57,12 +57,12 @@ if ($conn->connect_error){
 					
 						<p class="boxes"></p>
 							<label for="Namn">Namn</label><br>
-								<input type="text" id="Namn"><br>
+								<input type="text" name="Namn"><br>
 						</p>
 				
 						
 						<label for="Mail">E-post</label><br>
-							<input type="text" id="Mail"><br>
+							<input type="text" name="Mail"><br>
 						
 				
 						<p class="boxes"></p>
@@ -75,7 +75,7 @@ if ($conn->connect_error){
 
 						<p class="boxes">
 							<label for="Sallskap">Sällskap</label><br>
-								<input type="text" id="Sallskap"><br>
+								<input type="text" name="Sallskap"><br>
 						</p>
 					</div>
 					
@@ -108,7 +108,7 @@ if ($conn->connect_error){
 
 						<div id="formAllergi"> 
 							<label for="Allegri">Allergi</label></br>
-								<textarea placeholder="Skriv in eventuella allergier" id="Allergi"></textarea>
+								<textarea placeholder="Skriv in eventuella allergier" name="Allergi"></textarea>
 						</div>
 						
 						<div id="anmalanSkicka">
