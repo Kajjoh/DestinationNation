@@ -1,3 +1,15 @@
+<?php
+  $uname = "root";
+  $pass = "";
+  $host = "localhost";
+  $dbname = "projekt";
+  
+    $connection = new mysqli($host, $uname, $pass, $dbname);
+	if ($connection->connect_error)
+	{  
+		die("Connection failed: ".$connection.connect_error);
+	}
+?>	
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,7 +37,7 @@
         <div class="formular">
 
         <!-- Här börjar formuläret för att registrera sig.    --> 
-        <form name="registrera" method="POST" action="registreringsprocess.php" onsubmit="sendForm()">
+        <form name="registrera" method="POST" action="registreringsprocess.php">
             
             <p class="boxes">
                 <label for="prsnummer">Personnummer:<br></label>
