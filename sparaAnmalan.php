@@ -30,9 +30,10 @@ $emailErr = "";*/
 
 if(empty($person)){
     echo 'OBS! Fyll i ditt för- och efternamn.';
+    die();
 } 
 
-if(empty($email) || preg_match("/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/", $email)){
+if(empty($email) || !preg_match("/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/", $email)){
     //$emailErr = "OBS! Obligatoriskt fält.";
     echo 'OBS! Fyll i en giltig e-postadress.';
     die();
