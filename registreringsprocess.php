@@ -7,7 +7,7 @@
     $connection = new mysqli($host, $uname, $pass, $dbname);
 	if ($connection->connect_error)
 	{  
-		die("Connection failed: ".$connection->connect_error);
+		die("Connection failed: ".$connection.connect_error);
 	}
 	//skapar variablerna för det vi skickar in
 	$persnr = mysqli_real_escape_string($connection, trim($_POST['personnummer']));
