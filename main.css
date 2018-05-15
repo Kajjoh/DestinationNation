@@ -1,3 +1,5 @@
+/* ALLMÄN CSS */
+
 h1{
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -9,12 +11,9 @@ h1{
 h2{
     text-align: center;
     font-family: Palatino Linotype, italic;
-    font-size: 20px;
-    color: #C00000;
+    font-size: 30px;
+    color: black;
     padding: 0px;
-}
-.formular {
-	text-align: center;
 }
 
 #sidhuvud {
@@ -35,6 +34,21 @@ h2{
     margin-left: auto;
     margin-right: auto;
 }
+
+
+
+
+
+
+/* VILKEN FIL TILLHÖR DE? */
+
+
+
+.formular {
+	text-align: center;
+}
+
+
 
 #rubrik {
     margin-top: 20px;
@@ -131,4 +145,28 @@ background-color: #555;
     text-align: center;
 }
 
+
+/* ANMALAVEV.HTML */
+.formAnmalan {
+    border: 2px solid #C00000;
+    height: 550px;
+}
+
+.formTop {
+    float: left;
+    width: 60%;
+    margin-left: 20%;
+}
+
+.formLeft {
+    float: left;
+    width: 15%;
+    margin-left: 35%;
+}
+
+.formRight {
+    float: left;
+    width: 15%;
+    margin-right: 35%;
+}
 
