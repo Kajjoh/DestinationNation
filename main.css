@@ -59,87 +59,18 @@ h2{
     color: white;
     }
 
-
-/* What is this?   */ 
-.nuvarande{
-    background-color: blue;
-    color: #E8E8E8;
+/* Det här är vår sidfot. */
+#sidfot {
+    text-align: center;
+    margin-top: 40px;
 }
-
 
 /* Den här är grunden för alla formulär vi gjort. Vi kanske ska döpa om så varje formulär får ett eget namn. */
 .formular {
 	text-align: center;
 }
 
-
-/* VILKEN FIL TILLHÖR DE? */
-
-
-
-
-
-
-
-#rubrik {
-    margin-top: 20px;
-    text-align: center;
-}
-
-#filter{
-    margin-left: 150px;
-}
-
-#filterlista{
-    list-style-type: none;
-    padding: 0px;
-    margin: 0px;
-}
-
-#aktiviteter{
-    float: left;
-    background-color: #E8E8E8;
-    border-bottom: solid #C00000;
-    width: 170px;
-}
-
-#attributAkt{
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 16px 30px;
-    text-decoration: none;
-    margin-left: 14px;
-    margin-right: 16px;
-}
-
-#attributAkt:hover{
-    background-color: #555
-}
-
-
-
-.nationsMeny{
-    width: 150px;
-    color: #E8E8E8;
-}
-
-#nationsattr{
-    background-color: #E8E8E8;
-    color: black;
-    display: block;
-    padding: 12px;
-    text-decoration: none;
-    border-bottom: solid #C00000;
-    height: 40px;
-    
-}
-
-#nationsattr:hover{
-    background-color: #555;
-}
-
-
+/* Det här är grunden för alla boxar, vet inte om det ska vara så. */
 .boxes {
     padding: 10px;
     margin: 5px;
@@ -147,17 +78,9 @@ h2{
 }
 
 
-#sidfot {
-    text-align: center;
-    margin-top: 40px;
-}
 
 
-#persUppgifter{
-    text-align: center;
-}
-
-
+/*----------------------------------------------------------------------------*/
 /* ANMALAVEV.HTML */
 
 .divAnmalan {
@@ -203,4 +126,57 @@ h2{
     margin: 20px;
 }
 
+/*---------------------------------------------------------------------------------*/
+/* STARTSIDASTUDENT.HTML*/
+
+#filter{
+    margin-left: 150px;
+}
+
+#filterlista{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+#aktiviteter{
+    float: left;
+    background-color: #E8E8E8;
+    border-bottom: solid #C00000;
+    width: 170px;
+}
+
+#attributAkt{
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 16px 30px;
+    text-decoration: none;
+    margin-left: 14px;
+    margin-right: 16px;
+}
+
+#attributAkt:hover{
+    background-color: #555
+}
+
+.nationsMeny{
+    width: 150px;
+    color: #E8E8E8;
+}
+
+#nationsattr{
+    background-color: #E8E8E8;
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    border-bottom: solid #C00000;
+    height: 40px;
+    
+}
+
+#nationsattr:hover{
+    background-color: #555;
+}
 
