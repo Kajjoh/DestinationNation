@@ -30,29 +30,29 @@
 
 		<!-- Här börjar innehållssidan. --> 
 
-		<div class="formAnmalan">
+		<div class="divAnmalan">
 
 			<div id="rubrik">
 				<h2>Anmälan till "Gasque"</h2>
 			</div>
 
 			<!-- Här följer ett formulär för anmälan till evenemang. --> 
-			<div class="formular">
+			<div class="formAnmalan">
 				<form id="AnmalanEv" method="Post" action="">
 				
 					<div class="formTop">
 					
-						<p class="boxes">
+						<p class="boxes"></p>
 							<label for="Namn">Namn</label><br>
 								<input type="text" id="Namn"><br>
 						</p>
 				
-						<p class="boxes">
+						
 							<label for="Mail">E-post</label><br>
 								<input type="text" id="Mail"><br>
-						</p>
+						
 				
-						<p class="boxes">
+						<p class="boxes"></p>
 							<label for="Kön">Kön</label><br>
 							<select name="kon">
 							  <option value="Man">Man</option>
@@ -68,8 +68,6 @@
 					
 					<div class="formLeft">
 						
-
-
 						<p class="boxes">
 							<label for="Mat">Matpreferens</label><br>
 							<select name="mat">
@@ -77,10 +75,7 @@
 							  <option value="Vegi">Vegetariskt</option>
 							  <option value="Veg">Vegan</option>
 							</select>
-							<br>
-
-							<label for="Allegri">Allergi</label></br>
-								<textarea placeholder="Skriv in eventuella allergier" id="Allergi"></textarea>
+											
 						</p>
 					</div>
 
@@ -96,9 +91,16 @@
 					</div>
 
 					<div class="formBottom">
-						<p class="boxes">
+
+						<div id="formAllergi"> 
+							<label for="Allegri">Allergi</label></br>
+								<textarea placeholder="Skriv in eventuella allergier" id="Allergi"></textarea>
+						</div>
+						
+						<div id="anmalanSkicka">
 							<input type="submit" value="Skicka" id="submit">
-						</p>
+						</div>
+							
 					</div>
 				
 				</form>
@@ -129,6 +131,7 @@
         	</div>
 		</div>
 		
+		<script src="AnmalanEv.js" ></script>
 
 	</body>
 </html>
