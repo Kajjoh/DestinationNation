@@ -81,8 +81,8 @@ if ($conn->connect_error){
 
 				<p class="boxes">
 					<label for="Kravanmälan">Kräver detta evenemang en anmälan?</label><br>
-					<label for="Ja">Ja</label><label for="Nej">Nej</label><br>
-					<input type="checkbox" id="Ja" name="Ja"><input type="checkbox" id="Nej" name="Nej"><br>
+					<label for="Ja">Ja</label> <label for="Nej">Nej</label><br>
+					<input type="checkbox" value="Ja" name="Ja"><input type="checkbox" value="Nej" name="Nej"><br>
 				</p>
 
 				<p class="boxes">
