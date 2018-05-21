@@ -77,7 +77,7 @@
 		</div>
 
 		<?php
-			include('sidhuvud.html');
+			include('sidfot.html');
 		?>
 	
 	</body>
