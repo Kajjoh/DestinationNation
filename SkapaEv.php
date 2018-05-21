@@ -10,7 +10,7 @@
 	<body>
 
 	<?php
-		include('sidhuvud.php');
+		include('sidhuvud.html');
 	?>
 
 
@@ -77,7 +77,7 @@
 		</div>
 
 		<?php
-			include('sidhuvud.php');
+			include('sidhuvud.html');
 		?>
 	
 	</body>

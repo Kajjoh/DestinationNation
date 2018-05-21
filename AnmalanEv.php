@@ -23,7 +23,7 @@ if ($conn->connect_error){
 	<body>
 
 		<?php
-			include('sidhuvud.php');
+			include('sidhuvud.html');
 		?>
 
 		<!-- I den här menyn väljer man vart man ska. Ska ligga högst upp på majoriteten av sidorna. -->
@@ -118,7 +118,7 @@ if ($conn->connect_error){
 
 
 		<?php
-			include('sidfot.php');
+			include('sidfot.html');
 		?>
 		
 		<script src="AnmalanEv.js" ></script>

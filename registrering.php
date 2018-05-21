@@ -77,7 +77,7 @@
         </div>
 
         <?php
-            include('sidfot.php');
+            include('sidfot.html');
         ?>
 
 		<script src="registrering.js"></script>

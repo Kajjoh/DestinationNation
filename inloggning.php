@@ -10,7 +10,7 @@
 	<body>
 
 		<?php
-			include('sidhuvud.php');
+			include('sidhuvud.html');
 		?>
 
 		<!-- Här börjar innehållet. --> 
@@ -45,7 +45,7 @@
 			
 
 			<?php
-				include('sidfot.php');
+				include('sidfot.html');
 			?>
 	    	  
 	</body>

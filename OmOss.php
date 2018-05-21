@@ -9,7 +9,7 @@
 	<body>
 	
 		<?php
-			include('sidhuvud.php');
+			include('sidhuvud.html');
 		?>
 		
 		<!-- I den här menyn väljer man vart man ska. Ska ligga högst upp på majoriteten av sidorna. -->
@@ -57,7 +57,7 @@
 		</div>
 
 		<?php
-			include('sidfot.php');
+			include('sidfot.html');
 		?>
 		
 	</body>
