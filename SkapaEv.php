@@ -38,61 +38,64 @@ if ($conn->connect_error){
 			</div>
 
 		<!--Här börjar innehållet på sidan-->
-		<div id="rubrikSkapaEv">
-			<h3>Skapa Evenemang</h3>
-		</div>
+		<div class = "helaEvenemang">
+		
+			<div id="rubrikSkapaEv">
+				<h3>Skapa Evenemang</h3>
+			</div>
 
-		<!--formular (byta namn på formulären?) har samma struktur som de andra formulären. -->
-		<div class="formular">
-		<form id = "skapaEven" method = "POST" action = "">
+			<!--formular (byta namn på formulären?) har samma struktur som de andra formulären. -->
+			<div class="formular">
+			<form id = "skapaEven" method = "POST" action = "skapaEvProcess.php">
 
-			<p class="boxes">
-				<label for="Titel">Titel</label><br>
-				<input type="text" id="Titel"><br>
-			</p>
+				<p class="boxes">
+					<label for="Titel">Titel</label><br>
+					<input type="text" id="Titel" name= "Titel"><br>
+				</p>
 
-			<p class="boxes">
-					<label for="Typ">Typ</label><br>
-					<select name="cars">
-					  <option value="Pub">Pub</option>
-					  <option value="Klubb">Klubb</option>
-					  <option value="Lunch">Lunch</option>
-					  <option value="Frukost">Frukost</option>
-					  <option value="Restaurang">Restaurang</option>
-					  <option value="Brunch">Brunch</option>
-					  <option value="Släpp">Släpp</option>
-					  <option value="Gasque">Gasque</option>
-					  <option value="Konsert">Konsert</option>
-					  <option value="Övrigt">Övrigt</option>
-					</select>
-			</p>
+				<p class="boxes">
+						<label for="Typ">Typ</label><br>
+						<select name="cars">
+						<option value="Pub">Pub</option>
+						<option value="Klubb">Klubb</option>
+						<option value="Lunch">Lunch</option>
+						<option value="Frukost">Frukost</option>
+						<option value="Restaurang">Restaurang</option>
+						<option value="Brunch">Brunch</option>
+						<option value="Släpp">Släpp</option>
+						<option value="Gasque">Gasque</option>
+						<option value="Konsert">Konsert</option>
+						<option value="Övrigt">Övrigt</option>
+						</select>
+				</p>
 
-			<p class="boxes">
-				Datum & Tid<br>
-				<label for="Från">Från</label><br>
-				<input type="date" id="Från"><br>
-				<label for="Till">Till</label><br>
-				<input type="date" id="Till"><br>
-				<label for="Tid">Tid</label><br>
-				<input type="time" id="Tid">
-			</p>
+				<p class="boxes">
+					Datum & Tid<br>
+					<label for="Från">Från</label><br>
+					<input type="date" id="Från" name= "Från"><br>
+					<label for="Till">Till</label><br>
+					<input type="date" id="Till" name= "Till"><br>
+					<label for="Tid">Tid</label><br>
+					<input type="time" id="Tid" name= "Tid">
+				</p>
 
-			<p class="boxes">
-				<label for="Kravanmälan">Kräver detta evenemang en anmälan?</label><br>
-				<label for="Ja">Ja</label><label for="Nej">Nej</label><br>
-				<input type="checkbox" id="Ja"><input type="checkbox" id="Nej"><br>
-			</p>
+				<p class="boxes">
+					<label for="Kravanmälan">Kräver detta evenemang en anmälan?</label><br>
+					<label for="Ja">Ja</label><label for="Nej">Nej</label><br>
+					<input type="checkbox" id="Ja" name="Ja"><input type="checkbox" id="Nej" name="Nej"><br>
+				</p>
 
-			<p class="boxes">
-				<label for="Beskrivning">Beskrivning</label><br>
-				<textarea id="Beskrivning" placeholder="Beskrivning av evenemang"></textarea>
-			</p>
+				<p class="boxes">
+					<label for="Beskrivning">Beskrivning</label><br>
+					<textarea id="Beskrivning" name= "Beskrivning" placeholder="Beskrivning av evenemang"></textarea>
+				</p>
 
-			<p>
-				<input type = "submit" value = "Skapa" id = "skapaEvBtn">
-			</p>
-			
-		</form>
+				<p>
+					<input type = "submit" value = "Skapa" id = "skapaEvBtn">
+				</p>
+				
+			</form>
+			</div>
 		</div>
 
 		<?php

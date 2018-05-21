@@ -14,13 +14,16 @@
 		?>
 
 		<!-- Här börjar innehållet. --> 
-		<div id="rubrik">
+	
+		<div id="huvudRubrikInloggning">
 			<h3>Välkommen till DestinationNation</h3>
 		</div>	
 	
 			<div class="formular" id="inloggning">
 	
-				<p class="rubrikInloggning">Logga in</p>
+				<div class="rubrikInloggning">
+					<h2>Logga in</h2>
+				</div>	
 
 				<!-- Här börjar formuläret. -->
 				<form name="loggain" method="POST" action="process-data.php">
@@ -44,7 +47,7 @@
 				<p id="ingetKonto">Inget konto? Registrera dig <a href="registrering.php" >här</a></p>
 				
 			</div>
-			
+	</div>
 
 			<?php
 				include('sidfot.html');

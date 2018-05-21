@@ -36,6 +36,9 @@
 
 		<div id="anmaldaEvMSS">
 			<p> Här ska alla evenemang som studenten är anmäld till dyka upp.</p>
+			<?php
+				include('mSS_Anmalan_process.php');
+			?>
 			<br>
 			<br>
 		</div>
