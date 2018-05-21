@@ -32,7 +32,7 @@
 		
 			<div id="innehallOmOss">
 				<p>
-					DestinationNation erbjuder en tjänst för att öka spridningen av nationsevenemang vilket fynnar både 
+					DestinationNation erbjuder en tjänst för att öka spridningen av nationsevenemang vilket gynnar både 
 					nationer och studenter. Som nation är du välkommen att publicera nya kommande evenemang och låta Uppsalas
 					entusiastiska studenter anmäla sig till dem. Som student kommer du enklare kunna ta del av det fantastiska 
 					studentlivet genom att leta bland alla evenemang på vår tjänst och hitta nya spännande aktiviteter att delta i.<br> 
@@ -49,9 +49,33 @@
 				
 				<h4>Policy och riktlinjer</h4>
 				<p>
-					GDPR <br>
-					Användarcentrerat innehåll<br>
-					Här ska vi skriva allt vi kan komma på om vår tjänst regler och riktlinjer. 
+					Vi på DestinationNation har beslutat att följa GDPRs riktlinjer:
+					<br>
+					<br>
+					Den nya dataskyddsförordningen, GDPR innebär att en förteckning finns på alla dem uppgifter som hanteras, bl.a. information om vad uppgifterna används till, vilka kategorier av uppgifter och personer som förekommer. 
+					<br>
+					<br>
+					De personuppgifter som hanteras är studentens: <br>
+					•	Personnummer <br>
+					•	Namn <br>
+					•	Adress <br>
+					•	E-mail <br>
+
+					<br>
+					Studentens personuppgifter sparas så länge studenten har ett konto hos oss. När ett konto raderas, då försvinner även studentens sparade data. <br>
+					<br>
+					Vid användning av vår tjänst gäller följande regler:<br>
+
+					<br>
+					Vid meddelanden: <br>
+					•	Inga hot <br>
+					•	Inga kränkande uttalanden så som hotfulla, sexistiska eller rasistiska kommentarer <br>
+					<br>
+					Publicering av bilder: <br>
+					•	Bilder får ej uppvisa kränkande innehåll såsom våld, nakenhet, hets mot folkgrupp <br>
+					<br>
+					Avvikande får dessa regler kan få allvarliga konsekvenser. Då ingen kan vara anonym på vårat forum är du som person ansvarig för det som utförs som inloggad användare. 
+
 				</p>
 			</div>
 		</div>
