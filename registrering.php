@@ -36,38 +36,48 @@
             
             <p class="boxes">
                 <label for="prsnummer">Personnummer:<br></label>
-                <input id="regbox" type="text" placeholder="ÅÅMMDD-XXXX" name="personnummer">
+                <input id="regbox" type="text" placeholder="ÅÅMMDDXXXX" name="personnummer">
             </p>
 
             <p class="boxes">
-                <label for="studentId">Student-id:<br/></label> 
+                <label for="studentId">Student-id:<br></label> 
                 <input id="regbox" type="text" placeholder="xxxx xxxx" name="sId">
             </p>
 
             <p class="boxes">
-                <label for="fenamn">För- och efternamn:<br/></label>
+                <label for="fenamn">För- och efternamn:<br></label>
                 <input id="regbox" type="text"  name="namn">
             </p>
 
             <p class="boxes">
-                <label for="mail">E-mail:<br/></label>
+                <label for="mail">E-mail:<br></label>
                 <input id="regbox" type="text" placeholder="namn@exempel.se" name="email">
             </p>
 
             <p class="boxes">
-                <label for="adress">Adress:<br/></label>
+                <label for="adress">Adress:<br></label>
                 <input id="regbox" type="text" name="adress">
             </p>
 
             <p class="boxes">
-                <label for="ort">Ort:<br/></label>
+                <label for="ort">Ort:<br></label>
                 <input id="regbox" type="text" name="ort">
             </p>
-
-            <p class="boxes">
+			
+			<p class="boxes">
                 <label for="postnummr">Postnummer:<br/></label>
                 <input id="regbox" type="text" name="postnummr">
             </p>
+			
+			<p class="boxes">
+				<label>Lösenord:<br> </label>
+				<input type="password" name="userpass" id="pass">
+			</p>
+
+			<p class="boxes">
+				<label>Upprepa lösenord:<br> </label>
+				<input type="password" name="repeatpass" id="pass2">
+			</p>
 
             <p>
                 <input type="submit" value="Registrera" id="submitBtn" class="button">
