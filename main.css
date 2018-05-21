@@ -59,12 +59,18 @@ h4 {
     background-color: #E8E8E8;
     padding: 8px;
     width: 125px;
+	color: #C00000
 }
 
 #listaMeny:hover{
     background-color: whitesmoke;
     color: white;
-    }
+}
+
+#sidlankar {
+	color: #C00000
+	
+}	
 
 /* Det här är vår sidfot. */
 #sidfot {
@@ -161,6 +167,32 @@ h4 {
 
 
 /*---------------------------------------------------------------------------------*/
+
+/* inloggning.php */
+
+#inloggning {
+	border: 2px solid #C00000;
+	margin-right: 20%;
+	margin-left: 20%;
+}
+#personnummer {
+	width: 300px;
+	height: 25px;
+}
+#pw {
+	width: 300px;
+	height: 25px;
+}
+#rubrik {
+	text-align: center;
+}
+#logInBtn {
+	width: 80px;
+	height: 30px;
+}
+
+
+/*---------------------------------------------------------------------------------*/
 /* OMOSS.HTML*/
 
 #divOmOss {
@@ -232,3 +264,9 @@ h4 {
     background-color: #555;
 }
 
+/*----------------------------------------------------------------*/
+/* SkapaEv.php */
+
+#rubrikSkapaEv {
+	text-align: center;
+}

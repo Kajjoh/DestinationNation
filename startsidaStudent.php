@@ -16,10 +16,10 @@
         <!--Detta är menyn där man kan logga ut, gå till mina sidor etc.-->
         <div class="huvudMeny">
                 <ul>
-                  <li id="listaMeny"><a href="startsidaStudent.html">Start</a></li>
-                  <li style="float:right" id="listaMeny"><a href="inloggning.html">Logga ut</a></li>
-                  <li style="float:right"id="listaMeny"><a href="minaSidorStudent.html">Mina sidor</a></li>
-                  <li style="float:right" id="listaMeny"><a href="OmOss.html">Om Oss</a></li>
+                  <li id="listaMeny"><a id="sidlankar" href="startsidaStudent.html">Start</a></li>
+                  <li style="float:right" id="listaMeny"><a id="sidlankar" href="inloggning.html">Logga ut</a></li>
+                  <li style="float:right"id="listaMeny"><a id="sidlankar" href="minaSidorStudent.html">Mina sidor</a></li>
+                  <li style="float:right" id="listaMeny"><a id="sidlankar" href="OmOss.html">Om Oss</a></li>
                 </ul>
             </div>
 
