@@ -70,13 +70,13 @@ if ($conn->connect_error){
 				</p>
 
 				<p class="boxes">
-					Datum & Tid<br>
+					Tid & Datum<br>
 					<label for="Från">Från</label><br>
-					<input type="date" id="Från" name= "Från"><br>
+					<input type="time" id="Från" name= "Från"><br>
 					<label for="Till">Till</label><br>
-					<input type="date" id="Till" name= "Till"><br>
+					<input type="time" id="Till" name= "Till"><br>
 					<label for="Tid">Tid</label><br>
-					<input type="time" id="Tid" name= "Tid">
+					<input type="date" id="Tid" name= "Datum">
 				</p>
 
 				<p class="boxes">
