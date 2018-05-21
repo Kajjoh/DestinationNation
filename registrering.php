@@ -50,6 +50,7 @@
                     <label for="upprepalosen">Upprepa lösenord:</label><br>
                         <input type="password" name="repeatpass" id="repeatpass"><br>
                 
+                    <br>
                     <input type="submit" value="Registrera" id="submitBtn" class="button"><br>
            
             </form>
