@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>DestinationNation</title>
-		<link href="main.css" rel="stylesheet">
+		<link href="html/main.css" rel="stylesheet">
 		<meta charset="utf-8">
     </head>
 	
@@ -10,7 +10,7 @@
 	<body>
 
 		<?php
-			include('sidhuvud.html');
+			include('html/sidhuvud.html');
 		?>
 
 		<!-- Här börjar innehållet. --> 
@@ -50,7 +50,7 @@
 	</div>
 
 			<?php
-				include('sidfot.html');
+				include('html/sidfot.html');
 			?>
 	    	  
 	</body>

@@ -3,29 +3,19 @@
 
     <head>
         <title>DestinationNation</title>
-        <link rel="stylesheet" href="main.css" />
+        <link rel="stylesheet" href="html/main.css" />
         <meta charset="utf-8">
     </head>
     
     <body>
 
     <?php
-        include('sidhuvud.html');
+        include('html/sidhuvud.html');
+
+        include('html/meny.html');
     ?>
         
-        <!--Detta är menyn där man kan logga ut, gå till mina sidor etc.-->
-        <div class="huvudMeny">
-                <ul>
-                  <li id="listaMeny"><a id="sidlankar" href="startsidaStudent.html">Start</a></li>
-                  <li style="float:right" id="listaMeny"><a id="sidlankar" href="inloggning.html">Logga ut</a></li>
-                  <li style="float:right"id="listaMeny"><a id="sidlankar" href="minaSidorStudent.html">Mina sidor</a></li>
-                  <li style="float:right" id="listaMeny"><a id="sidlankar" href="OmOss.html">Om Oss</a></li>
-                </ul>
-            </div>
-
-
-
-        <!--denna div (filter) listar horisontellt alla aktiviteter för nationer för filtrering.-->
+          <!--denna div (filter) listar horisontellt alla aktiviteter för nationer för filtrering.-->
         <div id="filter">
             <ul id="filterlista">
                 <li id="aktiviteter"><a id="attributAkt">Pub</a></li>
@@ -59,7 +49,7 @@
         </div>
 
         <?php
-            include('sidfot.html');
+            include('html/sidfot.html');
         ?>
 
     </body>

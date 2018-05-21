@@ -1,15 +1,3 @@
-<?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "projekt";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error){
-    die("Connection failed: " . $conn->connect_error);
-}
-?>
 
 <DOCTYPE html>
 <html>
@@ -17,24 +5,16 @@ if ($conn->connect_error){
 	<head>
 		<title>AnmalanEv</title>
 		<meta charset="utf-8">
-		<link href="main.css" rel="stylesheet">
+		<link href="html/main.css" rel="stylesheet">
 	</head>
 	
 	<body>
 
 		<?php
-			include('sidhuvud.html');
-		?>
+			include('html/sidhuvud.html');
 
-		<!-- I den här menyn väljer man vart man ska. Ska ligga högst upp på majoriteten av sidorna. -->
-    	<div class="huvudMeny">
-			<ul>
-			  <li id="listaMeny"><a id="sidlankar" href="startsidaStudent.html">Start</a></li>
-			  <li style="float:right" id="listaMeny"><a id="sidlankar" href="inloggning.html">Logga ut</a></li>
-			  <li style="float:right"id="listaMeny"><a id="sidlankar" href="minaSidorStudent.html">Mina sidor</a></li>
-			  <li style="float:right" id="listaMeny"><a id="sidlankar" href="OmOss.html">Om Oss</a></li>
-			</ul>
-		</div>
+			include('html/meny.html');
+		?>
 
 		<!-- Här börjar innehållssidan. --> 
 
@@ -118,7 +98,7 @@ if ($conn->connect_error){
 
 
 		<?php
-			include('sidfot.html');
+			include('html/sidfot.html');
 		?>
 		
 		<script src="AnmalanEv.js" ></script>

@@ -14,12 +14,12 @@ $evTitel = mysqli_real_escape_string($conn, trim($_POST['Titel']));
 $evTyp = mysqli_real_escape_string($conn, trim($_POST['cars']));
 $tidFran = mysqli_real_escape_string($conn, trim($_POST['Från']));
 $tidTill = mysqli_real_escape_string($conn, trim($_POST['Till']));
-$evTid = mysqli_real_escape_string($conn, trim($_POST['Tid']));
-$evJa = ($_POST['Ja']);
-$evNej = ($_POST['Nej']);
+$evDatum = mysqli_real_escape_string($conn, trim($_POST['Datum']));
+$evJa =  isset($_POST['Ja']);
+$evNej = isset($_POST['Nej']);
 $evBeskrivning = mysqli_real_escape_string($conn, trim($_POST['Beskrivning']));
 
-if ((empty($evTitel)) || (empty($evTyp)) || (empty($tidFran)) || (empty($tidTill)) || (empty($evTid)) || (empty($evBeskrivning))){
+if ((empty($evTitel)) || (empty($evTyp)) || (empty($tidFran)) || (empty($tidTill)) || (empty($evDatum)) || (empty($evBeskrivning))){
     echo 'OBS! Fyll i alla fält.';
 }
 else if ((!empty($evJa)) && (!empty($evNej)))
@@ -33,7 +33,9 @@ else if ((empty($evJa)) && (empty($evNej)))
 
 else
 {
-    $sql = "INSERT INTO evenemang (title, typ, fran, till, tid, krav, beskrivning) VALUES ('$evTitel', '$evTyp', '$tidFran', '$tidTill', '$evTid', '$evJa', '$evNej', '$evBeskrivning')";
+    $sql = "INSERT INTO evenemang (title, typ, fran, till, tid, krav, beskrivning)
+    VALUES ('$evTitel', '$evTyp', '$tidFran', '$tidTill', '$evDatum', '$evJa', '$evNej', '$evBeskrivning')";
+    echo 'Tack! Ditt evenemang är nu skapat.';
 }
 
 
