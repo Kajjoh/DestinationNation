@@ -40,6 +40,8 @@
 					</p>
 					
 				</form>	
+
+				<p id="ingetKonto">Inget konto? Registrera dig <a href="registrering.php" >här</a></p>
 				
 			</div>
 			
