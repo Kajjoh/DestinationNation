@@ -28,27 +28,9 @@
 		<div id="persuppgMSS">
 			<h4>Personuppgifter</h4>
 
-			<p>Namn</p>
-			<p>-------</p>
-			<p>Personnummer</p>
-			<p>-------</p>
-			<p>Student-id</p>
-			<p>-------</p>
-			<p>E-mail</p>
-			<p>-------</p>
-			<p>Adress</p>
-			<p>-------</p>
-			<p>Ort</p>
-			<p>-------</p>
-			<p>Postnummer</p>
-			<p>-------</p>
-						
-			<p>Byt lösenord</p>
-			<p>-------</p>
-			<p>Nytt lösenord</p>
-			<p>-------</p>
-			<p>Upprepa lösenord</p>
-			<p>-------</p>
+			<?php
+				include('mSS-process.php');
+			?>
 
 		</div>
 
@@ -56,40 +38,10 @@
 			<p> Här ska alla evenemang som studenten är anmäld till dyka upp.</p>
 			<br>
 			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
 		</div>
 
 		<div id="sparadeEvMSS">
 			<p> Här ska alla evenemang man sparat dyka upp.</p>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
 			<br>
 			<br>
 		</div>
