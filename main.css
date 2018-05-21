@@ -59,12 +59,18 @@ h4 {
     background-color: #E8E8E8;
     padding: 8px;
     width: 125px;
+	color: #C00000
 }
 
 #listaMeny:hover{
     background-color: whitesmoke;
     color: white;
-    }
+}
+
+#sidlankar {
+	color: #C00000
+	
+}	
 
 /* Det här är vår sidfot. */
 #sidfot {
@@ -258,3 +264,9 @@ h4 {
     background-color: #555;
 }
 
+/*----------------------------------------------------------------*/
+/* SkapaEv.php */
+
+#rubrikSkapaEv {
+	text-align: center;
+}

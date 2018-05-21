@@ -14,13 +14,13 @@
 	?>
 
 
-		<!-- I den här menyn väljer man vart man ska. Ska ligga högst upp på majoriteten av sidorna. -->
+		<!-- I den här menyn väljer man vart man ska. Ska ligga högst uppid="sidlankar" på majoriteten av sidorna. -->
 		<div class="huvudMeny">
 				<ul>
-				  <li id="listaMeny"><a href="startsidaStudent.html">Start</a></li>
-				  <li style="float:right" id="listaMeny"><a href="inloggning.html">Logga ut</a></li>
-				  <li style="float:right"id="listaMeny"><a href="minaSidorStudent.html">Mina sidor</a></li>
-				  <li style="float:right" id="listaMeny"><a href="OmOss.html">Om Oss</a></li>
+				  <li id="listaMeny"><a id="sidlankar" href="startsidaStudent.html">Start</a></li>
+				  <li style="float:right" id="listaMeny"><a id="sidlankar" href="inloggning.html">Logga ut</a></li>
+				  <li style="float:right"id="listaMeny"><a id="sidlankar" href="minaSidorStudent.html">Mina sidor</a></li>
+				  <li style="float:right" id="listaMeny"><a id="sidlankar" href="OmOss.html">Om Oss</a></li>
 				</ul>
 			</div>
 
