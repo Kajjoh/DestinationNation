@@ -35,10 +35,10 @@ else
 {
     $sql = "INSERT INTO evenemang (title, typ, fran, till, tid, krav, beskrivning)
     VALUES ('$evTitel', '$evTyp', '$tidFran', '$tidTill', '$evDatum', '$evJa', '$evNej', '$evBeskrivning')";
-    echo 'Tack! Ditt evenemang är nu skapat.';
+
+    echo 'Tack! Ditt evenemang är nu skapat.';    
+    $conn->query($sql);
 }
-
-
 
 $conn->close();
 ?>
