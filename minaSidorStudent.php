@@ -95,10 +95,10 @@
 		</div>
 
 
+
 		<?php
 			include('sidfot.html');
 		?>
-		
 		
 	    <script src="javaMeny.js"></script>		
 	</body>
