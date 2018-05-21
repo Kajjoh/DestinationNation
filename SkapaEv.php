@@ -1,3 +1,16 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "projekt";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error){
+    die("Connection failed: " . $conn->connect_error);
+}
+?>
+
 <!DOCTYPE html>
 <html>
 	
@@ -31,6 +44,7 @@
 
 		<!--formular (byta namn på formulären?) har samma struktur som de andra formulären. -->
 		<div class="formular">
+		<form id = "skapaEven" method = "POST" action = "">
 
 			<p class="boxes">
 				<label for="Titel">Titel</label><br>
@@ -74,6 +88,11 @@
 				<textarea id="Beskrivning" placeholder="Beskrivning av evenemang"></textarea>
 			</p>
 
+			<p>
+				<input type = "submit" value = "Skapa" id = "skapaEvBtn">
+			</p>
+			
+		</form>
 		</div>
 
 		<?php
