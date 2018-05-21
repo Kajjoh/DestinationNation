@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -18,49 +17,43 @@
             <h3> Registrera ett konto:</h3>
         </div>
 
-        <div class="formular">
+        <div id="registrationForm">
+            <form name="regForm" method="POST" action="regiprocessTEST.php" onsubmit="return (validateForm())">
 
-            <!-- Här börjar formuläret för att registrera sig.    --> 
-            <form name="registrera" method="POST" action="registreringsprocess.php" onsubmit="return (validateForm())>
-                
-                    <label for="prsnummer">Personnummer:</label><br>
-                        <input id="personnummer" type="text" placeholder="ÅÅMMDDXXXX" name="personnummer"><br>
+                <label for="namn">Personnummer</label><br>
+                    <input type="text" name="prnr" id="prnr"><br>
+        
+                <label for="namn">Student-id</label><br>
+                    <input type="text" name="stid" id="stid"><br>
 
-                    <label for="studentId">Student-id:</label><br>
-                        <input id="sID" type="text" placeholder="xxxx xxxx" name="sId"><br>
+                <label for="namn">Namn</label><br>
+                    <input type="text" name="namn" id="namn"><br>
 
-                    <label for="fenamn">För- och efternamn:</label><br>
-                        <input id="namn" type="text"  name="namn"><br>
+                <label for="namn">E-mail</label><br>
+                    <input type="text" name="mail" id="mail"><br>
 
-                    <label for="mail">E-mail:</label><br>
-                        <input id="email" type="text" placeholder="namn@exempel.se" name="email"><br>
-            
-                    <label for="adress">Adress:</label><br>
-                        <input id="adress" type="text" name="adress"><br>
-                
-                    <label for="ort">Ort:</label><br>
-                        <input id="ort" type="text" name="ort"><br>
-                
-                    <label for="postnummr">Postnummer:</label><br>
-                        <input id="postnummr" type="text" name="postnummr"><br>
+                <label for="namn">Adress</label><br>
+                    <input type="text" name="adress" id="adress"><br>
 
-                    <label for="losenord">Lösenord:</label><br>
-                        <input type="password" name="userpass" id="userpass"><br>
+                <label for="namn">Ort</label><br>
+                    <input type="text" name="ort" id="ort"><br>
 
-                    <label for="upprepalosen">Upprepa lösenord:</label><br>
-                        <input type="password" name="repeatpass" id="repeatpass"><br>
-                
-                    <br>
-                    <input type="submit" value="Registrera" id="submitBtn" class="button"><br>
-           
+                <label for="namn">Postnummer</label><br>
+                    <input type="text" name="pstnr" id="pstnr"><br>
+
+                <label for="losen">Lösenord</label><br>
+                        <input type="password" placeholder="******" name="losen" id="losen"><br>
+
+                <input type="submit" value="Registrera!" id="submit">
+
             </form>
-
+        
         </div>
 
         <?php
             include('sidfot.html');
         ?>
 
-		<script src="registrering.js"></script>
+        <script src="registrering.js"></script>
     </body>
 </html>
