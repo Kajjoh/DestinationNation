@@ -97,7 +97,7 @@ h4 {
 /* ANMALANEV.HTML */
 
 .divAnmalan {
-    border: 2px solid #C00000;
+    border: 0.25em solid #C00000;
     border-radius: 10%;
     height: 95%;
     margin: 3% 30% 3% 30%;
@@ -130,20 +130,20 @@ h4 {
 
 #Allergi {
     resize: none;
-    height: 90px; 
-    width: 320px;
+    height: 90%; 
+    width: 320%;
 }
 
 #anmalanSkicka {
-    margin: 20px;
+    margin: 10%;
 }
 
 /*---------------------------------------------------------------------------------*/
 /* MINASIDORSTUDENT.HTML*/
 
 #persuppgMSS {
-    border: 2px solid #C00000;
-	border-radius: 20px;
+    border: 0.25em solid #C00000;
+	border-radius: 2em;
     float: left;
     width: 40%;
     margin-left: 7%;
@@ -151,8 +151,8 @@ h4 {
 }
 
 #anmaldaEvMSS {
-    border: 2px solid #C00000;
-	border-radius: 20px;
+    border: 0.25em solid #C00000;
+	border-radius: 2em;
     float: right;
     width: 40%;
     margin-right: 7%;
@@ -160,8 +160,8 @@ h4 {
 }
 
 #sparadeEvMSS {
-    border: 2px solid #C00000;
-	border-radius: 20px;
+    border: 0.25em solid #C00000;
+	border-radius: 2em;
     float: right;
     width: 40%;
     margin-right: 7%;
@@ -174,18 +174,18 @@ h4 {
 /* inloggning.php */
 
 #inloggning {
-	border: 2px solid #C00000;
-	border-radius: 20px;
+	border: 0.25em solid #C00000;
+	border-radius: 2em;
 	margin-right: 25%;
 	margin-left: 25%;
 }
 #personnummer {
-	width: 300px;
-	height: 25px;
+	width: 50%;
+	height: 250%;
 }
 #pw {
-	width: 300px;
-	height: 25px;
+	width: 50%;
+    height: 250%;
 }
 .rubrikInloggning {
 	text-align: center;
@@ -195,8 +195,8 @@ h4 {
 	text-align: center;
 }
 #logInBtn {
-	width: 80px;
-	height: 30px;
+	width: 15%;
+	height: 30%;
 }
 
 
@@ -204,7 +204,7 @@ h4 {
 /* OMOSS.HTML*/
 
 #divOmOss {
-    border: 2px solid #C00000;
+    border: 0.10em solid #C00000;
 }
 
 #rubrikOmOss {
@@ -231,7 +231,7 @@ h4 {
 /* STARTSIDASTUDENT.HTML*/
 
 #filter{
-    margin-left: 150px;
+    margin-left: 12%;
 }
 
 #filterlista{
@@ -244,7 +244,7 @@ h4 {
     float: left;
     background-color: #E8E8E8;
     border-bottom: solid #C00000;
-    width: 170px;
+    width: 10%;
 }
 
 #attributAkt{
@@ -253,8 +253,8 @@ h4 {
     text-align: center;
     padding: 16px 30px;
     text-decoration: none;
-    margin-left: 14px;
-    margin-right: 16px;
+    margin-left: 8px;
+    margin-right: 14px;
 }
 
 #attributAkt:hover{
@@ -262,8 +262,9 @@ h4 {
 }
 
 .nationsMeny{
-    width: 150px;
+    width: 12%;
     color: #E8E8E8;
+    border-right:solid #C00000;
 }
 
 #nationsattr{
@@ -273,7 +274,7 @@ h4 {
     padding: 12px;
     text-decoration: none;
     border-bottom: solid #C00000;
-    height: 40px;
+    height: 4%;
     
 }
 
