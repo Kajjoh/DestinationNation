@@ -18,7 +18,7 @@
         </div>
 
         <div id="registrationForm">
-            <form name="regForm" method="POST" action="regiprocessTEST.php" onsubmit="return (validateForm())">
+            <form name="regForm" method="POST" action="regi-process.php" onsubmit="return (validateForm())">
 
                 <label for="namn">Personnummer</label><br>
                     <input type="text" name="prnr" id="prnr"><br>
@@ -43,6 +43,9 @@
 
                 <label for="losen">Lösenord</label><br>
                         <input type="password" placeholder="******" name="losen" id="losen"><br>
+				
+				<label for="upprepalosen">Upprepa lösenord</label><br>
+						<input type="password" placeholder="******" name="upprepalosen" id="upprepalosen"><br>
 
                 <input type="submit" value="Registrera!" id="submit">
 
