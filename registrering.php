@@ -1,22 +1,11 @@
-<?php
-  $uname = "root";
-  $pass = "";
-  $host = "localhost";
-  $dbname = "projekt";
-  
-    $connection = new mysqli($host, $uname, $pass, $dbname);
-	if ($connection->connect_error)
-	{  
-		die("Connection failed: ".$connection.connect_error);
-	}
-?>	
+
 <!DOCTYPE html>
 <html>
-<head>
-    <title>DestinationNation</title>
-    <link href="main.css" rel="stylesheet">
-    <meta charset="UTF-8">
-</head>
+    <head>
+        <title>DestinationNation</title>
+        <link href="main.css" rel="stylesheet">
+        <meta charset="UTF-8">
+    </head>
     
     <body>
 
@@ -31,58 +20,39 @@
 
         <div class="formular">
 
-        <!-- Här börjar formuläret för att registrera sig.    --> 
-        <form name="registrera" method="POST" action="registreringsprocess.php">
+            <!-- Här börjar formuläret för att registrera sig.    --> 
+            <form name="registrera" method="POST" action="registreringsprocess.php" onsubmit="return (validateForm())>
+                
+                    <label for="prsnummer">Personnummer:</label><br>
+                        <input id="personnummer" type="text" placeholder="ÅÅMMDDXXXX" name="personnummer"><br>
+
+                    <label for="studentId">Student-id:</label><br>
+                        <input id="sID" type="text" placeholder="xxxx xxxx" name="sId"><br>
+
+                    <label for="fenamn">För- och efternamn:</label><br>
+                        <input id="namn" type="text"  name="namn"><br>
+
+                    <label for="mail">E-mail:</label><br>
+                        <input id="email" type="text" placeholder="namn@exempel.se" name="email"><br>
             
-            <p class="boxes">
-                <label for="prsnummer">Personnummer:<br></label>
-                <input id="regbox" type="text" placeholder="ÅÅMMDDXXXX" name="personnummer">
-            </p>
+                    <label for="adress">Adress:</label><br>
+                        <input id="adress" type="text" name="adress"><br>
+                
+                    <label for="ort">Ort:</label><br>
+                        <input id="ort" type="text" name="ort"><br>
+                
+                    <label for="postnummr">Postnummer:</label><br>
+                        <input id="postnummr" type="text" name="postnummr"><br>
 
-            <p class="boxes">
-                <label for="studentId">Student-id:<br></label> 
-                <input id="regbox" type="text" placeholder="xxxx xxxx" name="sId">
-            </p>
+                    <label for="losenord">Lösenord:</label><br>
+                        <input type="password" name="userpass" id="userpass"><br>
 
-            <p class="boxes">
-                <label for="fenamn">För- och efternamn:<br></label>
-                <input id="regbox" type="text"  name="namn">
-            </p>
-
-            <p class="boxes">
-                <label for="mail">E-mail:<br></label>
-                <input id="regbox" type="text" placeholder="namn@exempel.se" name="email">
-            </p>
-
-            <p class="boxes">
-                <label for="adress">Adress:<br></label>
-                <input id="regbox" type="text" name="adress">
-            </p>
-
-            <p class="boxes">
-                <label for="ort">Ort:<br></label>
-                <input id="regbox" type="text" name="ort">
-            </p>
-			
-			<p class="boxes">
-                <label for="postnummr">Postnummer:<br/></label>
-                <input id="regbox" type="text" name="postnummr">
-            </p>
-			
-			<p class="boxes">
-				<label>Lösenord:<br> </label>
-				<input type="password" name="userpass" id="pass">
-			</p>
-
-			<p class="boxes">
-				<label>Upprepa lösenord:<br> </label>
-				<input type="password" name="repeatpass" id="pass2">
-			</p>
-
-            <p>
-                <input type="submit" value="Registrera" id="submitBtn" class="button">
-            </p>         
-        </form>
+                    <label for="upprepalosen">Upprepa lösenord:</label><br>
+                        <input type="password" name="repeatpass" id="repeatpass"><br>
+                
+                    <input type="submit" value="Registrera" id="submitBtn" class="button"><br>
+           
+            </form>
 
         </div>
 

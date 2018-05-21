@@ -75,8 +75,9 @@
 		$sql = "INSERT INTO registrering (perNr, studID, namn, mail, adress, ort, postNr)
 		VALUES ('$persnr', '$stdId', '$foefNamn', '$emejl', $adress', '$ort', '$pstnr')";
 		$connection->query($sql);
-		echo 'tack för din registrering' ;
+		echo 'tack för din registrering';
 	}
+
 	$connection->close();
 	
 
