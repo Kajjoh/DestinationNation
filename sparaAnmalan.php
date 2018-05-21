@@ -44,6 +44,7 @@ else{
     VALUES ('$person', '$email', '$kon', '$matpref', '$allergi', '$drickpref', '$kompis')";
     $conn->query($sql);
     echo 'Tack för din anmälan!';
+    
 }
 
 $conn->close();
