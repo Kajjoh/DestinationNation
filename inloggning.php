@@ -18,7 +18,7 @@
 			<h3>Välkommen till DestinationNation</h3>
 		</div>	
 	
-			<div class="formular">
+			<div class="formular" id="inloggning">
 	
 				<p class="rubrikInloggning">Logga in</p>
 
@@ -27,12 +27,12 @@
 		
 					<p class="boxes">
 						<label for="prsnummer">Personnummer:<br></label>
-						<input type="text" placeholder="ÅÅMMDD-XXXX" name="personnummer">
+						<input type="text" placeholder="ÅÅMMDD-XXXX" name="personnummer" id="personnummer">
 					</p>	
 					
 					<p class="boxes">
 						<label for="passwrd">Lösenord:<br></label>
-						<input type="password" placeholder="..." name="pword">
+						<input type="password" placeholder="..." name="pword" id="pw">
 					</p>
 					
 					<p>

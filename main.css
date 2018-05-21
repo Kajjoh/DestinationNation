@@ -161,6 +161,32 @@ h4 {
 
 
 /*---------------------------------------------------------------------------------*/
+
+/* inloggning.php */
+
+#inloggning {
+	border: 2px solid #C00000;
+	margin-right: 20%;
+	margin-left: 20%;
+}
+#personnummer {
+	width: 300px;
+	height: 25px;
+}
+#pw {
+	width: 300px;
+	height: 25px;
+}
+#rubrik {
+	text-align: center;
+}
+#logInBtn {
+	width: 80px;
+	height: 30px;
+}
+
+
+/*---------------------------------------------------------------------------------*/
 /* OMOSS.HTML*/
 
 #divOmOss {
