@@ -265,6 +265,7 @@ h4 {
     width: 12%;
     color: #E8E8E8;
     border-right:solid #C00000;
+    float: left;
 }
 
 #nationsattr{
@@ -282,6 +283,30 @@ h4 {
     background-color: #555;
 }
 
+.ssFlode{
+    border: solid #C00000;
+    text-align: center;
+    width: 85% ;
+    margin-left: auto ;
+    margin-right: auto ;
+    float: right;
+    height: 580px;
+}
+
+.innerSSflode{
+    border: solid #C00000;
+    margin: 5%;
+    height: 500px;
+    border-radius: 2em;
+}
+
+.event{
+    border: solid black;
+    border-radius: 2em;
+    margin: 5%;
+
+}
+
 /*----------------------------------------------------------------*/
 /* SkapaEv.php */
 
@@ -294,4 +319,15 @@ h4 {
 	margin-right: 25%;
 	margin-left: 25%;
 	margin-top: 5%;
+}
+
+/*-----------------------------------------------------------------*/
+/*registrering.php*/
+
+#rubrikRegistrering{
+    text-align: center;
+}
+
+#registrationForm{
+    text-align: center;
 }
