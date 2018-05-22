@@ -16,14 +16,14 @@ if ($conn->connect_error){
 	
 	<head>
 		<title>DestinationNation</title>
-		<link href="main.css" rel="stylesheet">
+		<link href="html/main.css" rel="stylesheet">
 		<meta charset="utf-8">
 	</head>
 	
 	<body>
 
 	<?php
-		include('sidhuvud.html');
+		include('html/sidhuvud.html');
 	?>
 
 
@@ -99,7 +99,7 @@ if ($conn->connect_error){
 		</div>
 
 		<?php
-			include('sidfot.html');
+			include('html/sidfot.html');
 		?>
 	
 	</body>
