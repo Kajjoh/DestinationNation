@@ -14,7 +14,7 @@ $dbname = "projekt";
     } 
 
     // Get values from login.php
-    $inputmail = $_POST['personnummer'];
+    $inputmail = $_POST['email'];
     $inputpassword = $_POST['pword'];
 
     $sql = "SELECT namn, mail, losen, salt FROM registrering WHERE mail='$inputmail'";
@@ -28,7 +28,7 @@ $dbname = "projekt";
         $pwFromDB = $row['losen'];
         $saltFromDB = $row['salt'];
                 
-        $hash = sha1($saltFromDB . $inputpassword);
+        $hash = hash('sha256', ($saltFromDB . $inputpassword));
 
     if ($pwFromDB==$hash)
     {

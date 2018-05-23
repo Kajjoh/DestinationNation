@@ -26,11 +26,11 @@
 				</div>	
 
 				<!-- Här börjar formuläret. -->
-				<form name="loggain" method="POST" action="process-data.php">
+				<form name="loggain" method="POST" action="login-process.php">
 		
 					<p class="boxes">
-						<label for="prsnummer">Personnummer:<br></label>
-						<input type="text" placeholder="ÅÅMMDD-XXXX" name="personnummer" id="personnummer">
+						<label for="email">Email:<br></label>
+						<input type="text" placeholder="email@exempel.com" name="email" id="email">
 					</p>	
 					
 					<p class="boxes">
