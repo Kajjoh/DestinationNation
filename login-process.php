@@ -16,30 +16,43 @@ $dbname = "projekt";
     // Get values from login.php
     $inputmail = $_POST['email'];
     $inputpassword = $_POST['pword'];
+	$mailFromDb = "";
 
-    $sql = "SELECT namn, losen, salt FROM registrering WHERE mail='$inputmail'";
+    $sql = "SELECT namn, mail, losen, salt FROM registrering WHERE mail='$inputmail'";
 
     $result = mysqli_query($conn, $sql);
 
-    $row=mysqli_fetch_assoc($result);
-                
+    while ($row = mysqli_fetch_assoc($result))
+	{
+		$mailFromDB = $row['mail'];
         $namnFromDB = $row['namn'];
         $pwFromDB = $row['losen'];
         $saltFromDB = $row['salt'];
-                
-        $hash = hash('sha256', ($saltFromDB . $inputpassword));
+	}
+        
+        
+    $hash = hash('sha256', ($saltFromDB . $inputpassword));
 
     if ($pwFromDB==$hash)
-    {
-        header("Location: minaSidorStudent.php");
+    {	
+		session_start();
+		$_SESSION['user'] = "$namnFromDB";
+        header("Location: startsidaStudent.php");
     }
-    else
-    {
+    else if (empty($inputmail) || empty($mailFromDB))
+    {	
+		session_start();
+		$_SESSION['felmail'] = "Felaktig emailadress";
         header("Location: inloggning.php");
     }
+	else
+	{
+		session_start();
+		$_SESSION['fellosen'] = "Fel lösenord";
+		header("Location: inloggning.php");
+	}
              
-    session_start();
-    $_SESSION['user'] = "$namnFromDB";
+   
 
     $conn->close();
 

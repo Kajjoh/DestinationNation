@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -30,12 +33,26 @@
 		
 					<p class="boxes">
 						<label for="email">Email:<br></label>
-						<input type="text" placeholder="email@exempel.com" name="email" id="email">
+						<input type="text" placeholder="email@exempel.com" name="email" id="email"><br>
+						<?php
+							if (isset($_SESSION['felmail']))
+							{
+								echo $_SESSION['felmail'];
+								unset($_SESSION['felmail']);
+							}
+						?>
 					</p>	
 					
 					<p class="boxes">
 						<label for="passwrd">Lösenord:<br></label>
-						<input type="password" placeholder="..." name="pword" id="pw">
+						<input type="password" placeholder="..." name="pword" id="pw"><br>
+						<?php
+							if (isset($_SESSION['fellosen']))
+							{
+								echo $_SESSION['fellosen'];
+								unset($_SESSION['fellosen']);
+							}
+						?>
 					</p>
 					
 					<p>
