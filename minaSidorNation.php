@@ -17,7 +17,7 @@
 			?>
 		</div>
 
-		<a id="evKnapp" href="SkapaEv.php"><button>Skapa Evenemang</button></a>
+		<a id="evKnapp" onscroll=""href="SkapaEv.php"><button>Skapa Evenemang</button></a>
 		<?php
 			include('html/sidfot.html');
 		?>
