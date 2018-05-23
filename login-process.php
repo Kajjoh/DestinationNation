@@ -17,14 +17,13 @@ $dbname = "projekt";
     $inputmail = $_POST['email'];
     $inputpassword = $_POST['pword'];
 
-    $sql = "SELECT namn, mail, losen, salt FROM registrering WHERE mail='$inputmail'";
+    $sql = "SELECT namn, losen, salt FROM registrering WHERE mail='$inputmail'";
 
     $result = mysqli_query($conn, $sql);
 
     $row=mysqli_fetch_assoc($result);
                 
         $namnFromDB = $row['namn'];
-        $mejlFromDB = $row['mail'];
         $pwFromDB = $row['losen'];
         $saltFromDB = $row['salt'];
                 
