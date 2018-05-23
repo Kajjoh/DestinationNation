@@ -16,7 +16,8 @@ $dbname = "projekt";
     // Get values from login.php
     $inputmail = $_POST['email'];
     $inputpassword = $_POST['pword'];
-	$mailFromDb = "";
+	$mailFromDB = "";
+	$namnFromDB = "";
 
     $sql = "SELECT namn, mail, losen, salt FROM registrering WHERE mail='$inputmail'";
 

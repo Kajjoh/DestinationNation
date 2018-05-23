@@ -57,7 +57,9 @@
 	
 	if (empty($mail) || !preg_match($mailmatch, $mail))
 	{
-		header("Location: index.php");
+		session_start();
+		$_SESSION['emailmess'] = "Inkorrekt emailadress";
+		header("Location: registrering.php");
 	}
 	
 	else if ($mail == $emailfromdb)

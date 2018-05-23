@@ -1,3 +1,11 @@
+<?php
+	session_start();
+	if (isset($_SESSION['user']))
+	{
+		echo "Välkommen: {$_SESSION['user']}";
+	}
+	
+?>
 <!DOCTYPE html>
 <html>
 
