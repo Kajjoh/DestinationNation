@@ -168,6 +168,33 @@ h4 {
     margin-top: 2%;
 }
 
+/*------------------------------------------------------------*/
+/* index.php */
+
+.student-nation {
+    border: 0.2em solid #C00000;
+    width: 17%;
+    text-align: center;
+    padding: 2%;
+    border-radius: 2em;
+    font-size: 1.3em;   
+    margin-bottom: 5%; 
+    margin-top: 5%;
+    font-weight: bold;
+}
+
+#nationsKnapp {
+    float: left;
+    margin-left: 23%;
+    margin-right: 5%;
+}
+
+#studentKnapp {
+    float: right;
+    margin-right: 23%;
+    margin-left: 5%;
+}
+
 
 /*---------------------------------------------------------------------------------*/
 
