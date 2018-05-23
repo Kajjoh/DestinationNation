@@ -1,15 +1,3 @@
-<?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "projekt";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error){
-    die("Connection failed: " . $conn->connect_error);
-}
-?>
 
 <!DOCTYPE html>
 <html>
@@ -24,18 +12,9 @@ if ($conn->connect_error){
 
 	<?php
 		include('html/sidhuvud.html');
+
+		include('html/meny.html');
 	?>
-
-
-		<!-- I den här menyn väljer man vart man ska. Ska ligga högst uppid="sidlankar" på majoriteten av sidorna. -->
-		<div class="huvudMeny">
-				<ul>
-				  <li id="listaMeny"><a id="sidlankar" href="startsidaStudent.html">Start</a></li>
-				  <li style="float:right" id="listaMeny"><a id="sidlankar" href="inloggning.html">Logga ut</a></li>
-				  <li style="float:right"id="listaMeny"><a id="sidlankar" href="minaSidorStudent.html">Mina sidor</a></li>
-				  <li style="float:right" id="listaMeny"><a id="sidlankar" href="OmOss.html">Om Oss</a></li>
-				</ul>
-			</div>
 
 		<!--Här börjar innehållet på sidan-->
 		<div class = "helaEvenemang">
@@ -46,16 +25,13 @@ if ($conn->connect_error){
 
 			<!--formular (byta namn på formulären?) har samma struktur som de andra formulären. -->
 			<div class="formular">
-			<form id = "skapaEven" method = "POST" action = "skapaEvProcess.php">
+			<form name="skapaEven" method="POST" action="skapaEvProcess.php" onsubmit="return (validateForm())">
 
-				<p class="boxes">
 					<label for="Titel">Titel</label><br>
-					<input type="text" id="Titel" name= "Titel"><br>
-				</p>
+						<input type="text" id="Titel" name="Titel"><br>
 
-				<p class="boxes">
-						<label for="Typ">Typ</label><br>
-						<select name="cars">
+					<label for="Typ">Typ</label><br>
+					<select name="cars">
 						<option value="Pub">Pub</option>
 						<option value="Klubb">Klubb</option>
 						<option value="Lunch">Lunch</option>
@@ -66,36 +42,33 @@ if ($conn->connect_error){
 						<option value="Gasque">Gasque</option>
 						<option value="Konsert">Konsert</option>
 						<option value="Övrigt">Övrigt</option>
-						</select>
-				</p>
+					</select><br>
 
-				<p class="boxes">
+					<label for="plats">Plats</label><br>
+						<input type="text" id="plats" name="plats"><br>
+
 					Tid & Datum<br>
-					<label for="Från">Från</label><br>
-					<input type="time" id="Från" name= "Från"><br>
+					<label for="Fran">Från</label><br>
+						<input type="text" placeholder="--:--" id="Fran" name="Fran"><br>
+					
 					<label for="Till">Till</label><br>
-					<input type="time" id="Till" name= "Till"><br>
-					<label for="Tid">Tid</label><br>
-					<input type="date" id="Tid" name= "Datum">
-				</p>
+						<input type="text" placeholder="--:--" id="Till" name="Till"><br>
+					
+					<label for="Datum">Datum</label><br>
+						<input type="text" placeholder="xxxx-xx-xx" id="Datum" name="Datum"><br>
 
-				<p class="boxes">
 					<label for="Kravanmälan">Kräver detta evenemang en anmälan?</label><br>
 					<label for="Ja">Ja</label> <label for="Nej">Nej</label><br>
-					<input type="checkbox" value="Ja" name="Ja"><input type="checkbox" value="Nej" name="Nej"><br>
-				</p>
+						<input type="checkbox" value="Ja" name="Ja"><input type="checkbox" value="Nej" name="Nej"><br>
 
-				<p class="boxes">
 					<label for="Beskrivning">Beskrivning</label><br>
-					<textarea id="Beskrivning" name= "Beskrivning" placeholder="Beskrivning av evenemang"></textarea>
-				</p>
+						<textarea id="Beskrivning" name="Beskrivning" placeholder="Beskrivning av evenemang"></textarea><br>
 
-				<p>
-					<input type = "submit" value = "Skapa" id = "skapaEvBtn">
-				</p>
+					<input type="submit" value="Skapa evenemang!" id="skapaEvBtn">
 				
 			</form>
 			</div>
+		
 		</div>
 
 		<?php

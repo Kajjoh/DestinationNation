@@ -17,13 +17,12 @@ $dbname = "projekt";
     $result = $conn->query($sql);
 
     $row=mysqli_fetch_assoc($result);
-    echo "<div> <br> Personnummer: ". $row["perNr"]." 
-                <br> StudentID: " . $row["studID"]. "
-                <br> Namn: " .$row["namn"]."
-                <br> Mail: " .$row["mail"]."
-                <br> Adress: " .$row["adress"]."
-                <br> Ort: " .$row["ort"]."
-                <br> Postnummer: " .$row["postNr"]."       
+    echo "<div> <p class=persuppgRad>Personnummer: <br>". $row["perNr"]." </p>
+                <p class=persuppgRad> Namn: <br>" .$row["namn"]." </p>
+                <p class=persuppgRad>  Mail: <br>" .$row["mail"]." </p>
+                <p class=persuppgRad> Adress: <br>" .$row["adress"]." </p>
+                <p class=persuppgRad> Ort: <br>" .$row["ort"]." </p>
+                <p class=persuppgRad> Postnummer: <br>" .$row["postNr"]." </p>      
             </div>";
      
     $conn->close();

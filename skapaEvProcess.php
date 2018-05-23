@@ -10,36 +10,41 @@ if ($conn->connect_error){
     die("Connection failed: " . $conn->connect_error);
 }
 
-$evTitel = mysqli_real_escape_string($conn, trim($_POST['Titel']));
-$evTyp = mysqli_real_escape_string($conn, trim($_POST['cars']));
-$tidFran = mysqli_real_escape_string($conn, trim($_POST['Från']));
-$tidTill = mysqli_real_escape_string($conn, trim($_POST['Till']));
-$evDatum = mysqli_real_escape_string($conn, trim($_POST['Datum']));
-$evJa =  isset($_POST['Ja']);
-$evNej = isset($_POST['Nej']);
-$evBeskrivning = mysqli_real_escape_string($conn, trim($_POST['Beskrivning']));
+    $evTitel = mysqli_real_escape_string($conn, trim($_POST['Titel']));
+    $evTyp = mysqli_real_escape_string($conn, trim($_POST['cars']));
+    $evPlats = mysqli_real_escape_string($conn, trim($_POST['plats']));
+    $tidFran = mysqli_real_escape_string($conn, trim($_POST['Fran']));
+    $tidTill = mysqli_real_escape_string($conn, trim($_POST['Till']));
+    $evDatum = mysqli_real_escape_string($conn, trim($_POST['Datum']));
+    $evJa =  isset($_POST['Ja']);
+    $evNej = isset($_POST['Nej']);
+    $evBeskrivning = mysqli_real_escape_string($conn, trim($_POST['Beskrivning']));
 
-if ((empty($evTitel)) || (empty($evTyp)) || (empty($tidFran)) || (empty($tidTill)) || (empty($evDatum)) || (empty($evBeskrivning))){
-    echo 'OBS! Fyll i alla fält.';
-}
-else if ((!empty($evJa)) && (!empty($evNej)))
-{
-    echo 'OBS! Bara ett alternativ kan väljas.';
-}
-else if ((empty($evJa)) && (empty($evNej)))
-{
-    echo 'Ett alternativ måste väljas.';
-}
+    $timeMatch = "/([0-2][0-9]:([0-5][0-9])/";
+    $dateMatch = "/([1-2][0-9][0-9][0-9]-[0-1][0-9]-[0-3][0-9]/)";
 
-else
-{
-    $sql = "INSERT INTO evenemang (title, typ, fran, till, tid, krav, beskrivning)
-    VALUES ('$evTitel', '$evTyp', '$tidFran', '$tidTill', '$evDatum', '$evJa', '$evNej', '$evBeskrivning')";
+    if (empty($evTitel) || (empty($evPlats)) || (empty($evBeskrivning)) || (empty($tidFran)) || (empty($tidTill)) || (empty($evDatum))
+	{
+		header("Location: SkapaEv.php");
+    }   
+    else if 
+    {
+        if (!preg_match($timeMatch, $tidFran)) || (!preg_match($timeMatch, $tidTill))
+        {
+            header("Location: SkapaEv.php");
+        }
+    }
 
-    echo 'Tack! Ditt evenemang är nu skapat.';    
-    $conn->query($sql);
-}
+    else 
+    {
+        $sql = "INSERT INTO evenemang (titel, typ, plats, fran, till, tid, beskrivning) /* VI MÅSTE LÄGGA TILL KRAV*/
+        VALUES ('$evTitel', '$evTyp', '$evPlats', '$tidFran', '$tidTill', '$evDatum', '$evBeskrivning')";
+        
+        $conn->query($sql);
+    }
 
-$conn->close();
+    $conn->close();
+
+    header('Location: SkapaEv.php');
+
 ?>
-
