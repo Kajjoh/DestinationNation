@@ -358,3 +358,17 @@ h4 {
 #registrationForm{
     text-align: center;
 }
+
+/*minaSidorNation.php*/
+#persuppgMSN
+{
+    border: 0.25em solid #C00000;
+    border-radius: 2em;
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 2%;
+}
+#evKnapp
+{
+    margin-left:45%;
+}
