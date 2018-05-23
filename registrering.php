@@ -10,6 +10,7 @@
 
         <?php
             include('html/sidhuvud.html');
+			include('html/meny2.html');
         ?>
 
         <!-- Här börjar innehållet. -->
