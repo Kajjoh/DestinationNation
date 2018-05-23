@@ -58,8 +58,10 @@
 						<input type="text" placeholder="xxxx-xx-xx" id="Datum" name="Datum"><br>
 
 					<label for="Kravanmälan">Kräver detta evenemang en anmälan?</label><br>
-					<label for="Ja">Ja</label> <label for="Nej">Nej</label><br>
-						<input type="checkbox" value="Ja" name="Ja"><input type="checkbox" value="Nej" name="Nej"><br>
+					<select name="krav">
+						<option value="nej">Nej</option>
+						<option value="ja">Ja</option>
+					</select><br>
 
 					<label for="Beskrivning">Beskrivning</label><br>
 						<textarea id="Beskrivning" name="Beskrivning" placeholder="Beskrivning av evenemang"></textarea><br>
