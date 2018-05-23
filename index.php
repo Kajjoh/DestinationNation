@@ -10,6 +10,7 @@
 
     <?php
         include('html/sidhuvud.html');
+        
     ?>
 
         <h2> Välkommen till DestinationNation!</h2>
