@@ -22,7 +22,7 @@
 			<div class="formular" id="inloggning">
 	
 				<div class="rubrikInloggning">
-					<h2>Logga in som student</h2>
+					<h2>Logga in som nation</h2>
 				</div>	
 
 				<!-- Här börjar formuläret. -->
@@ -44,7 +44,9 @@
 					
 				</form>	
 
-				<p id="ingetKonto">Inget konto? Registrera dig <a href="registrering.php" >här</a></p>
+				<p id="ingetKonto">Inte nation?* Logga in som <a href="inloggning.php" >student</a></p>
+
+                <p class = "kontaktaNation">*Har du inte inloggningsuppgifterna vänligen kontakta din nation.</p>
 				
 			</div>
 	</div>
