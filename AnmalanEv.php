@@ -1,4 +1,6 @@
-
+<?php
+	session_start();
+?>
 <DOCTYPE html>
 <html>
 	
@@ -33,6 +35,13 @@
 						<p class="boxes"></p>
 							<label for="Namn">Namn</label><br>
 								<input type="text" name="Namn"><br>
+								<?php
+									if (isset($_SESSION['fyllinamn']))
+									{
+										echo $_SESSION['fyllinamn'];
+										unset($_SESSION['fyllinamn']);
+									}
+								?>
 						</p>
 				
 						<p class="boxes"></p>

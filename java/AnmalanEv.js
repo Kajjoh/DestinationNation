@@ -11,4 +11,8 @@ function validateAnmalan (event)
 			man preventar default vilket är att skicka data*/
 		alert('Du måste fylla i namn för att kunna anmäla dig till ett evenemang');
 	}
+	else 
+	{
+		alert('Tack för din anmälan');
+	}
 }
