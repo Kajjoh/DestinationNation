@@ -38,22 +38,21 @@ $dbname = "projekt";
     {	
 		session_start();
 		$_SESSION['user'] = "$namnFromDB";
-        header("Location: startsidaStudent.php");
+        header("Location: ../startsidaStudent.php");
     }
     else if (empty($inputmail) || empty($mailFromDB))
     {	
 		session_start();
 		$_SESSION['felmail'] = "Felaktig emailadress";
-        header("Location: inloggning.php");
+        header("Location: ../loginStud.php");
     }
 	else
 	{
 		session_start();
 		$_SESSION['fellosen'] = "Fel lösenord";
-		header("Location: inloggning.php");
+		header("Location: ../loginStud.php");
 	}
              
-   
 
     $conn->close();
 
