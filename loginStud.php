@@ -14,7 +14,7 @@
 
 		<?php
 			include('html/sidhuvud.html');
-			include('html/meny2.html');
+			include('html/menyStudent.html');
 		?>
 
 		<!-- Här börjar innehållet. --> 
@@ -61,6 +61,7 @@
 					</p>
 					
 				</form>	
+				<p id="Felkund">Inte student? Logga in som <a href="loginnat.php" >nation</a></p>
 
 				<p id="ingetKonto">Inget konto? Registrera dig <a href="registrering.php" >här</a></p>
 				
