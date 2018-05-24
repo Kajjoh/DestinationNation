@@ -135,5 +135,5 @@
 		?>
 		
 	</body>
-	
+	 <script src="java/skapaEv.js"></script>	
 </html>
