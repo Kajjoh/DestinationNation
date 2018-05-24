@@ -55,7 +55,28 @@
 		$emailfromdb = $row['mail'];
 	}
 	
-	if (empty($mail) || !preg_match($mailmatch, $mail))
+	if (empty($prnr) || !preg_match($persnrmatch, $prnr))
+	{
+		session_start();
+		$_SESSION['ogiltigtprnr'] = "Ogiltigt personnummer";
+		header("Location: registrering.php");
+	}
+	
+	else if (empty($stid) || !preg_match($studidmatch, $stid))
+	{
+		session_start();
+		$_SESSION['ogiltigtstdid'] = "Ogiltigt student-id";
+		header("Location: registrering.php");
+	}
+	
+	else if (empty($name))
+	{
+		session_start();
+		$_SESSION['tomtnamn'] = "Var god fyll i ditt namn";
+		header("Location: registrering.php");
+	}
+	
+	else if (empty($mail) || !preg_match($mailmatch, $mail))
 	{
 		session_start();
 		$_SESSION['emailmess'] = "Inkorrekt emailadress";
@@ -64,35 +85,42 @@
 	
 	else if ($mail == $emailfromdb)
 	{
-		header("Location: index.php");
+		session_start();
+		$_SESSION['upptagenemail'] = "Emailadressen används redan";
+		header("Location: registrering.php");
 	}
-	else if (empty($name))
-	{
-		header("Location: index.php");
-	}
-	else if (empty($prnr) || !preg_match($persnrmatch, $prnr))
-	{
-		header("Location: index.php");
-	}
-	else if (empty($stid) || !preg_match($studidmatch, $stid))
-	{
-		header("Location: index.php");
-	}
+	
+	 
+	
 	else if (empty($adress))
 	{
-		header("Location: index.php");
+		session_start();
+		$_SESSION['tomadress'] = "Var god fyll i din adress";
+		header("Location: registrering.php");
 	}
 	else if (empty($ort))
 	{
-		header("Location: index.php");
+		session_start();
+		$_SESSION['tomort'] = "Var god fyll i din ort";
+		header("Location: registrering.php");
 	}
 	else if (empty($pstnr) || !preg_match($pstnrmatch, $pstnr))
 	{
-		header("Location: index.php");
+		session_start();
+		$_SESSION['ogiltigtpstnr'] = "Ogiltigt postnummer";
+		header("Location: registrering.php");
 	}
-	else if (empty($losen) || $losen != $upprepalosen)
+	else if (empty($losen))
 	{
-		header("Location: index.php");
+		session_start();
+		$_SESSION['tomtlosen'] = "Var god fyll i lösenord";
+		header("Location: registrering.php");
+	}
+	else if ($losen != $upprepalosen)
+	{
+		session_start();
+		$_SESSION['losenmatch'] = "Lösenorden måste matcha";
+		header("Location: registrering.php");
 	}
 
 	else
