@@ -21,4 +21,68 @@ $dbname = "projekt";
 		header("Location: startsidaStudent.php");
 		
 	}
+	else if (isset($_POST['klubbKnapp']))
+	{
+		session_start();
+		$_SESSION['klubb'] = 'klubb';
+		header("Location: startsidaStudent.php");
+		
+	}
+	else if (isset($_POST['lunchKnapp']))
+	{
+		session_start();
+		$_SESSION['lunch'] = 'lunch';
+		header("Location: startsidaStudent.php");
+		
+	}
+	else if (isset($_POST['frukostKnapp']))
+	{
+		session_start();
+		$_SESSION['frukost'] = 'frukost';
+		header("Location: startsidaStudent.php");
+		
+	}
+	else if (isset($_POST['restaurangKnapp']))
+	{
+		session_start();
+		$_SESSION['restaurang'] = 'restaurang';
+		header("Location: startsidaStudent.php");
+		
+	}
+	else if (isset($_POST['brunchKnapp']))
+	{
+		session_start();
+		$_SESSION['brunch'] = 'brunch';
+		header("Location: startsidaStudent.php");
+		
+	}
+	else if (isset($_POST['slappKnapp']))
+	{
+		session_start();
+		$_SESSION['slapp'] = 'slapp';
+		header("Location: startsidaStudent.php");
+		
+	}
+	else if (isset($_POST['gasqueKnapp']))
+	{
+		session_start();
+		$_SESSION['gasque'] = 'gasque';
+		header("Location: startsidaStudent.php");
+		
+	}
+	else if (isset($_POST['konsertKnapp']))
+	{
+		session_start();
+		$_SESSION['konsert'] = 'konsert';
+		header("Location: startsidaStudent.php");
+		
+	}
+	else if (isset($_POST['ovrigtKnapp']))
+	{
+		session_start();
+		$_SESSION['ovrigt'] = 'ovrigt';
+		header("Location: startsidaStudent.php");
+		
+	}
+?>
 	
