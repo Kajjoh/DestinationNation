@@ -1,3 +1,7 @@
+<?php
+    session_start();          
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -10,6 +14,16 @@
 			include('html/sidhuvud.html');
 			include('html/meny.html');
 		?>
+
+		<div id="sessionMessage">
+			<?php
+				if (isset($_SESSION['nation']))
+				{
+					echo $_SESSION['nation'] ."!";
+				}
+			?>
+        </div>
+		
 		<div id="persuppgMSN">
 			<h4>"Denna nations (sessions) evenemang"</h4>
 			<?php
