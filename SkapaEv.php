@@ -25,7 +25,7 @@
 
 			<!--formular (byta namn på formulären?) har samma struktur som de andra formulären. -->
 			<div class="formular">
-			<form id ="skapaEv" name="skapaEven" method="POST" action="skapaEvProcess.php" onsubmit="return (validateForm())">
+			<form id ="skapaEv" name="skapaEven" method="POST" action="skapaEvProcess.php" onsubmit="return (validateEv())">
 
 					<label for="Titel">Titel</label><br>
 						<input type="text" id="Titel" name="Titel"><br>
@@ -78,5 +78,5 @@
 		?>
 		
 	</body>
-	 <script src="java/main.js"></script>	
+	 <script src="java/skapaEv.js"></script>	
 </html>
