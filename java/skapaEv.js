@@ -10,17 +10,12 @@ function validateEv (event) /*första funktionen*/
 		var Till = document.skapaEven.Till.value.trim();
 		var Datum = document.skapaEven.Datum.value.trim();
 		var Beskrivning = document.skapaEven.Beskrivning.value.trim();
-
+		
 		if(Titel == "" || (Plats == "") || (Fran == "") || (Till == "") || (Datum == "")|| (Beskrivning == "") ) /* Skapar en if-sats och om det är tomma fält skickas en alert ut med information*/
 		{
 			event.preventDefault(); /* om det i if-satsen inte stämmer skickas aldrig data, 
 			man preventar default vilket är att skicka data*/
 			alert('Du måste fylla i fältet för att skapa ett evenemang');
-		}
-		else
-		{
-			alert('Nu är ett evenemang registrerat');
-			header('skapaEv.php');
 		}
 	}
 
