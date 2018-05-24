@@ -16,7 +16,7 @@
 	<?php
 		include('html/sidhuvud.html');
 
-		include('html/meny.html');
+		include('html/menyNation.html');
 	?>
 
 		<!--Här börjar innehållet på sidan-->
