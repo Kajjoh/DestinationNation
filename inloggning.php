@@ -30,7 +30,7 @@
 				</div>	
 
 				<!-- Här börjar formuläret. -->
-				<form name="loggain" method="POST" action="login-process.php">
+				<form id ="inlogg" name="loggain" method="POST" action="login-process.php">
 		
 					<p class="boxes">
 						<label for="email">Email:<br></label>
@@ -72,5 +72,6 @@
 			?>
 	    	  
 	</body>
+	<script src="java/inloggning.js"></script>	
 </html>	
 	  
