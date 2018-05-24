@@ -29,8 +29,10 @@ $emailErr = "";*/
 
 if(empty($person))
 {
-    //echo 'OBS! Fyll i ditt för- och efternamn.';
-    die();
+    session_start();
+    $_SESSION['fyllinamn'] = "Fyll i ditt namn";
+    header("Location: AnmalanEv.php");
+   // die();
 } 
 
 else
