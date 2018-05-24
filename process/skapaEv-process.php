@@ -29,53 +29,53 @@ if ($conn->connect_error){
     if ($evTitel=="")
     {
         $_SESSION['felmeddelande'] = "Du måste fylla i alla fält!";
-        header("Location: SkapaEv.php");
+        header("Location: ../skapaEv.php");
     }
     else if ($evTitel=="")
     {
         $_SESSION['felmeddelande'] = "Du måste fylla i alla fält!";
-        header("Location: SkapaEv.php");
+        header("Location: ../skapaEv.php");
 
     }
     else if ($evPlats=="")
     {
         $_SESSION['felmeddelande'] = "Du måste fylla i alla fält!";
-        header("Location: SkapaEv.php");
+        header("Location: ../skapaEv.php");
     }
     else if ($evBeskrivning=="") 
     {
         $_SESSION['felmeddelande'] = "Du måste fylla i alla fält!";
-        header("Location: SkapaEv.php");
+        header("Location: ../skapaEv.php");
     }
     else if ($tidFran=="")
     {
         $_SESSION['felmeddelande'] = "Du måste fylla i alla fält!";
-        header("Location: SkapaEv.php");
+        header("Location: ../skapaEv.php");
     }
     else if ($tidTill=="") 
     {
         $_SESSION['felmeddelande'] = "Du måste fylla i alla fält!";
-        header("Location: SkapaEv.php");
+        header("Location: ../skapaEv.php");
     }
     else if ($evDatum=="")
     {
         $_SESSION['felmeddelande'] = "Du måste fylla i alla fält!";
-        header("Location: SkapaEv.php");
+        header("Location: ../skapaEv.php");
     }
     else if (!(preg_match($timeMatch, $tidFran)))
     {
         $_SESSION['felTid'] = "Tiden ska skrivas som 00:00.";
-        header("Location: SkapaEv.php");
+        header("Location: ../skapaEv.php");
     }
     else if (!(preg_match($timeMatch, $tidTill)))
     {
         $_SESSION['felTid'] = "Tiden ska skrivas som 00:00.";
-        header("Location: SkapaEv.php");
+        header("Location: ../skapaEv.php");
     }    
     else if (!(preg_match($dateMatch, $evDatum)))
     {
         $_SESSION['felDatum'] = "Datumet ska skrivas som 2018-01-01.";
-        header("Location: SkapaEv.php");
+        header("Location: ../skapaEv.php");
     }
     else 
     {
@@ -88,7 +88,7 @@ if ($conn->connect_error){
 
     $conn->close();
 
-    header('Location: SkapaEv.php');
+    header('Location: ../skapaEv.php');
 
 ?>
 
