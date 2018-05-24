@@ -4,6 +4,19 @@
 	{
 		echo "Välkommen: {$_SESSION['user']}";
 	}
+	$servername = "localhost";
+	$dbusername = "root";
+	$dbpassword = "";
+	$dbname = "projekt";
+
+    // Create connection to database
+    $conn = new mysqli($servername, $dbusername, $dbpassword, $dbname);
+
+    // Check connection with database
+    if ($conn->connect_error) 
+    {
+        die("Connection failed: " . $conn->connect_error);
+    }
 	
 ?>
 <!DOCTYPE html>
@@ -42,9 +55,19 @@
                     <li id="aktiviteter"><a id="attributAkt">Övrigt</a></li>
                 </ul>
             </div>
-        </div>    
-
-        <div class ="ssFlode">
+        </div> 
+		<div align="center">	
+		<?php
+			$valjevenemang = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang";
+			$hamtaevenemang = mysqli_query($conn, $valjevenemang);
+			while ($row = mysqli_fetch_assoc($hamtaevenemang));
+			{
+				echo "titel: ".$row['titel'];
+			}
+			
+		?>
+		</div>
+        <!--<div class ="ssFlode">
             <div class = "innerSSflode">
                 <h3 id = "ssRubrik">Evenemang</h3>
 
@@ -84,7 +107,7 @@
                 </div>
 
             </div>
-        </div>
+        </div>-->
 
         <!--Denna div (nationsMeny) listar alla nationer vertikalt för filtrering.-->
         <div class="bakgrundmeny">
