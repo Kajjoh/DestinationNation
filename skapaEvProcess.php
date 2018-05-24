@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -21,47 +24,63 @@ if ($conn->connect_error){
 
     $timeMatch = "/^([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/";
     $dateMatch = "/([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/";
+    $nation = $_SESSION['nation'];
 
     if ($evTitel=="")
     {
+        $_SESSION['felmeddelande'] = "Du måste fylla i alla fält!";
         header("Location: SkapaEv.php");
+    }
+    else if ($evTitel=="")
+    {
+        $_SESSION['felmeddelande'] = "Du måste fylla i alla fält!";
+        header("Location: SkapaEv.php");
+
     }
     else if ($evPlats=="")
     {
+        $_SESSION['felmeddelande'] = "Du måste fylla i alla fält!";
         header("Location: SkapaEv.php");
     }
     else if ($evBeskrivning=="") 
     {
+        $_SESSION['felmeddelande'] = "Du måste fylla i alla fält!";
         header("Location: SkapaEv.php");
     }
     else if ($tidFran=="")
     {
+        $_SESSION['felmeddelande'] = "Du måste fylla i alla fält!";
         header("Location: SkapaEv.php");
     }
     else if ($tidTill=="") 
     {
+        $_SESSION['felmeddelande'] = "Du måste fylla i alla fält!";
         header("Location: SkapaEv.php");
     }
     else if ($evDatum=="")
     {
+        $_SESSION['felmeddelande'] = "Du måste fylla i alla fält!";
         header("Location: SkapaEv.php");
     }
     else if (!(preg_match($timeMatch, $tidFran)))
     {
+        $_SESSION['felTid'] = "Tiden ska skrivas som 00:00.";
         header("Location: SkapaEv.php");
     }
     else if (!(preg_match($timeMatch, $tidTill)))
     {
+        $_SESSION['felTid'] = "Tiden ska skrivas som 00:00.";
         header("Location: SkapaEv.php");
     }    
     else if (!(preg_match($dateMatch, $evDatum)))
     {
+        $_SESSION['felDatum'] = "Datumet ska skrivas som 2018-01-01.";
         header("Location: SkapaEv.php");
     }
-    else
+    else 
     {
-        $sql = "INSERT INTO evenemang (titel, typ, plats, fran, till, tid, krav, beskrivning) 
-        VALUES ('$evTitel', '$evTyp', '$evPlats', '$tidFran', '$tidTill', '$evDatum', '$evKrav', '$evBeskrivning')";
+        $sql = "INSERT INTO evenemang (titel, typ, plats, fran, till, tid, krav, beskrivning, nation) 
+        VALUES ('$evTitel', '$evTyp', '$evPlats', '$tidFran', '$tidTill', '$evDatum', '$evKrav', '$evBeskrivning', '$nation')";
                 
         $conn->query($sql);
     }
@@ -72,4 +91,7 @@ if ($conn->connect_error){
     header('Location: SkapaEv.php');
 
 ?>
+
+
+<!--  -->
 

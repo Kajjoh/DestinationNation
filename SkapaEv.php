@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 
 <!DOCTYPE html>
 <html>
@@ -29,6 +32,15 @@
 
 					<label for="Titel">Titel</label><br>
 						<input type="text" id="Titel" name="Titel"><br>
+						<div class="errorMessage">
+							<?php
+							if (isset($_SESSION['felmeddelande']))
+							{
+								echo $_SESSION['felmeddelande'];
+								unset ($_SESSION['felmeddelande']);
+							}
+							?>
+                    	</div><br>
 
 					<label for="Typ">Typ</label><br>
 					<select name="cars">
@@ -46,16 +58,52 @@
 
 					<label for="plats">Plats</label><br>
 						<input type="text" id="plats" name="plats"><br>
+						<div class="errorMessage">
+							<?php
+							if (isset($_SESSION['felmeddelande']))
+							{
+								echo $_SESSION['felmeddelande'];
+								unset ($_SESSION['felmeddelande']);
+							}
+							?>
+                    	</div><br>
 
 					Tid & Datum<br>
 					<label for="Fran">Från</label><br>
 						<input type="text" placeholder="--:--" id="Fran" name="Fran"><br>
+						<div class="errorMessage">
+							<?php
+							if (isset($_SESSION['felTid']))
+							{
+								echo $_SESSION['felTid'];
+								unset ($_SESSION['felTid']);
+							}
+							?>
+                    	</div><br>
 					
 					<label for="Till">Till</label><br>
 						<input type="text" placeholder="--:--" id="Till" name="Till"><br>
+						<div class="errorMessage">
+							<?php
+							if (isset($_SESSION['felTid']))
+							{
+								echo $_SESSION['felTid'];
+								unset ($_SESSION['felTid']);
+							}
+							?>
+                    	</div><br>
 					
 					<label for="Datum">Datum</label><br>
 						<input type="text" placeholder="xxxx-xx-xx" id="Datum" name="Datum"><br>
+						<div class="errorMessage">
+							<?php
+							if (isset($_SESSION['felDatum']))
+							{
+								echo $_SESSION['felDatum'];
+								unset ($_SESSION['felDatum']);
+							}
+							?>
+                    	</div><br>
 
 					<label for="Kravanmälan">Kräver detta evenemang en anmälan?</label><br>
 					<select name="krav">
@@ -65,6 +113,15 @@
 
 					<label for="Beskrivning">Beskrivning</label><br>
 						<textarea id="Beskrivning" name="Beskrivning" placeholder="Beskrivning av evenemang"></textarea><br>
+						<div class="errorMessage">
+							<?php
+							if (isset($_SESSION['felmeddelande']))
+							{
+								echo $_SESSION['felmeddelande'];
+								unset ($_SESSION['felmeddelande']);
+							}
+							?>
+                    	</div><br>
 
 					<input type="submit" value="Skapa evenemang!" id="skapaEvBtn">
 				
@@ -78,5 +135,5 @@
 		?>
 		
 	</body>
-	 <script src="java/skapaEv.js"></script>	
+	
 </html>

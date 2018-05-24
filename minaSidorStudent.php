@@ -12,10 +12,7 @@
 			include('html/sidhuvud.html');
 			include('html/meny.html');
 		?>
-				
-		<!-- Här börjar innehållet.  -->
-		<!-- Informationen som kommer ligga under personuppgifter till vänster på sidan. -->		
-		
+						
 		<div id="persuppgMSS">
 			<h4>Personuppgifter</h4>
 
