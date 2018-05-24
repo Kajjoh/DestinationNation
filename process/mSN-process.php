@@ -20,7 +20,7 @@ $dbname = "projekt";
                 <br> Typ: " . $row["typ"]. "
                 <br> Från: " .$row["fran"]."
                 <br> Till: " .$row["till"]."
-                <br> Tid: " .$row["tid"]."
+                <br> Tid: " .$row["datum"]."
                 <br> Krav: " .$row["krav"]."
                 <br> Beskrivning: " .$row["beskrivning"]."       
             </div>";
