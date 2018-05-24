@@ -28,7 +28,7 @@
 
 			<!--formular (byta namn på formulären?) har samma struktur som de andra formulären. -->
 			<div class="formular">
-			<form id ="skapaEv" name="skapaEven" method="POST" action="skapaEvProcess.php" onsubmit="return (validateEv())">
+			<form id ="skapaEv" name="skapaEven" method="POST" action="process/skapaEv-process.php" onsubmit="return (validateEv())">
 
 					<label for="Titel">Titel</label><br>
 						<input type="text" id="Titel" name="Titel"><br>
