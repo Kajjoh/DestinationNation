@@ -22,10 +22,11 @@ $matpref = ($_POST['mat']);
 $drickpref = ($_POST['dryck']);
 $allergi = ($_POST['Allergi']);
 $kompis = ($_POST['Sallskap']);
-/*$personErr = "";
-$emailErr = "";*/
+
 
 //Tar hand om fallen för fält som inte får vara tomma. 
+$anvMail =  $_SESSION['student'];
+
 
 if(empty($person))
 {
@@ -38,7 +39,7 @@ if(empty($person))
 else
 {
     $sql = "INSERT INTO anmalan (namn, mail, kon, mat, allergi, dryck, sallskap)
-    VALUES ('$person', '$email', '$kon', '$matpref', '$allergi', '$drickpref', '$kompis')";
+    VALUES ('$person', '$anvMail', '$kon', '$matpref', '$allergi', '$drickpref', '$kompis')";
     $conn->query($sql);
     header("Location: startsidaStudent.php");
     
