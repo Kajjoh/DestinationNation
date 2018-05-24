@@ -27,7 +27,7 @@
                 	<!--onsubmit="return (validateForm()-->
 
                     <label for="namn">Personnummer</label><br>
-                        <input type="text" placeholder="XXXXXX-XXXX" name="prnr" id="prnr"><br>
+                        <input class="regFält" type="text" placeholder="XXXXXX-XXXX" name="prnr" id="prnr"><br>
 						<?php
 							if (isset($_SESSION['ogiltigtprnr']))
 							{
@@ -37,7 +37,7 @@
 						?><br>
             
                     <label for="namn">Student-id</label><br>
-                        <input type="text" placeholder="XXXXXXXX" name="stid" id="stid"><br>
+                        <input class="regFält" type="text" placeholder="XXXXXXXX" name="stid" id="stid"><br>
 						<?php
 							if (isset($_SESSION['ogiltigtstdid']))
 							{
@@ -47,7 +47,7 @@
 						?><br>
 
                     <label for="namn">Namn</label><br>
-                        <input type="text" placeholder="Ditt namn..." name="namn" id="namn"><br>
+                        <input class="regFält" type="text" placeholder="Ditt namn..." name="namn" id="namn"><br>
 						<?php
 							if (isset($_SESSION['tomtnamn']))
 							{
@@ -57,7 +57,7 @@
 						?><br>
 
                     <label for="namn">E-mail</label><br>
-                        <input type="text" placeholder="email@exempel.com" name="mail" id="mail"><br>
+                        <input class="regFält" type="text" placeholder="email@exempel.com" name="mail" id="mail"><br>
 						<?php
 							if (isset($_SESSION['emailmess']))
 							{
@@ -72,7 +72,7 @@
 						?><br>
 
                     <label for="namn">Adress</label><br>
-                        <input type="text" placeholder="Din adress..." name="adress" id="adress"><br>
+                        <input class="regFält" type="text" placeholder="Din adress..." name="adress" id="adress"><br>
 						<?php
 							if (isset($_SESSION['tomadress']))
 							{
@@ -82,7 +82,7 @@
 						?><br>
 
                     <label for="namn">Ort</label><br>
-                        <input type="text" placeholder="Din ort..." name="ort" id="ort"><br>
+                        <input class="regFält" type="text" placeholder="Din ort..." name="ort" id="ort"><br>
 						<?php
 							if (isset($_SESSION['tomort']))
 							{
@@ -92,7 +92,7 @@
 						?><br>
 
                     <label for="namn">Postnummer</label><br>
-                        <input type="text" placeholder="XXXXX" name="pstnr" id="pstnr"><br>
+                        <input class="regFält" type="text" placeholder="XXXXX" name="pstnr" id="pstnr"><br>
 						<?php
 							if (isset($_SESSION['ogiltigtpstnr']))
 							{
@@ -102,7 +102,7 @@
 						?><br>
 
                     <label for="losen">Lösenord</label><br>
-                            <input type="password" placeholder="******" name="losen" id="losen"><br>
+                            <input class="regFält" type="password" placeholder="******" name="losen" id="losen"><br>
 							<?php
 							if (isset($_SESSION['tomtlosen']))
 							{
@@ -112,7 +112,7 @@
 						?><br>
                     
                     <label for="upprepalosen">Upprepa lösenord</label><br>
-                            <input type="password" placeholder="******" name="upprepalosen" id="upprepalosen"><br>
+                            <input class="regFält" type="password" placeholder="******" name="upprepalosen" id="upprepalosen"><br>
 							<?php
 							if (isset($_SESSION['losenmatch']))
 							{

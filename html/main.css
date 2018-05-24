@@ -404,6 +404,19 @@ h4 {
 
 #registrationForm{
     text-align: center;
+    margin: 5%;
+}
+
+.regFält{
+    width: 30%;
+    height: 250%;
+    padding: 1%;
+}
+
+#submit{
+    width: 25%;
+    height: 250%;
+    padding: 1.5%;
 }
 
 /*minaSidorNation.php*/
