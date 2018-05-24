@@ -59,68 +59,66 @@
 	{
 		session_start();
 		$_SESSION['ogiltigtprnr'] = "Ogiltigt personnummer";
-		header("Location: registrering.php");
+		header("Location: ../registrering.php");
 	}
 	
 	else if (empty($stid) || !preg_match($studidmatch, $stid))
 	{
 		session_start();
 		$_SESSION['ogiltigtstdid'] = "Ogiltigt student-id";
-		header("Location: registrering.php");
+		header("Location: ../registrering.php");
 	}
 	
 	else if (empty($name))
 	{
 		session_start();
 		$_SESSION['tomtnamn'] = "Var god fyll i ditt namn";
-		header("Location: registrering.php");
+		header("Location: ../registrering.php");
 	}
 	
 	else if (empty($mail) || !preg_match($mailmatch, $mail))
 	{
 		session_start();
 		$_SESSION['emailmess'] = "Inkorrekt emailadress";
-		header("Location: registrering.php");
+		header("Location: ../registrering.php");
 	}
 	
 	else if ($mail == $emailfromdb)
 	{
 		session_start();
 		$_SESSION['upptagenemail'] = "Emailadressen används redan";
-		header("Location: registrering.php");
+		header("Location: ../registrering.php");
 	}
-	
-	 
 	
 	else if (empty($adress))
 	{
 		session_start();
 		$_SESSION['tomadress'] = "Var god fyll i din adress";
-		header("Location: registrering.php");
+		header("Location: ../registrering.php");
 	}
 	else if (empty($ort))
 	{
 		session_start();
 		$_SESSION['tomort'] = "Var god fyll i din ort";
-		header("Location: registrering.php");
+		header("Location: ../registrering.php");
 	}
 	else if (empty($pstnr) || !preg_match($pstnrmatch, $pstnr))
 	{
 		session_start();
 		$_SESSION['ogiltigtpstnr'] = "Ogiltigt postnummer";
-		header("Location: registrering.php");
+		header("Location: ../registrering.php");
 	}
 	else if (empty($losen))
 	{
 		session_start();
 		$_SESSION['tomtlosen'] = "Var god fyll i lösenord";
-		header("Location: registrering.php");
+		header("Location: ../registrering.php");
 	}
 	else if ($losen != $upprepalosen)
 	{
 		session_start();
 		$_SESSION['losenmatch'] = "Lösenorden måste matcha";
-		header("Location: registrering.php");
+		header("Location: ../registrering.php");
 	}
 
 	else
@@ -138,6 +136,6 @@
 		
 	
 	$conn->close();	
-	include 'inloggning.php';
+	include '../inloggning.php';
 	
 ?>

@@ -26,12 +26,12 @@ $dbname = "projekt";
 
     if (($inputmail=="") || ($inputpassword==""))
         {
-            header('Location: ../inloggningNation.php');
+            header('Location: ../loginNat.php');
         }
     else if (mysqli_num_rows($result)<1) 
     {
         $_SESSION['noUser'] = "Användaren finns inte registrerad.";
-        header("Location: ../inloggningNation.php");
+        header("Location: ../loginNat.php");
     }
     else
     {
@@ -46,7 +46,7 @@ $dbname = "projekt";
             else
             {
                 $_SESSION['password'] = "Fel lösenord.";
-                header("Location: ../inloggningNation.php");
+                header("Location: ../loginNat.php");
             }
 
         }
