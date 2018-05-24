@@ -72,6 +72,10 @@ h4 {
 	
 }	
 
+.errorMessage {
+    color: red;
+}
+
 /* Det här är vår sidfot. */
 #sidfot {
     text-align: center;
@@ -311,7 +315,7 @@ h4 {
 }
 
 .ssFlode{
-    border: solid #C00000;
+    border: solid white;
     text-align: center;
     width: 85% ;
     margin-left: auto ;
@@ -322,7 +326,7 @@ h4 {
 
 .innerSSflode{
     border: solid #C00000;
-    margin: 5%;
+    margin: 4%;
     height: 500px;
     border-radius: 2em;
 }
@@ -330,7 +334,7 @@ h4 {
 .event{
     border: solid black;
     border-radius: 2em;
-    margin: 5%;
+    margin: 4%;
 
 }
 
@@ -372,4 +376,9 @@ h4 {
 #evKnapp
 {
     margin-left:45%;
+}
+
+#sessionMessage {
+    font-size: 2em;
+    text-align: center;
 }
