@@ -12,15 +12,18 @@
 
     <?php
         include('html/sidhuvud.html');
+		include('html/menyNation.html');
     ?>
 
         
         
-            
+        <form id="skapaEvNation" action="SkapaEv.php">
+			<input type="submit" id="skapaEvKnapp" id value="Skapa Evenemang"/>
+		<form/>	
 
-        <div class ="ssFlode">
-            <div class = "innerSSflode">
-                <h3 id = "ssRubrik">Evenemang</h3>
+        <div class ="startnationFlode">
+            <div class = "innernationflode">
+                <h3 id = "startnatioRubrik">Evenemang</h3>
 
                 <div class = "event">
                     <p>
