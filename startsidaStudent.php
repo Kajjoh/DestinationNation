@@ -60,9 +60,17 @@
 		<?php
 			$valjevenemang = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang";
 			$hamtaevenemang = mysqli_query($conn, $valjevenemang);
-			while ($row = mysqli_fetch_assoc($hamtaevenemang));
+			while ($row = mysqli_fetch_assoc($hamtaevenemang))
 			{
 				echo "titel: ".$row['titel'];
+				echo "typ: ".$row['typ'];
+				echo "från: ".$row['fran'];
+				echo "till: ".$row['till'];
+				echo "datum: ".$row['datum'];
+				echo "krav: ".$row['krav'];
+				echo "beskrivning: ".$row['beskrivning'];
+				echo "plats: ".$row['plats'];
+				echo "nation: ".$row['nation'];
 			}
 			
 		?>
