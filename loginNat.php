@@ -32,10 +32,10 @@
 				<!-- Här börjar formuläret. -->
 				<form name="loggain" method="POST" action="process/loginNat-process.php">
 		
-					<p class="boxes">
+					<div class="loginBox">
 						<label for="email">Mejladress:<br></label>
 						<input type="text" placeholder="nation@exempel.com" name="email" id="email">
-					</p>
+					</div>
 					<div class="errorMessage">
                         <?php
                         if (isset($_SESSION['noUser']))
@@ -46,10 +46,10 @@
                         ?>
                     </div><br>	
 					
-					<p class="boxes">
+					<div class="loginBox">
 						<label for="pw">Lösenord:<br></label>
 						<input type="password" placeholder="..." name="pw" id="pw">
-					</p>
+					</div>
 					<div class="errorMessage">
                         <?php
                             if (isset($_SESSION['password']))

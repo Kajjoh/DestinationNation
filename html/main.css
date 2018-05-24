@@ -212,11 +212,20 @@ h4 {
 }
 #personnummer {
 	width: 50%;
-	height: 250%;
-}
-#pw {
-	width: 50%;
     height: 250%;
+    padding: 1%;
+}
+
+#email{
+    width: 30%;
+    height: 250%;
+    padding: 1%;
+}
+
+#pw {
+	width: 30%;
+    height: 250%;
+    padding: 1%;
 }
 .rubrikInloggning {
 	text-align: center;
@@ -227,9 +236,9 @@ h4 {
 }
 #logInBtn {
 	width: 15%;
-	height: 30%;
+    height: 30%;
+    padding: 1%;
 }
-
 
 /*---------------------------------------------------------------------------------*/
 /* OMOSS.HTML*/
