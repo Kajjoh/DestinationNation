@@ -71,7 +71,6 @@
                 <p class = "kontaktaNation">*Har du inte inloggningsuppgifterna vänligen kontakta din nation.</p>
 				
 			</div>
-	</div>
 
 			<?php
 				include('html/sidfot.html');
