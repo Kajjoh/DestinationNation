@@ -53,6 +53,7 @@ $dbname = "projekt";
 		header("Location: ../loginStud.php");
 	}
              
+    $_SESSION['student'] = "$mailFromDB";
 
     $conn->close();
 
