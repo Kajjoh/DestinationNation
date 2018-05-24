@@ -27,20 +27,22 @@
         
         
           <!--denna div (filter) listar horisontellt alla aktiviteter för nationer för filtrering.-->
-        <div id="filter">
-            <ul id="filterlista">
-                <li id="aktiviteter"><a id="attributAkt">Pub</a></li>
-                <li id="aktiviteter"><a id="attributAkt">Klubb</a></li>
-                <li id="aktiviteter"><a id="attributAkt">Lunch</a></li>
-                <li id="aktiviteter"><a id="attributAkt">Frukost</a></li>
-                <li id="aktiviteter"><a id="attributAkt">Restaurang</a></li>
-                <li id="aktiviteter"><a id="attributAkt">Brunch</a></li>
-                <li id="aktiviteter"><a id="attributAkt">Släpp</a></li>
-                <li id="aktiviteter"><a id="attributAkt">Gasque</a></li>
-                <li id="aktiviteter"><a id="attributAkt">Konsert</a></li>
-                <li id="aktiviteter"><a id="attributAkt">Övrigt</a></li>
-            </ul>
-        </div>
+        <div class="backgrundMeny">   
+          <div id="filter">
+                <ul id="filterlista">
+                    <li id="aktiviteter"><a id="attributAkt">Pub</a></li>
+                    <li id="aktiviteter"><a id="attributAkt">Klubb</a></li>
+                    <li id="aktiviteter"><a id="attributAkt">Lunch</a></li>
+                    <li id="aktiviteter"><a id="attributAkt">Frukost</a></li>
+                    <li id="aktiviteter"><a id="attributAkt">Restaurang</a></li>
+                    <li id="aktiviteter"><a id="attributAkt">Brunch</a></li>
+                    <li id="aktiviteter"><a id="attributAkt">Släpp</a></li>
+                    <li id="aktiviteter"><a id="attributAkt">Gasque</a></li>
+                    <li id="aktiviteter"><a id="attributAkt">Konsert</a></li>
+                    <li id="aktiviteter"><a id="attributAkt">Övrigt</a></li>
+                </ul>
+            </div>
+        </div>    
 
         <div class ="ssFlode">
             <div class = "innerSSflode">
