@@ -11,7 +11,7 @@
 		<?php
 			include('html/sidhuvud.html');
 
-			include('html/meny.html');
+			include('html/menyStudent.html');
 		?>
 				
 		<!-- Här börjar innehållssidan. --> 

@@ -10,7 +10,7 @@
 	
 		<?php
 			include('html/sidhuvud.html');
-			include('html/meny.html');
+			include('html/menyStudent.html');
 		?>
 						
 		<div id="persuppgMSS">

@@ -43,36 +43,63 @@
         <div class="backgrundMeny">   
           <div id="filter">
                 <ul id="filterlista">
-                    <li id="aktiviteter"><a id="attributAkt">Pub</a></li>
-                    <li id="aktiviteter"><a id="attributAkt">Klubb</a></li>
-                    <li id="aktiviteter"><a id="attributAkt">Lunch</a></li>
-                    <li id="aktiviteter"><a id="attributAkt">Frukost</a></li>
-                    <li id="aktiviteter"><a id="attributAkt">Restaurang</a></li>
-                    <li id="aktiviteter"><a id="attributAkt">Brunch</a></li>
-                    <li id="aktiviteter"><a id="attributAkt">Släpp</a></li>
-                    <li id="aktiviteter"><a id="attributAkt">Gasque</a></li>
-                    <li id="aktiviteter"><a id="attributAkt">Konsert</a></li>
-                    <li id="aktiviteter"><a id="attributAkt">Övrigt</a></li>
+					<form method="POST" action="filtreraEvenemang.php">
+                    <li id="aktiviteter"><input type="submit" name="pubKnapp" id="pubKnapp" value="Pub"></li>
+                    <li id="aktiviteter"><input type="submit" name="klubbKnapp" id="klubbKnapp" value="Klubb"></li>
+                    <li id="aktiviteter"><input type="submit" name="lunchknapp" id="lunchknapp" value ="Lunch"></li>
+                    <li id="aktiviteter"><input type="submit" name="frukostknapp" id="frukostknapp" value="Frukost"></li>
+                    <li id="aktiviteter"><a id="attributAkt"><button>Restaurang</button></a></li>
+                    <li id="aktiviteter"><a id="attributAkt"><button>Brunch</button></a></li>
+                    <li id="aktiviteter"><a id="attributAkt"><button>Släpp</button></a></li>
+                    <li id="aktiviteter"><a id="attributAkt"><button>Gasque</button></a></li>
+                    <li id="aktiviteter"><a id="attributAkt"><button>Konsert</button></a></li>
+                    <li id="aktiviteter"><a id="attributAkt"><button>Övrigt</button></a></li>
+					</form>
                 </ul>
             </div>
         </div> 
 		<div align="center">	
 		<?php
-			$valjevenemang = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang";
-			$hamtaevenemang = mysqli_query($conn, $valjevenemang);
-			while ($row = mysqli_fetch_assoc($hamtaevenemang))
+			if (!isset($_SESSION['pub']))
 			{
-				echo "titel: ".$row['titel'];
-				echo "typ: ".$row['typ'];
-				echo "från: ".$row['fran'];
-				echo "till: ".$row['till'];
-				echo "datum: ".$row['datum'];
-				echo "krav: ".$row['krav'];
-				echo "beskrivning: ".$row['beskrivning'];
-				echo "plats: ".$row['plats'];
-				echo "nation: ".$row['nation'];
+				$valjevenemang = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang";
+				$hamtaevenemang = mysqli_query($conn, $valjevenemang);
+				while ($row = mysqli_fetch_assoc($hamtaevenemang))
+				{
+					echo "titel: ".$row['titel'];
+					echo "typ: ".$row['typ'];
+					echo "från: ".$row['fran'];
+					echo "till: ".$row['till'];
+					echo "datum: ".$row['datum'];
+					echo "krav: ".$row['krav'];
+					echo "beskrivning: ".$row['beskrivning'];
+					echo "plats: ".$row['plats'];
+					echo "nation: ".$row['nation'];
+				
+				}
 			}
 			
+			if (isset($_SESSION['pub']))
+			{
+				
+				$valjpub = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE typ = 'Pub'";
+				$hamtapub = mysqli_query($conn, $valjpub);
+				while ($row = mysqli_fetch_assoc($hamtapub))
+				{
+					echo "titel: ".$row['titel'];
+					echo "typ: ".$row['typ'];
+					echo "från: ".$row['fran'];
+					echo "till: ".$row['till'];
+					echo "datum: ".$row['datum'];
+					echo "krav: ".$row['krav'];
+					echo "beskrivning: ".$row['beskrivning'];
+					echo "plats: ".$row['plats'];
+					echo "nation: ".$row['nation'];
+					unset($_SESSION['pub']);
+					
+				}
+				
+			}
 		?>
 		</div>
         <!--<div class ="ssFlode">
