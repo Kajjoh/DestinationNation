@@ -35,11 +35,6 @@
 								<input type="text" name="Namn"><br>
 						</p>
 				
-						
-						<label for="Mail">E-post</label><br>
-							<input type="text" name="Mail"><br>
-						
-				
 						<p class="boxes"></p>
 							<label for="Kön">Kön</label><br>
 							<select name="kon">
