@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -26,17 +30,35 @@
 				</div>	
 
 				<!-- Här börjar formuläret. -->
-				<form name="loggain" method="POST" action="process-data.php">
+				<form name="loggain" method="POST" action="loginNation-process.php">
 		
 					<p class="boxes">
-						<label for="prsnummer">Personnummer:<br></label>
-						<input type="text" placeholder="ÅÅMMDD-XXXX" name="personnummer" id="personnummer">
-					</p>	
+						<label for="email">Mejladress:<br></label>
+						<input type="text" placeholder="nation@exempel.com" name="email" id="email">
+					</p>
+					<div class="errorMessage">
+                        <?php
+                        if (isset($_SESSION['noUser']))
+                        {
+                            echo $_SESSION['noUser'];
+                            unset ($_SESSION['noUser']);
+                        }
+                        ?>
+                    </div><br>	
 					
 					<p class="boxes">
-						<label for="passwrd">Lösenord:<br></label>
-						<input type="password" placeholder="..." name="pword" id="pw">
+						<label for="pw">Lösenord:<br></label>
+						<input type="password" placeholder="..." name="pw" id="pw">
 					</p>
+					<div class="errorMessage">
+                        <?php
+                            if (isset($_SESSION['password']))
+                            {
+                                echo $_SESSION['password'];
+                                unset ($_SESSION['password']);
+                            }
+                        ?>
+                    </div><br>
 					
 					<p>
 						<input type="submit" value="Logga In" id="logInBtn" class="button">

@@ -25,7 +25,6 @@
         </div>
 		
 		<div id="persuppgMSN">
-			<h4>"Denna nations (sessions) evenemang"</h4>
 			<?php
 				include('mSN-process.php');
 			?>
@@ -35,7 +34,6 @@
 		<?php
 			include('html/sidfot.html');
 		?>
-		
-	    <script src="javaMeny.js"></script>	
+
 	</body>
 </html>
