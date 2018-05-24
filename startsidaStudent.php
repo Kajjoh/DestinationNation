@@ -50,21 +50,21 @@
 					<form method="POST" action="filtreraEvenemang.php">
                     <li id="aktiviteter"><input type="submit" name="pubKnapp" id="pubKnapp" value="Pub"></li>
                     <li id="aktiviteter"><input type="submit" name="klubbKnapp" id="klubbKnapp" value="Klubb"></li>
-                    <li id="aktiviteter"><input type="submit" name="lunchknapp" id="lunchknapp" value ="Lunch"></li>
-                    <li id="aktiviteter"><input type="submit" name="frukostknapp" id="frukostknapp" value="Frukost"></li>
-                    <li id="aktiviteter"><a id="attributAkt"><button>Restaurang</button></a></li>
-                    <li id="aktiviteter"><a id="attributAkt"><button>Brunch</button></a></li>
-                    <li id="aktiviteter"><a id="attributAkt"><button>Släpp</button></a></li>
-                    <li id="aktiviteter"><a id="attributAkt"><button>Gasque</button></a></li>
-                    <li id="aktiviteter"><a id="attributAkt"><button>Konsert</button></a></li>
-                    <li id="aktiviteter"><a id="attributAkt"><button>Övrigt</button></a></li>
+                    <li id="aktiviteter"><input type="submit" name="lunchKnapp" id="lunchKnapp" value ="Lunch"></li>
+                    <li id="aktiviteter"><input type="submit" name="frukostKnapp" id="frukostKnapp" value="Frukost"></li>
+                    <li id="aktiviteter"><input type="submit" name="restaurangKnapp" id="restaurangKnapp" value="Restaurang"></li>
+                    <li id="aktiviteter"><input type="submit" name="brunchKnapp" id="brunchKnapp" value="Brunch"></li>
+                    <li id="aktiviteter"><input type="submit" name="slappKnapp" id="slappKnapp" value="Släpp"></li>
+                    <li id="aktiviteter"><input type="submit" name="gasqueKnapp" id="gasqueKnapp" value="Gasque"></li>
+                    <li id="aktiviteter"><input type="submit" name="konsertKnapp" id="konsertKnapp" value="Konsert"></li>
+                    <li id="aktiviteter"><input type="submit" name="ovrigtKnapp" id="ovrigtKnapp" value="Övrigt"></li>
 					</form>
                 </ul>
             </div>
         </div> 
 		<div align="center">	
 		<?php
-			if (!isset($_SESSION['pub']))
+			if (!isset($_SESSION['pub']) && !isset($_SESSION['klubb']) && !isset($_SESSION['lunch']) && !isset($_SESSION['frukost']) && !isset($_SESSION['restaurang']) && !isset($_SESSION['brunch']) && !isset($_SESSION['slapp']) && !isset($_SESSION['gasque']) && !isset($_SESSION['konsert']) && !isset($_SESSION['ovrigt']))
 			{
 				$valjevenemang = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang";
 				$hamtaevenemang = mysqli_query($conn, $valjevenemang);
@@ -104,6 +104,178 @@
 				}
 				
 			}
+            else if (isset($_SESSION['klubb']))
+            {
+                
+                $valjklubb = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE typ = 'Klubb'";
+                $hamtaklubb = mysqli_query($conn, $valjklubb);
+                while ($row = mysqli_fetch_assoc($hamtaklubb))
+                {
+                    echo "titel: ".$row['titel'];
+                    echo "typ: ".$row['typ'];
+                    echo "från: ".$row['fran'];
+                    echo "till: ".$row['till'];
+                    echo "datum: ".$row['datum'];
+                    echo "krav: ".$row['krav'];
+                    echo "beskrivning: ".$row['beskrivning'];
+                    echo "plats: ".$row['plats'];
+                    echo "nation: ".$row['nation'];
+                    unset($_SESSION['klubb']);                    
+                }
+            }
+            else if (isset($_SESSION['lunch']))
+            {
+                
+                $valjlunch = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE typ = 'Lunch'";
+                $hamtalunch = mysqli_query($conn, $valjlunch);
+                while ($row = mysqli_fetch_assoc($hamtalunch))
+                {
+                    echo "titel: ".$row['titel'];
+                    echo "typ: ".$row['typ'];
+                    echo "från: ".$row['fran'];
+                    echo "till: ".$row['till'];
+                    echo "datum: ".$row['datum'];
+                    echo "krav: ".$row['krav'];
+                    echo "beskrivning: ".$row['beskrivning'];
+                    echo "plats: ".$row['plats'];
+                    echo "nation: ".$row['nation'];
+                    unset($_SESSION['lunch']);                    
+                }
+            }
+            else if (isset($_SESSION['frukost']))
+            {
+                
+                $valjfrukost = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE typ = 'Frukost'";
+                $hamtafrukost = mysqli_query($conn, $valjfrukost);
+                while ($row = mysqli_fetch_assoc($hamtafrukost))
+                {
+                    echo "titel: ".$row['titel'];
+                    echo "typ: ".$row['typ'];
+                    echo "från: ".$row['fran'];
+                    echo "till: ".$row['till'];
+                    echo "datum: ".$row['datum'];
+                    echo "krav: ".$row['krav'];
+                    echo "beskrivning: ".$row['beskrivning'];
+                    echo "plats: ".$row['plats'];
+                    echo "nation: ".$row['nation'];
+                    unset($_SESSION['frukost']);                    
+                }
+            }
+            else if (isset($_SESSION['restaurang']))
+            {
+                
+                $valjrestaurang = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE typ = 'Restaurang'";
+                $hamtarestaurang = mysqli_query($conn, $valjrestaurang);
+                while ($row = mysqli_fetch_assoc($hamtarestaurang))
+                {
+                    echo "titel: ".$row['titel'];
+                    echo "typ: ".$row['typ'];
+                    echo "från: ".$row['fran'];
+                    echo "till: ".$row['till'];
+                    echo "datum: ".$row['datum'];
+                    echo "krav: ".$row['krav'];
+                    echo "beskrivning: ".$row['beskrivning'];
+                    echo "plats: ".$row['plats'];
+                    echo "nation: ".$row['nation'];
+                    unset($_SESSION['restaurang']);                    
+                }
+            }
+            else if (isset($_SESSION['brunch']))
+            {
+                
+                $valjbrunch = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE typ = 'Brunch'";
+                $hamtarbrunch = mysqli_query($conn, $valjbrunch);
+                while ($row = mysqli_fetch_assoc($hamtarbrunch))
+                {
+                    echo "titel: ".$row['titel'];
+                    echo "typ: ".$row['typ'];
+                    echo "från: ".$row['fran'];
+                    echo "till: ".$row['till'];
+                    echo "datum: ".$row['datum'];
+                    echo "krav: ".$row['krav'];
+                    echo "beskrivning: ".$row['beskrivning'];
+                    echo "plats: ".$row['plats'];
+                    echo "nation: ".$row['nation'];
+                    unset($_SESSION['brunch']);                    
+                }
+            }
+            else if (isset($_SESSION['slapp']))
+            {
+                
+                $valjslapp = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE typ = 'Släpp'";
+                $hamtarslapp = mysqli_query($conn, $valjslapp);
+                while ($row = mysqli_fetch_assoc($hamtarslapp))
+                {
+                    echo "titel: ".$row['titel'];
+                    echo "typ: ".$row['typ'];
+                    echo "från: ".$row['fran'];
+                    echo "till: ".$row['till'];
+                    echo "datum: ".$row['datum'];
+                    echo "krav: ".$row['krav'];
+                    echo "beskrivning: ".$row['beskrivning'];
+                    echo "plats: ".$row['plats'];
+                    echo "nation: ".$row['nation'];
+                    unset($_SESSION['slapp']);                    
+                }
+            }
+            else if (isset($_SESSION['gasque']))
+            {
+                
+                $valjgasque = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE typ = 'Gasque'";
+                $hamtargasque = mysqli_query($conn, $valjgasque);
+                while ($row = mysqli_fetch_assoc($hamtargasque))
+                {
+                    echo "titel: ".$row['titel'];
+                    echo "typ: ".$row['typ'];
+                    echo "från: ".$row['fran'];
+                    echo "till: ".$row['till'];
+                    echo "datum: ".$row['datum'];
+                    echo "krav: ".$row['krav'];
+                    echo "beskrivning: ".$row['beskrivning'];
+                    echo "plats: ".$row['plats'];
+                    echo "nation: ".$row['nation'];
+                    unset($_SESSION['gasque']);                    
+                }
+            }
+            else if (isset($_SESSION['konsert']))
+            {
+                
+                $valjkonsert = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE typ = 'Konsert'";
+                $hamtarkonsert = mysqli_query($conn, $valjkonsert);
+                while ($row = mysqli_fetch_assoc($hamtarkonsert))
+                {
+                    echo "titel: ".$row['titel'];
+                    echo "typ: ".$row['typ'];
+                    echo "från: ".$row['fran'];
+                    echo "till: ".$row['till'];
+                    echo "datum: ".$row['datum'];
+                    echo "krav: ".$row['krav'];
+                    echo "beskrivning: ".$row['beskrivning'];
+                    echo "plats: ".$row['plats'];
+                    echo "nation: ".$row['nation'];
+                    unset($_SESSION['konsert']);                    
+                }
+            }
+            else if (isset($_SESSION['ovrigt']))
+            {
+                
+                $valjovrigt = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE typ = 'Övrigt'";
+                $hamtarovrigt = mysqli_query($conn, $valjovrigt);
+                while ($row = mysqli_fetch_assoc($hamtarovrigt))
+                {
+                    echo "titel: ".$row['titel'];
+                    echo "typ: ".$row['typ'];
+                    echo "från: ".$row['fran'];
+                    echo "till: ".$row['till'];
+                    echo "datum: ".$row['datum'];
+                    echo "krav: ".$row['krav'];
+                    echo "beskrivning: ".$row['beskrivning'];
+                    echo "plats: ".$row['plats'];
+                    echo "nation: ".$row['nation'];
+                    unset($_SESSION['ovrigt']);                    
+                }
+            }
+
 		?>
 		</div>
         <!--<div class ="ssFlode">
