@@ -28,12 +28,13 @@
 	{
 		session_start();
 		$_SESSION['emailfel'] = "Matchar ingen email i databasen";
-		header("Location: medlemmar.php");
+		header("Location: ../raderaMed.php");
 	}
 	else 
 	{
 		$sql = "DELETE FROM registrering WHERE mail = '$mail'";
 		$conn->query($sql);
+		header('Location: ../startsidaTjanstelev.php');
 	}
 	$conn->close();
-	include 'startsidaTjanstelev.php';
+	

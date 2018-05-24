@@ -21,7 +21,7 @@
 			</div>	
 
 				<!-- Här börjar formuläret. -->
-			<form name="tabortmedlem" method="POST" action="medlemprocess.php">
+			<form name="tabortmedlem" method="POST" action="process/raderaMed-process.php">
 		
 				<p class="boxes">
 					<label for="email">Email:<br></label>
