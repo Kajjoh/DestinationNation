@@ -87,22 +87,23 @@
         </div>
 
         <!--Denna div (nationsMeny) listar alla nationer vertikalt för filtrering.-->
-        <div class="nationsMeny">
-            <a id="nationsattr" href="#">Gotlands nation</a>
-            <a id="nationsattr" href="#">Gästrike-Hälsinge nation</a>
-            <a id="nationsattr" href="#">Göteborgs nation</a>
-            <a id="nationsattr" href="#">Kalmars nation</a>
-            <a id="nationsattr" href="#">Norrlands nation</a>
-            <a id="nationsattr" href="#">Smålands nation</a>
-            <a id="nationsattr" href="#">Stockholms nation</a>
-            <a id="nationsattr" href="#">Södermanlands-Nerikes nation</a>
-            <a id="nationsattr" href="#">Uplands nation</a>
-            <a id="nationsattr" href="#">Värmlands nation</a>
-            <a id="nationsattr" href="#">Västgöta nation</a>
-            <a id="nationsattr" href="#">Västmanlands-Dala nation</a>
-            <a id="nationsattr" href="#">Östgöta nation</a>
+        <div class="bakgrundmeny">
+            <div class="nationsMeny">
+                <a id="nationsattr" href="#">Gotlands nation</a>
+                <a id="nationsattr" href="#">Gästrike-Hälsinge nation</a>
+                <a id="nationsattr" href="#">Göteborgs nation</a>
+                <a id="nationsattr" href="#">Kalmars nation</a>
+                <a id="nationsattr" href="#">Norrlands nation</a>
+                <a id="nationsattr" href="#">Smålands nation</a>
+                <a id="nationsattr" href="#">Stockholms nation</a>
+                <a id="nationsattr" href="#">Södermanlands-Nerikes nation</a>
+                <a id="nationsattr" href="#">Uplands nation</a>
+                <a id="nationsattr" href="#">Värmlands nation</a>
+                <a id="nationsattr" href="#">Västgöta nation</a>
+                <a id="nationsattr" href="#">Västmanlands-Dala nation</a>
+                <a id="nationsattr" href="#">Östgöta nation</a>
+            </div>
         </div>
-
 
 
         <?php
