@@ -79,7 +79,7 @@ if ($conn->connect_error){
     }
     else 
     {
-        $sql = "INSERT INTO evenemang (titel, typ, plats, fran, till, tid, krav, beskrivning, nation) 
+        $sql = "INSERT INTO evenemang (titel, typ, plats, fran, till, datum, krav, beskrivning, nation) 
         VALUES ('$evTitel', '$evTyp', '$evPlats', '$tidFran', '$tidTill', '$evDatum', '$evKrav', '$evBeskrivning', '$nation')";
                 
         $conn->query($sql);
