@@ -26,7 +26,7 @@
 
 			<!-- Här följer ett formulär för anmälan till evenemang. --> 
 			<div class="formAnmalan">
-				<form id="AnmalanEv" method="Post" action="sparaAnmalan.php">
+				<form id="AnmalanEv" name="AnmalanEv" method="Post" action="sparaAnmalan.php" onsubmit="return (validateAnmalan())">
 				
 					<div class="formTop">
 					
@@ -100,8 +100,6 @@
 		<?php
 			include('html/sidfot.html');
 		?>
-		
-		<script src="AnmalanEv.js" ></script>
-
 	</body>
+	 <script src="java/AnmalanEv.js"></script>	
 </html>
