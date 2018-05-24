@@ -23,7 +23,7 @@
             </div>
 
             <div id="registrationForm">
-                <form name="regForm" method="POST" action="regi-process.php" onsubmit="return (validateForm())">
+                <form name="regForm" method="POST" action="process/regi-process.php" onsubmit="return (validateForm())">
 
                     <label for="namn">Personnummer</label><br>
                         <input type="text" placeholder="XXXXXX-XXXX" name="prnr" id="prnr"><br>
