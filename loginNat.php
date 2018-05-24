@@ -66,7 +66,7 @@
 					
 				</form>	
 
-				<p id="ingetKonto">Inte nation?* Logga in som <a href="inloggning.php" >student</a></p>
+				<p id="ingetKonto">Inte nation?* Logga in som <a href="loginStud.php" >student</a></p>
 
                 <p class = "kontaktaNation">*Har du inte inloggningsuppgifterna vänligen kontakta din nation.</p>
 				
