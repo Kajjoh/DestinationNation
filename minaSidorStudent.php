@@ -17,7 +17,7 @@
 			<h4>Personuppgifter</h4>
 
 			<?php
-				include('mSS-process.php');
+				include('process/mSSPerson-process.php');
 			?>
 
 		</div>
@@ -25,7 +25,7 @@
 		<div id="anmaldaEvMSS">
 			<p> Här ska alla evenemang som studenten är anmäld till dyka upp.</p>
 			<?php
-				include('mSS_Anmalan_process.php');
+				include('process/mSSAnmalan-process.php');
 			?>
 			<br>
 			<br>
@@ -34,10 +34,11 @@
 		<div id="sparadeEvMSS">
 			<p> Här ska alla evenemang man sparat dyka upp.</p>
 			<br>
+			<?php
+				include('process/mSSSparade-process.php');
+			?>
 			<br>
 		</div>
-
-
 
 		<?php
 			include('html/sidfot.html');
