@@ -30,7 +30,7 @@
 				</div>	
 
 				<!-- Här börjar formuläret. -->
-				<form name="loggain" method="POST" action="loginNation-process.php">
+				<form name="loggain" method="POST" action="process/loginNat-process.php">
 		
 					<p class="boxes">
 						<label for="email">Mejladress:<br></label>
