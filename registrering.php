@@ -23,7 +23,8 @@
             </div>
 
             <div id="registrationForm">
-                <form name="regForm" method="POST" action="process/regi-process.php" onsubmit="return (validateForm())">
+                <form name="regForm" method="POST" action="process/regi-process.php" id="registreraform">
+                	<!--onsubmit="return (validateForm()-->
 
                     <label for="namn">Personnummer</label><br>
                         <input type="text" placeholder="XXXXXX-XXXX" name="prnr" id="prnr"><br>
@@ -131,6 +132,6 @@
             include('html/sidfot.html');
         ?>
 
-        <script src="registrering.js"></script>
+        <script src="java/registrering.js"></script>
     </body>
 </html>

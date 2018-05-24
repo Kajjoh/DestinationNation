@@ -12,7 +12,7 @@
 	<body>
 		<?php
 			include('html/sidhuvud.html');
-			include('html/meny.html');
+			include('html/menyNation.html');
 		?>
 
 		<div id="sessionMessage">
