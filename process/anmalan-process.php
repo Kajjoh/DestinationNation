@@ -32,7 +32,7 @@ if(empty($person))
 {
     session_start();
     $_SESSION['fyllinamn'] = "Fyll i ditt namn";
-    header("Location: AnmalanEv.php");
+    header("Location: ../anmalanEv.php");
    // die();
 } 
 
@@ -41,7 +41,7 @@ else
     $sql = "INSERT INTO anmalan (namn, mail, kon, mat, allergi, dryck, sallskap)
     VALUES ('$person', '$anvMail', '$kon', '$matpref', '$allergi', '$drickpref', '$kompis')";
     $conn->query($sql);
-    header("Location: startsidaStudent.php");
+    header("Location: ../startsidaStudent.php");
     
 }
 

@@ -28,7 +28,7 @@
 
 			<!-- Här följer ett formulär för anmälan till evenemang. --> 
 			<div class="formAnmalan">
-				<form id="AnmalanEv" name="AnmalanEv" method="Post" action="sparaAnmalan.php" onsubmit="return (validateAnmalan())">
+				<form id="AnmalanEv" name="AnmalanEv" method="Post" action="process/anmalan-process.php" onsubmit="return (validateAnmalan())">
 				
 					<div class="formTop">
 					
