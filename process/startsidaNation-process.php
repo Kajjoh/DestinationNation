@@ -16,17 +16,23 @@
         $sql = "SELECT * FROM evenemang";
         $result = $conn->query($sql);
 
-        $row=mysqli_fetch_assoc($result);
-        echo "<div> <br> Titel: ". $row["titel"]."
-                    <br> Plats: ". $row["plats"]." 
-                    <br> Nation: ".$row["nation"]."
-                    <br> Typ: " . $row["typ"]. "
-                    <br> Från: " .$row["fran"]."
-                    <br> Till: " .$row["till"]."
-                    <br> Tid: " .$row["datum"]."
-                    <br> Krav: " .$row["krav"]."
-                    <br> Beskrivning: " .$row["beskrivning"]."       
-                </div>";
-         
+        if($result->num_rows > 0){
+            while($row=$result->fetch_assoc())
+            {
+
+                echo "<div> 
+                            <br> Evenemangs ID: ". $row["eveID"]."
+                            <br> Titel: ". $row["titel"]."
+                            <br> Plats: ". $row["plats"]." 
+                            <br> Nation: ".$row["nation"]."
+                            <br> Typ: " . $row["typ"]. "
+                            <br> Från: " .$row["fran"]."
+                            <br> Till: " .$row["till"]."
+                            <br> Tid: " .$row["datum"]."
+                            <br> Kräver anmälan: " .$row["krav"]."
+                            <br> Beskrivning: " .$row["beskrivning"]."       
+                        </div>";
+            }
+        }        
         $conn->close();
-?>
+ ?>

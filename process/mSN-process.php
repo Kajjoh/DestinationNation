@@ -28,7 +28,4 @@ $dbname = "projekt";
             </div>";
      
     $conn->close();
-
-
-
 ?>
