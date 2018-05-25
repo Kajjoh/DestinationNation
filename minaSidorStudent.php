@@ -23,7 +23,7 @@
 		</div>
 
 		<div id="anmaldaEvMSS">
-			<p> Här ska alla evenemang som studenten är anmäld till dyka upp.</p>
+			<h4>Anmälda evenemang:</h4>
 			<?php
 				include('process/mSSAnmalan-process.php');
 			?>
@@ -32,7 +32,7 @@
 		</div>
 
 		<div id="sparadeEvMSS">
-			<p> Här ska alla evenemang man sparat dyka upp.</p>
+			<h4>Sparade evenemang:</h4>
 			<br>
 			<?php
 				include('process/mSSSparade-process.php');
