@@ -15,7 +15,10 @@ function validateEv (event) /*första funktionen*/
 		{
 			event.preventDefault(); /* om det i if-satsen inte stämmer skickas aldrig data, 
 			man preventar default vilket är att skicka data*/
-			alert('Du måste fylla i fältet för att skapa ett evenemang');
+			alert('Du måste fylla i alla fält för att kunna skapa ett evenemang');
+		}
+		else{
+			alert("Ditt evenemang är nu skapat!");
 		}
 	}
 
