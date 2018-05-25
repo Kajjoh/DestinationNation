@@ -85,15 +85,17 @@
 				}
 			}
 			/*om pub väljs att filtrera görs detta*/
-			if (isset($_SESSION['pub']))
+			else if (isset($_SESSION['pub']))
 			{
 				/*hämtar ut allt från evenemang som stämmer in på typen pub*/
 				$valjpub = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE typ = 'Pub'";
 				$hamtapub = mysqli_query($conn, $valjpub);
-				while ($row = mysqli_fetch_assoc($hamtapub))
+				$pubkontroll = mysqli_num_rows($hamtapub);
+				if ($pubkontroll > 0)
 				{
-					if(!empty($row.['typ']))
+					while ($row = mysqli_fetch_assoc($hamtapub))
 					{
+					
 						echo "titel: ".$row['titel'];
 						echo "typ: ".$row['typ'];
 						echo "från: ".$row['fran'];
@@ -105,8 +107,12 @@
 						echo "nation: ".$row['nation'];
 						//unsetar sessionen för pub
 						unset($_SESSION['pub']);
-					}
 					
+					}
+				}
+				else
+				{
+					unset($_SESSION['pub']);
 				}
 				
 			}
@@ -116,20 +122,30 @@
                 /*hämtar ut allt från evenemang som stämmer in på typen klubb*/
                 $valjklubb = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE typ = 'Klubb'";
                 $hamtaklubb = mysqli_query($conn, $valjklubb);
-                while ($row = mysqli_fetch_assoc($hamtaklubb))
-                {
-                    echo "titel: ".$row['titel'];
-                    echo "typ: ".$row['typ'];
-                    echo "från: ".$row['fran'];
-                    echo "till: ".$row['till'];
-                    echo "datum: ".$row['datum'];
-                    echo "krav: ".$row['krav'];
-                    echo "beskrivning: ".$row['beskrivning'];
-                    echo "plats: ".$row['plats'];
-                    echo "nation: ".$row['nation'];
-                    //unsetar session klubb
-                    unset($_SESSION['klubb']);                    
-                }
+				$klubbkontroll = mysqli_num_rows($hamtaklubb);
+				if ($klubbkontroll > 0)
+				{ 
+					while ($row = mysqli_fetch_assoc($hamtaklubb))
+					{
+						echo "titel: ".$row['titel'];
+						echo "typ: ".$row['typ'];
+						echo "från: ".$row['fran'];
+						echo "till: ".$row['till'];
+						echo "datum: ".$row['datum'];
+						echo "krav: ".$row['krav'];
+						echo "beskrivning: ".$row['beskrivning'];
+						echo "plats: ".$row['plats'];
+						echo "nation: ".$row['nation'];
+						//unsetar session klubb
+						unset($_SESSION['klubb']);                    
+					}
+					
+				}
+				else
+				{
+					unset($_SESSION['klubb']);
+				}
+              
             }
             /*om lunch väljs att filtrera görs detta*/
             else if (isset($_SESSION['lunch']))
@@ -137,20 +153,29 @@
                 /*hämtar ut allt från evenemang som stämmer in på typen lunch*/
                 $valjlunch = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE typ = 'Lunch'";
                 $hamtalunch = mysqli_query($conn, $valjlunch);
-                while ($row = mysqli_fetch_assoc($hamtalunch))
-                {
-                    echo "titel: ".$row['titel'];
-                    echo "typ: ".$row['typ'];
-                    echo "från: ".$row['fran'];
-                    echo "till: ".$row['till'];
-                    echo "datum: ".$row['datum'];
-                    echo "krav: ".$row['krav'];
-                    echo "beskrivning: ".$row['beskrivning'];
-                    echo "plats: ".$row['plats'];
-                    echo "nation: ".$row['nation'];
-                    //unsetar session lunch
-                    unset($_SESSION['lunch']);                    
-                }
+				$lunchkontroll = mysqli_num_rows($hamtalunch);
+				if ($lunchkontroll > 0)
+				{
+					while ($row = mysqli_fetch_assoc($hamtalunch))
+					{
+						echo "titel: ".$row['titel'];
+						echo "typ: ".$row['typ'];
+						echo "från: ".$row['fran'];
+						echo "till: ".$row['till'];
+						echo "datum: ".$row['datum'];
+						echo "krav: ".$row['krav'];
+						echo "beskrivning: ".$row['beskrivning'];
+						echo "plats: ".$row['plats'];
+						echo "nation: ".$row['nation'];
+						//unsetar session lunch
+						unset($_SESSION['lunch']);                    
+					}
+				}
+				else
+				{
+					unset($_SESSION['lunch']);
+				}
+                
             }
             /*om frukost väljs att filtrera görs detta*/
             else if (isset($_SESSION['frukost']))
@@ -158,20 +183,29 @@
                 /*hämtar ut allt från evenemang som stämmer in på typen frukost*/
                 $valjfrukost = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE typ = 'Frukost'";
                 $hamtafrukost = mysqli_query($conn, $valjfrukost);
-                while ($row = mysqli_fetch_assoc($hamtafrukost))
-                {
-                    echo "titel: ".$row['titel'];
-                    echo "typ: ".$row['typ'];
-                    echo "från: ".$row['fran'];
-                    echo "till: ".$row['till'];
-                    echo "datum: ".$row['datum'];
-                    echo "krav: ".$row['krav'];
-                    echo "beskrivning: ".$row['beskrivning'];
-                    echo "plats: ".$row['plats'];
-                    echo "nation: ".$row['nation'];
-                    //unsetar session frukost
-                    unset($_SESSION['frukost']);                    
-                }
+				$frukostkontroll = mysqli_num_rows($hamtafrukost);
+				if ($frukostkontroll > 0)
+				{
+					while ($row = mysqli_fetch_assoc($hamtafrukost))
+					{
+						echo "titel: ".$row['titel'];
+						echo "typ: ".$row['typ'];
+						echo "från: ".$row['fran'];
+						echo "till: ".$row['till'];
+						echo "datum: ".$row['datum'];
+						echo "krav: ".$row['krav'];
+						echo "beskrivning: ".$row['beskrivning'];
+						echo "plats: ".$row['plats'];
+						echo "nation: ".$row['nation'];
+						//unsetar session frukost
+						unset($_SESSION['frukost']);                    
+					}
+				}
+				else
+				{
+					unset($_SESSION['frukost']);
+				}
+                
             }
             /*om restaurang väljs att filtrera görs detta*/
             else if (isset($_SESSION['restaurang']))
@@ -179,125 +213,179 @@
                 /*hämtar ut allt från evenemang som stämmer in på typen restaurang*/
                 $valjrestaurang = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE typ = 'Restaurang'";
                 $hamtarestaurang = mysqli_query($conn, $valjrestaurang);
-                while ($row = mysqli_fetch_assoc($hamtarestaurang))
-                {
-                    echo "titel: ".$row['titel'];
-                    echo "typ: ".$row['typ'];
-                    echo "från: ".$row['fran'];
-                    echo "till: ".$row['till'];
-                    echo "datum: ".$row['datum'];
-                    echo "krav: ".$row['krav'];
-                    echo "beskrivning: ".$row['beskrivning'];
-                    echo "plats: ".$row['plats'];
-                    echo "nation: ".$row['nation'];
-                    //unsetar session restaurang
-                    unset($_SESSION['restaurang']);                    
-                }
+				$restaurangkontroll = mysqli_num_rows($hamtarestaurang);
+				if ($restaurangkontroll > 0)
+				{
+					while ($row = mysqli_fetch_assoc($hamtarestaurang))
+					{
+						echo "titel: ".$row['titel'];
+						echo "typ: ".$row['typ'];
+						echo "från: ".$row['fran'];
+						echo "till: ".$row['till'];
+						echo "datum: ".$row['datum'];
+						echo "krav: ".$row['krav'];
+						echo "beskrivning: ".$row['beskrivning'];
+						echo "plats: ".$row['plats'];
+						echo "nation: ".$row['nation'];
+						//unsetar session restaurang
+						unset($_SESSION['restaurang']);                    
+					}
+				}
+				else
+				{
+					unset($_SESSION['restaurang']);
+				}
+                
             }
             /*om brunch väljs att filtrera görs detta*/
             else if (isset($_SESSION['brunch']))
             {
                 /*hämtar ut allt från evenemang som stämmer in på typen brunch*/
                 $valjbrunch = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE typ = 'Brunch'";
-                $hamtarbrunch = mysqli_query($conn, $valjbrunch);
-                while ($row = mysqli_fetch_assoc($hamtarbrunch))
-                {
-                    echo "titel: ".$row['titel'];
-                    echo "typ: ".$row['typ'];
-                    echo "från: ".$row['fran'];
-                    echo "till: ".$row['till'];
-                    echo "datum: ".$row['datum'];
-                    echo "krav: ".$row['krav'];
-                    echo "beskrivning: ".$row['beskrivning'];
-                    echo "plats: ".$row['plats'];
-                    echo "nation: ".$row['nation'];
-                    //unsetar session brunch
-                    unset($_SESSION['brunch']);                    
-                }
+                $hamtabrunch = mysqli_query($conn, $valjbrunch);
+				$brunchkontroll = mysqli_num_rows($hamtabrunch);
+				if ($brunchkontroll > 0)
+				{
+					while ($row = mysqli_fetch_assoc($hamtabrunch))
+					{
+						echo "titel: ".$row['titel'];
+						echo "typ: ".$row['typ'];
+						echo "från: ".$row['fran'];
+						echo "till: ".$row['till'];
+						echo "datum: ".$row['datum'];
+						echo "krav: ".$row['krav'];
+						echo "beskrivning: ".$row['beskrivning'];
+						echo "plats: ".$row['plats'];
+						echo "nation: ".$row['nation'];
+						//unsetar session brunch
+						unset($_SESSION['brunch']);                    
+					}
+				}
+				else
+				{
+					unset($_SESSION['brunch']);
+				}
+                
             }
             /*om släpp väljs att filtrera görs detta*/
             else if (isset($_SESSION['slapp']))
             {
                 /*hämtar ut allt från evenemang som stämmer in på typen släpp*/
                 $valjslapp = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE typ = 'Släpp'";
-                $hamtarslapp = mysqli_query($conn, $valjslapp);
-                while ($row = mysqli_fetch_assoc($hamtarslapp))
-                {
-                    echo "titel: ".$row['titel'];
-                    echo "typ: ".$row['typ'];
-                    echo "från: ".$row['fran'];
-                    echo "till: ".$row['till'];
-                    echo "datum: ".$row['datum'];
-                    echo "krav: ".$row['krav'];
-                    echo "beskrivning: ".$row['beskrivning'];
-                    echo "plats: ".$row['plats'];
-                    echo "nation: ".$row['nation'];
-                    //unsetar session släpp
-                    unset($_SESSION['slapp']);                    
-                }
+                $hamtaslapp = mysqli_query($conn, $valjslapp);
+				$slappkontroll = mysqli_num_rows($hamtaslapp);
+				if ($slappkontroll > 0)
+				{
+					while ($row = mysqli_fetch_assoc($hamtaslapp))
+					{
+						echo "titel: ".$row['titel'];
+						echo "typ: ".$row['typ'];
+						echo "från: ".$row['fran'];
+						echo "till: ".$row['till'];
+						echo "datum: ".$row['datum'];
+						echo "krav: ".$row['krav'];
+						echo "beskrivning: ".$row['beskrivning'];
+						echo "plats: ".$row['plats'];
+						echo "nation: ".$row['nation'];
+						//unsetar session släpp
+						unset($_SESSION['slapp']);                    
+					}
+				}
+				else
+				{
+					unset($_SESSION['slapp']);
+				}
+                
             }
             /*om Gasque väljs att filtrera görs detta*/
             else if (isset($_SESSION['gasque']))
             {
                 /*hämtar ut allt från evenemang som stämmer in på typen gasque*/
                 $valjgasque = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE typ = 'Gasque'";
-                $hamtargasque = mysqli_query($conn, $valjgasque);
-                while ($row = mysqli_fetch_assoc($hamtargasque))
-                {
-                    echo "titel: ".$row['titel'];
-                    echo "typ: ".$row['typ'];
-                    echo "från: ".$row['fran'];
-                    echo "till: ".$row['till'];
-                    echo "datum: ".$row['datum'];
-                    echo "krav: ".$row['krav'];
-                    echo "beskrivning: ".$row['beskrivning'];
-                    echo "plats: ".$row['plats'];
-                    echo "nation: ".$row['nation'];
-                    //unsetar session gasque
-                    unset($_SESSION['gasque']);                    
-                }
+                $hamtagasque = mysqli_query($conn, $valjgasque);
+				$gasquekontroll = mysqli_num_rows($hamtagasque);
+				if ($gasquekontroll > 0)
+				{
+					while ($row = mysqli_fetch_assoc($hamtagasque))
+					{
+						echo "titel: ".$row['titel'];
+						echo "typ: ".$row['typ'];
+						echo "från: ".$row['fran'];
+						echo "till: ".$row['till'];
+						echo "datum: ".$row['datum'];
+						echo "krav: ".$row['krav'];
+						echo "beskrivning: ".$row['beskrivning'];
+						echo "plats: ".$row['plats'];
+						echo "nation: ".$row['nation'];
+						//unsetar session gasque
+						unset($_SESSION['gasque']);                    
+					}
+				}
+				else
+				{
+					unset($_SESSION['gasque']);
+				}
+                
             }
             /*om konsert väljs att filtrera görs detta*/
             else if (isset($_SESSION['konsert']))
             {
                 /*hämtar ut allt från evenemang som stämmer in på typen konsert*/
                 $valjkonsert = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE typ = 'Konsert'";
-                $hamtarkonsert = mysqli_query($conn, $valjkonsert);
-                while ($row = mysqli_fetch_assoc($hamtarkonsert))
-                {
-                    echo "titel: ".$row['titel'];
-                    echo "typ: ".$row['typ'];
-                    echo "från: ".$row['fran'];
-                    echo "till: ".$row['till'];
-                    echo "datum: ".$row['datum'];
-                    echo "krav: ".$row['krav'];
-                    echo "beskrivning: ".$row['beskrivning'];
-                    echo "plats: ".$row['plats'];
-                    echo "nation: ".$row['nation'];
-                    //unsetar session konsert
-                    unset($_SESSION['konsert']);                    
-                }
+                $hamtakonsert = mysqli_query($conn, $valjkonsert);
+				$konsertkontroll = mysqli_num_rows($hamtakonsert);
+				if ($konsertkontroll > 0)
+				{
+					while ($row = mysqli_fetch_assoc($hamtakonsert))
+					{
+						echo "titel: ".$row['titel'];
+						echo "typ: ".$row['typ'];
+						echo "från: ".$row['fran'];
+						echo "till: ".$row['till'];
+						echo "datum: ".$row['datum'];
+						echo "krav: ".$row['krav'];
+						echo "beskrivning: ".$row['beskrivning'];
+						echo "plats: ".$row['plats'];
+						echo "nation: ".$row['nation'];
+						//unsetar session konsert
+						unset($_SESSION['konsert']);                    
+					}
+				}
+				else
+				{
+					unset($_SESSION['konsert']);
+				}
+                
             }
             /*om övrigt väljs att filtrera görs detta*/
             else if (isset($_SESSION['ovrigt']))
             {
                 /*hämtar ut allt från evenemang som stämmer in på typen övrigt*/
                 $valjovrigt = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE typ = 'Övrigt'";
-                $hamtarovrigt = mysqli_query($conn, $valjovrigt);
-                while ($row = mysqli_fetch_assoc($hamtarovrigt))
-                {
-                    echo "titel: ".$row['titel'];
-                    echo "typ: ".$row['typ'];
-                    echo "från: ".$row['fran'];
-                    echo "till: ".$row['till'];
-                    echo "datum: ".$row['datum'];
-                    echo "krav: ".$row['krav'];
-                    echo "beskrivning: ".$row['beskrivning'];
-                    echo "plats: ".$row['plats'];
-                    echo "nation: ".$row['nation'];
-                    //unsetar session övrigt
-                    unset($_SESSION['ovrigt']);                    
-                }
+                $hamtaovrigt = mysqli_query($conn, $valjovrigt);
+				$ovrigtkontroll = mysqli_num_rows($hamtaovrigt);
+				if ($ovrigtkontroll > 0)
+				{
+					while ($row = mysqli_fetch_assoc($hamtaovrigt))
+					{
+						echo "titel: ".$row['titel'];
+						echo "typ: ".$row['typ'];
+						echo "från: ".$row['fran'];
+						echo "till: ".$row['till'];
+						echo "datum: ".$row['datum'];
+						echo "krav: ".$row['krav'];
+						echo "beskrivning: ".$row['beskrivning'];
+						echo "plats: ".$row['plats'];
+						echo "nation: ".$row['nation'];
+						//unsetar session övrigt
+						unset($_SESSION['ovrigt']);                    
+					}
+				}
+				else
+				{
+					unset($_SESSION['ovrigt']);
+				}
+                
             }
 
 		?>
