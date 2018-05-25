@@ -453,7 +453,7 @@
 			
 			else if (isset($_SESSION['gh']))
 			{
-				$valjgh = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'GästrikeHälsinge Nation'";
+				$valjgh = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Gästrike-Hälsinge Nation'";
 				$hamtagh = mysqli_query($conn, $valjgh);
 				$kontrollgh = mysqli_num_rows($hamtagh);
 				if ($kontrollgh > 0)
@@ -543,7 +543,7 @@
 			
 			else if (isset($_SESSION['norrland']))
 			{
-				$valjnorrland = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Norrlandss Nation'";
+				$valjnorrland = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Norrlands Nation'";
 				$hamtanorrland = mysqli_query($conn, $valjnorrland);
 				$kontrollnorrland = mysqli_num_rows($hamtanorrland);
 				if ($kontrollnorrland > 0)
