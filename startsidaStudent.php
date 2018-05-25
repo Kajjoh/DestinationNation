@@ -422,64 +422,28 @@
 
 		?>
 		</div>
-        <!--<div class ="ssFlode">
-            <div class = "innerSSflode">
-                <h3 id = "ssRubrik">Evenemang</h3>
-
-                <div class = "event">
-                    <p>
-                        OCaml pluggstuga!
-                        <br>
-                        Tid: 18:00 - 22:00
-                        <br>
-                        Datum: 24/5 - 18
-                        <br>
-                        Plats: Östgöta nation
-                        <br>
-                        Välkomna till årets OCaml pluggstuga! 
-                        Vi kommer bjuda på goda hamburgare och dricka kommer kunna köpas
-                        i baren. Kalle Karlsson kommer gå igenom syntax, olika funktioner
-                        och kommer att kunna svara på frågor. 
-                        <br>
-                        Hoppas vi ses!
-                    </p>
-                </div>
-
-                <div class = "event">
-                    <p>
-                        Spring med GH!
-                        <br>
-                        Tid: 16:00 - 18:00
-                        <br>
-                        Datum: 16/4 - 18
-                        <br>
-                        Plats: Stadsskogen
-                        <br>
-                        Kom och spring med oss i Stadsskogen! Rundan är på 
-                        5 km och man springer helt i sin egen takt. Man får 
-                        frukt och vatten som diplom.
-                    </p>
-                </div>
-
-            </div>
-        </div>-->
+      
 
         <!--Denna div (nationsMeny) listar alla nationer vertikalt för filtrering.-->
         <div class="bakgrundmeny">
             <div class="nationsMeny">
-                <a id="nationsattr" href="#">Gotlands nation</a>
-                <a id="nationsattr" href="#">Gästrike-Hälsinge nation</a>
-                <a id="nationsattr" href="#">Göteborgs nation</a>
-                <a id="nationsattr" href="#">Kalmars nation</a>
-                <a id="nationsattr" href="#">Norrlands nation</a>
-                <a id="nationsattr" href="#">Smålands nation</a>
-                <a id="nationsattr" href="#">Stockholms nation</a>
-                <a id="nationsattr" href="#">Södermanlands-Nerikes nation</a>
-                <a id="nationsattr" href="#">Uplands nation</a>
-                <a id="nationsattr" href="#">Värmlands nation</a>
-                <a id="nationsattr" href="#">Västgöta nation</a>
-                <a id="nationsattr" href="#">Västmanlands-Dala nation</a>
-                <a id="nationsattr" href="#">Östgöta nation</a>
+				<form method="POST" action="filtreraNation.php">
+					<ul>
+						<li id="nationsattr"><input type="submit" name="gotlandsKnapp" id="gotlandsKnapp" value="Gotlands Nation"></li>
+						<li id="nationsattr"><input type="submit" name="ghKnapp" id="ghKnapp" value="Gästrike-Hälsinge Nation"></li>
+						<li id="nationsattr"><input type="submit" name="gbgKnapp" id="gbgKnapp" value="Göteborgs Nation"></li>
+						<li id="nationsattr"><input type="submit" name="kalmarsKnapp" id="kalmarsKnapp" value="Kalmars Nation"></li>
+						<li id="nationsattr"><input type="submit" name="norrlandsKnapp" id="norrlandsKnapp" value="Norrlands Nation"></li>
+						<li id="nationsattr"><input type="submit" name="smalandsKnapp" id="smalandsKnapp" value="Smålands Nation"></li>
+						<li id="nationsattr"><input type="submit" name="stockenKnapp" id="stockenKnapp" value="Stockholms Nation"></li>
+						<li id="nationsattr"><input type="submit" name="snerikesKnapp" id="snerikessKnapp" value="Södermanlands-Nerikes Nation"></li>
+						<li id="nationsattr"><input type="submit" name="uplandsKnapp" id="uplandsKnapp" value="Uplands Nation"></li>
+						<li id="nationsattr"><input type="submit" name="varmlandsKnapp" id="varmlandsKnapp" value="Värmlands Nation"></li>
+						<li id="nationsattr"><input type="submit" name="vgKnapp" id="vgKnapp" value="Västgöta Nation"></li>
+						<li id="nationsattr"><input type="submit" name="vdalaKnapp" id="vdalaKnapp" value="Västmanland-Dala Nation"></li>
+						<li id="nationsattr"><input type="submit" name="ogKnapp" id="ogKnapp" value="Östgöta Nation"></li>
+					</ul>
+				</form>		
             </div>
         </div>
 
