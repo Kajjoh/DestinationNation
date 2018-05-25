@@ -127,7 +127,11 @@
 				$pubkontroll = mysqli_num_rows($hamtapub);
 				if ($pubkontroll > 0)
 				{
+<<<<<<< HEAD
+					if(!empty($row['typ']))
+=======
 					while ($row = mysqli_fetch_assoc($hamtapub))
+>>>>>>> a7555673baa6932b3d0e8b25cf56692c2796b93f
 					{
 					
 						echo "titel: ".$row['titel'];
