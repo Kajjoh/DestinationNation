@@ -34,7 +34,7 @@ $dbname = "projekt";
 	{
 		session_start();
 		$_SESSION['klubb'] = 'klubb';  // då startas sessionen klass
-		header("Location: ../sstartsidaNation.php");
+		header("Location: ../startsidaNation.php");
 		// och directas till startsidaNation
 	}
 	 //om  lunchKnapp är set, alltså vald 
