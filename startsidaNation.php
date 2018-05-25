@@ -25,7 +25,13 @@
             <div class = "innernationflode">
                 <h3 id = "startnatioRubrik">Evenemang</h3>
 
-                <div class = "event">
+                <div id="startsidaEv">
+                <?php
+                    include('process/startsidaNation-process.php');
+                ?>
+                </div>
+
+                <!--<div class = "event">
                     <p>
                         OCaml pluggstuga!
                         <br>
@@ -58,7 +64,7 @@
                         5 km och man springer helt i sin egen takt. Man får 
                         frukt och vatten som diplom.
                     </p>
-                </div>
+                </div>-->
 
             </div>
         </div>

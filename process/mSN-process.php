@@ -16,7 +16,9 @@ $dbname = "projekt";
     $result = $conn->query($sql);
 
     $row=mysqli_fetch_assoc($result);
-    echo "<div> <br> Titel: ". $row["titel"]." 
+    echo "<div> <br> Titel: ". $row["titel"]."
+                <br> Plats: ". $row["plats"]." 
+                <br> Nation: ".$row["nation"]."
                 <br> Typ: " . $row["typ"]. "
                 <br> Från: " .$row["fran"]."
                 <br> Till: " .$row["till"]."
