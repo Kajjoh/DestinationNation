@@ -4,7 +4,7 @@
 	
 	$eveID = mysqli_real_escape_string($conn, trim($_POST['evenemangsid']));
 
-	$findeveid = "SELECT eveID FROM registrering WHERE eveID = '$eveID'";
+	$findeveid = "SELECT eveID FROM evenemang WHERE eveID = '$eveID'";
 	$retrieveEveIDfromdb = mysqli_query($conn, $findeveid);
 	$eveIDfromdb = "";
 	while ($row = mysqli_fetch_assoc($retrieveEveIDfromdb))
@@ -19,7 +19,7 @@
 	}
 	else 
 	{
-		$sql = "DELETE FROM evenemang WHERE eveID = '$eveid'";
+		$sql = "DELETE *FROM evenemang WHERE eveID = '$eveID'";
 		$conn->query($sql);
 		header('Location: ../startsidaTjanstelev.php');
 	}
