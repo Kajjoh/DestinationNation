@@ -8,8 +8,7 @@
 		<title>DestinationNation</title>
 		<link href="html/main.css" rel="stylesheet">
 		<meta charset="utf-8">
-    </head>
-	
+    </head>	
 	
 	<body>
 
@@ -23,6 +22,7 @@
 		<div id="huvudRubrikInloggning">
 			<h3>Välkommen till DestinationNation</h3>
 		</div>	
+
 	
 			<div class="formular" id="inloggning">
 	
