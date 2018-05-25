@@ -26,7 +26,7 @@ h4 {
 
 /* Det som följer tillhör vårt sidhuvud */
 #sidhuvud {
-    margin: auto;
+    margin: ;
 }
 
 #header {
@@ -277,86 +277,47 @@ h4 {
 /*---------------------------------------------------------------------------------*/
 /* STARTSIDASTUDENT.HTML*/
 
+/* Diven som aktivitetsmenyn ligger i*/
 #filter{
-    margin-left: 12%;
+    margin-left: 17.2%;
+    padding: 1%;
+    border-bottom: 0.1em solid #C00000
 }
 
-#filterlista{
-    list-style-type: none;
-    padding: 0px;
-    margin: 0px;
+.back{
+    background-color: #E8E8E8;
 }
 
 #aktiviteter{
-    float: left;
+    display: inline;
+    margin-left: 1%;
+}
+
+.knappAktmeny{
+    padding: 0.5% 1%;
+}
+
+/* nationsmenyn */
+.nationsattr{
+    width: 16%;
     background-color: #E8E8E8;
-    border-bottom: solid #C00000;
-    width: 10%;
+    padding: 0.5em;
+    border-bottom: 0.1em solid #C00000;
+    border-right: 0.1em solid #C00000;
 }
 
-#attributAkt{
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 16px 30px;
-    text-decoration: none;
-    margin-left: 8px;
-    margin-right: 14px;
+.knappNationsmeny {
+    width: 95%;
+    padding: 2%;
 }
 
-#attributAkt:hover{
-    background-color: #555
-}
-
-.nationsMeny{
-    width: 12%;
-    color: #E8E8E8;
-    border-right:solid #C00000;
-    float: left;
-}
-
-#nationsattr{
-    background-color: #E8E8E8;
-    color: black;
-    display: block;
-    padding: 12px;
-    text-decoration: none;
-    border-bottom: solid #C00000;
-    height: 4%;
-    
-}
-
-#nationsattr:hover{
-    background-color: #555;
-}
-
-.ssFlode{
-    border: solid white;
-    text-align: center;
-    width: 85% ;
-    margin-left: auto ;
-    margin-right: auto ;
+.eventFlode{
+    margin-top: 5%;
+    border: 0.2em solid purple;
+    width: 80%;
     float: right;
-    height: 580px;
 }
 
-.innerSSflode{
-    border: solid #C00000;
-    margin: 4%;
-    height: 500px;
-    border-radius: 2em;
-}
-
-.event{
-    border: solid black;
-    border-radius: 2em;
-    margin: 4%;
-
-}
-
-.bakgrundmeny{
-    background-color: #E8E8E8;
-}
 
 /*----------------------------------------------------------------*/
 /*startsidaNation.php*/

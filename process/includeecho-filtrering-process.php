@@ -4,12 +4,12 @@ include('process/connection.php');
 
         echo "titel: ".$row['titel'];
 					echo "typ: ".$row['typ'];
-					echo "från: ".$row['fran'];
-					echo "till: ".$row['till'];
-					echo "datum: ".$row['datum'];
-					echo "krav: ".$row['krav'];
-					echo "beskrivning: ".$row['beskrivning'];
-					echo "plats: ".$row['plats'];
-                    echo "nation: ".$row['nation'];
+					echo "<br> från: ".$row['fran'];
+					echo "<br>till: ".$row['till'];
+					echo "<br>datum: ".$row['datum'];
+					echo "<br>krav: ".$row['krav'];
+					echo "<br>beskrivning: ".$row['beskrivning'];
+					echo "<br>plats: ".$row['plats'];
+                    echo "<br>nation: ".$row['nation'] ."<br>";
                     
 ?>
