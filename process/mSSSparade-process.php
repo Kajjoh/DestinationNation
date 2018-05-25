@@ -1,28 +1,30 @@
 <?php
-$servername = "localhost";
-$dbusername = "root";
-$dbpassword = "";
-$dbname = "projekt";
+ 
+    include('connection.php');
 
-    // Create connection to database
-    $conn = new mysqli($servername, $dbusername, $dbpassword, $dbname);
-
-    // Check connection with database
-    if ($conn->connect_error) 
-    {
-        die("Connection failed: " . $conn->connect_error);
-    } 
-
-    $sql = "SELECT title, typ, fran, till, krav FROM evenemang";
+    $sql = "SELECT titel, typ, nation, datum, fran, till, krav FROM sparaevenemang a, evenemang b WHERE a.eveID=b.eveID";
     $result = $conn->query($sql);
 
-    $row=mysqli_fetch_assoc($result);
-    echo "<div> <br> Titel: ". $row["title"]." 
-                <br> Typ: " . $row["typ"]. "
-                <br> Från: " .$row["fran"]."
-                <br> Till: " .$row["till"]."
-                <br> Krav: " .$row["krav"]."     
-            </div>";
+    if($result->num_rows > 0)
+    {
+        while($row=$result->fetch_assoc())
+        {
+            echo "<div> 
+                    <br> Titel: ". $row["titel"]."
+                    <br> Typ: " . $row["typ"]. "
+                    <br> Nation: ".$row["nation"]."
+                    <br> Plats: ". $row["plats"]." 
+                    <br> Datum: " .$row["datum"]." 
+                    <br> Från: " .$row["fran"]."
+                    <br> Till: " .$row["till"]."
+                    <br> Till: " .$row["krav"]."
+                </div>";
+        }
+    }      
+    else
+    {
+        echo "Du har inga sparade evenemang!";
+    }
      
     $conn->close();
 ?>

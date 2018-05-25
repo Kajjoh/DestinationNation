@@ -1,19 +1,6 @@
 <?php
 	
-	$servername = "localhost";
-	$dbusername = "root";
-	$dbpassword = "";
-	$dbname = "projekt";
-	
-	
-	// Create connection to database
-	$conn = new mysqli($servername, $dbusername, $dbpassword, $dbname);
-	
-	// Check connection with database
-	if ($conn->connect_error) 
-	{
-		die("Connection failed: " . $conn->connect_error);
-	}
+	include('connection.php');
 
 	function genRandString($length = 25) {
     $chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -130,12 +117,14 @@
 		$sql = "INSERT INTO registrering (perNr, studID, namn, mail, adress, ort, postNr, losen, salt)
 		VALUES ('$prnr', '$stid', '$name', '$mail', '$adress', '$ort', '$pstnr', '$hash', '$salt')";
 		$conn->query($sql);
+
+		header('Location: ../loginStud.php');
 	}
 	
 	
 		
 	
 	$conn->close();	
-	include '../inloggning.php';
+	
 	
 ?>

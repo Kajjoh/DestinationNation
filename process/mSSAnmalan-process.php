@@ -1,28 +1,30 @@
 <?php
-$servername = "localhost";
-$dbusername = "root";
-$dbpassword = "";
-$dbname = "projekt";
 
-    // Create connection to database
-    $conn = new mysqli($servername, $dbusername, $dbpassword, $dbname);
+    include('connection.php');
 
-    // Check connection with database
-    if ($conn->connect_error) 
-    {
-        die("Connection failed: " . $conn->connect_error);
-    } 
-
-    $sql = "SELECT title, typ, fran, till, krav FROM evenemang";
+    $sql = "SELECT  titel, typ, nation, fran, till, datum, plats FROM anmalan a, evenemang b WHERE a.eveID=b.eveID";
     $result = $conn->query($sql);
 
-    $row=mysqli_fetch_assoc($result);
-    echo "<div> <br> Titel: ". $row["title"]." 
-                <br> Typ: " . $row["typ"]. "
-                <br> Från: " .$row["fran"]."
-                <br> Till: " .$row["till"]."
-                <br> Krav: " .$row["krav"]."     
-            </div>";
-     
+    if($result->num_rows > 0)
+    {
+        while($row=$result->fetch_assoc())
+        {
+            echo "<div> 
+                    <br> Evenemangs ID: ". $row["eveID"]."
+                    <br> Nation: ".$row["nation"]."
+                    <br> Titel: ". $row["titel"]."
+                    <br> Plats: ". $row["plats"]." 
+                    <br> Typ: " . $row["typ"]. "
+                    <br> Från: " .$row["fran"]."
+                    <br> Till: " .$row["till"]."
+                    <br> Datum: " .$row["datum"]."       
+                </div>";
+        }
+    }      
+    else
+    {
+        echo "Du har inga anmälda evenemang!";
+    }
+
     $conn->close();
 ?>

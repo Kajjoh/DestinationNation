@@ -199,6 +199,14 @@ h4 {
     margin-left: 5%;
 }
 
+#loginAdm {
+    text-align: center;
+    width: 10%;
+    margin-left: 85%;
+    padding: 5px;
+    font-size: 20px;
+}
+
 
 /*---------------------------------------------------------------------------------*/
 
@@ -377,7 +385,12 @@ h4 {
 #skapaEvKnapp {
 	width: 300px;
 	height: 60px;
-	font-size: 30px;
+    font-size: 30px;
+}
+
+#startsidaEv{
+    overflow: scroll;
+    height: 77.5%;
 }
 
 
@@ -420,15 +433,6 @@ h4 {
 }
 
 /*minaSidorNation.php*/
-#persuppgMSN
-{
-    border: 0.25em solid #C00000;
-    border-radius: 2em;
-    width: 40%;
-    margin-left: 30%;
-    margin-top: 2%;
-    overflow: auto;
-}
 #evKnapp
 {
     margin-left:45%;
@@ -436,5 +440,24 @@ h4 {
 
 #sessionMessage {
     font-size: 2em;
+    text-align: center;
+}
+
+#persuppgMSN{
+    margin: 4%;
+    height: 500px;
+    border-radius: 2em;
+    margin-left: 30%;
+    margin-top: 2%;
+    overflow: auto;
+    width: 40%;
+}
+
+#minasidorNflode{
+    border: solid #C00000;
+    margin: 4%;
+    height: 500px;
+    border-radius: 2em;
+    overflow: scroll;
     text-align: center;
 }

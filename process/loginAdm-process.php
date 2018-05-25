@@ -8,18 +8,18 @@ session_start();
     $inputmail = $_POST['email'];
     $inputpassword = $_POST['pw'];
     
-    $sql = "SELECT nation, mejl, losen FROM nationer WHERE mejl='$inputmail'";
+    $sql = "SELECT namn, mejl, losen FROM admin WHERE mejl='$inputmail'";
 
     $result = mysqli_query($conn, $sql);
 
     if (($inputmail=="") || ($inputpassword==""))
         {
-            header('Location: ../loginNat.php');
+            header('Location: ../loginAdm.php');
         }
     else if (mysqli_num_rows($result)<1) 
     {
         $_SESSION['noUser'] = "Användaren finns inte registrerad.";
-        header("Location: ../loginNat.php");
+        header("Location: ../loginAdm.php");
     }
     else
     {
@@ -29,17 +29,17 @@ session_start();
 
             if ($inputpassword==$pwFromDB)
             {
-                header("Location: ../minaSidorNation.php");
+                header("Location: ../startsidaTjanstelev.php");
             }
             else
             {
                 $_SESSION['password'] = "Fel lösenord.";
-                header("Location: ../loginNat.php");
+                header("Location: ../loginAdm.php");
             }
 
         }
 
-        $_SESSION['nation'] = "$namnFromDB";
+        $_SESSION['admin'] = "$namnFromDB";
 
     $conn->close();
     

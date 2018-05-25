@@ -13,10 +13,15 @@ $dbname = "projekt";
         die("Connection failed: " . $conn->connect_error);
     }
 
-	
+	if (isset($_POST['allaEvKnapp']))
+	{
+		session_start();
+		$_SESSION['allaevenemang'] = 'allaevenemang';
+		header("Location: startsidaStudent.php");
+	}
 	
     //om  pubKnapp är set, alltså vald 
-	if (isset($_POST['pubKnapp']))
+	else if (isset($_POST['pubKnapp']))
 	{
 		session_start();
 		$_SESSION['pub'] = 'pub'; // då startas sessionen pub

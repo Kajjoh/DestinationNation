@@ -10,10 +10,13 @@
 
     <?php
         include('html/sidhuvud.html');
-        
     ?>
 
         <h2> Välkommen till DestinationNation!</h2>
+        
+        <div id="loginAdm">
+            <p class="loggain"><a href="index.php" >Logga in</a></p>
+        </div>
 
         <p class="student-nation" id="nationsKnapp"><a href="loginNat.php" >Logga in som Nation!</a></p>
 
@@ -26,4 +29,5 @@
     	    	  
 	</body>
 </html>	
-	  
+      
+

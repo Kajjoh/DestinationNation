@@ -8,7 +8,8 @@
 		<title>DestinationNation</title>
 		<link href="html/main.css" rel="stylesheet">
 		<meta charset="utf-8">
-    </head>	
+    </head>
+	
 	
 	<body>
 
@@ -22,16 +23,15 @@
 		<div id="huvudRubrikInloggning">
 			<h3>Välkommen till DestinationNation</h3>
 		</div>	
-
 	
 			<div class="formular" id="inloggning">
 	
 				<div class="rubrikInloggning">
-					<h2>Logga in som nation</h2>
+					<h2>Logga in som administratör</h2>
 				</div>	
 
 				<!-- Här börjar formuläret. -->
-				<form name="loggain" method="POST" action="process/loginNat-process.php">
+				<form name="loggain" method="POST" action="process/loginAdm-process.php">
 		
 					<div class="loginBox">
 						<label for="email">Mejladress:<br></label>
@@ -67,9 +67,7 @@
 					
 				</form>	
 
-				<p id="ingetKonto">Inte nation?* Logga in som <a href="loginStud.php" >student</a></p>
-
-                <p class = "kontaktaNation">*Har du inte inloggningsuppgifterna vänligen kontakta din nation.</p>
+                <p class = "kontaktaNation">*Har du inte inloggningsuppgifterna vänligen kontakta din chef.</p>
 				
 			</div>
 
