@@ -21,17 +21,17 @@
 			</div>	
 
 				<!-- Här börjar formuläret. -->
-			<form name="tabortmedlem" method="POST" action="medlemprocess.php">
+			<form name="tabortmedlem" method="POST" action="process/raderaEveTjanste.php">
 		
 				<p class="boxes">
-					<label for="email">Evenemangs ID:<br></label>
+					<label for="evenemangsid">Evenemangs ID:<br></label>
 					<input type="text" placeholder="****" name="evenemangsid" id="evenemangsid"><br>
 					<?php
 						session_start();
-						if (isset($_SESSION['emailfel']))
+						if (isset($_SESSION['eveIDfel']))
 							{
-								echo $_SESSION['emailfel'];
-								unset($_SESSION['emailfel']);
+								echo $_SESSION['eveIDfel'];
+								unset($_SESSION['eveIDfel']);
 							}
 					?>
 						
