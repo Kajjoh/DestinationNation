@@ -130,12 +130,14 @@
 		$sql = "INSERT INTO registrering (perNr, studID, namn, mail, adress, ort, postNr, losen, salt)
 		VALUES ('$prnr', '$stid', '$name', '$mail', '$adress', '$ort', '$pstnr', '$hash', '$salt')";
 		$conn->query($sql);
+
+		header('Location: loginStud.php');
 	}
 	
 	
 		
 	
 	$conn->close();	
-	include '../inloggning.php';
+	
 	
 ?>
