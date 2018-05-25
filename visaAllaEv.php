@@ -48,7 +48,7 @@
           <div id="filter">
                 <ul id="filterlista">
                     <!--Här är vår filtreringslista-->
-					<form method="POST" action="filtreraEvenemang.php">
+					<form method="POST" action="process/filtreraEvenemang-process.php">
 						<li id="aktiviteter"><input type="submit" name="allaEvKnapp" id="allaEvKnapp" value="Alla evenemang"></li>
 						<li id="aktiviteter"><input type="submit" name="pubKnapp" id="pubKnapp" value="Pub"></li>
 						<li id="aktiviteter"><input type="submit" name="klubbKnapp" id="klubbKnapp" value="Klubb"></li>
@@ -146,6 +146,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang av typen: Pub";
 					unset($_SESSION['pub']);
 				}
 				
@@ -177,6 +178,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang av typen: Klubb";
 					unset($_SESSION['klubb']);
 				}
               
@@ -207,6 +209,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang av typen: Lunch";
 					unset($_SESSION['lunch']);
 				}
                 
@@ -237,6 +240,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang av typen: Frukost";
 					unset($_SESSION['frukost']);
 				}
                 
@@ -267,6 +271,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang av typen: Restaurang";
 					unset($_SESSION['restaurang']);
 				}
                 
@@ -297,6 +302,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang av typen: Brunch";
 					unset($_SESSION['brunch']);
 				}
                 
@@ -327,6 +333,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang av typen: Släpp";
 					unset($_SESSION['slapp']);
 				}
                 
@@ -357,6 +364,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang av typen: Gasque";
 					unset($_SESSION['gasque']);
 				}
                 
@@ -387,6 +395,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang av typen: Konsert";
 					unset($_SESSION['konsert']);
 				}
                 
@@ -417,6 +426,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang av typen: Övrigt";
 					unset($_SESSION['ovrigt']);
 				}
                 
@@ -445,6 +455,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang på Gotlands just nu";
 					unset($_SESSION['gotland']);
 				}
 				
@@ -453,7 +464,7 @@
 			
 			else if (isset($_SESSION['gh']))
 			{
-				$valjgh = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Gästrike-Hälsinge Nation'";
+				$valjgh = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Gastrike-Halsinge Nation'";
 				$hamtagh = mysqli_query($conn, $valjgh);
 				$kontrollgh = mysqli_num_rows($hamtagh);
 				if ($kontrollgh > 0)
@@ -475,6 +486,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang på Gästrike-Hälsinge just nu";
 					unset($_SESSION['gh']);
 				}
 				
@@ -483,7 +495,7 @@
 			
 			else if (isset($_SESSION['gbg']))
 			{
-				$valjgbg = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Göteborgs Nation'";
+				$valjgbg = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Goteborgs Nation'";
 				$hamtagbg = mysqli_query($conn, $valjgbg);
 				$kontrollgbg = mysqli_num_rows($hamtagbg);
 				if ($kontrollgbg > 0)
@@ -505,6 +517,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang på Göteborgs just nu";
 					unset($_SESSION['gbg']);
 				}
 				
@@ -535,6 +548,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang på Kalmars just nu";
 					unset($_SESSION['kalmar']);
 				}
 				
@@ -565,6 +579,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang på Norrlands just nu";
 					unset($_SESSION['norrland']);
 				}
 				
@@ -573,7 +588,7 @@
 			
 			else if (isset($_SESSION['smaland']))
 			{
-				$valjsmaland = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Smålands Nation'";
+				$valjsmaland = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Smalands Nation'";
 				$hamtasmaland = mysqli_query($conn, $valjsmaland);
 				$kontrollsmaland = mysqli_num_rows($hamtasmaland);
 				if ($kontrollsmaland > 0)
@@ -595,6 +610,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang på Smålands just nu";
 					unset($_SESSION['smaland']);
 				}
 				
@@ -625,13 +641,14 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang på Stockholms just nu";
 					unset($_SESSION['stocken']);
 				}
 			}	
 				
 			else if (isset($_SESSION['snerike']))
 			{
-				$valjsnerike = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'SödermanlandsNerikes Nation'";
+				$valjsnerike = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Sodermanlands-Nerikes Nation'";
 				$hamtasnerike = mysqli_query($conn, $valjsnerike);
 				$kontrollsnerike = mysqli_num_rows($hamtasnerike);
 				if ($kontrollsnerike > 0)
@@ -653,6 +670,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang på Sodermanlands-Nerikes just nu";
 					unset($_SESSION['snerike']);
 				}
 				
@@ -683,6 +701,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang på Uplands just nu";	
 					unset($_SESSION['upland']);
 				}
 				
@@ -691,7 +710,7 @@
 			
 			else if (isset($_SESSION['varmland']))
 			{
-				$valjvarmland = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Värmlands Nation'";
+				$valjvarmland = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Varmlands Nation'";
 				$hamtavarmland = mysqli_query($conn, $valjvarmland);
 				$kontrollvarmland = mysqli_num_rows($hamtavarmland);
 				if ($kontrollvarmland > 0)
@@ -713,6 +732,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang på Värmlands just nu";
 					unset($_SESSION['varmland']);
 				}
 				
@@ -721,7 +741,7 @@
 			
 			else if (isset($_SESSION['vg']))
 			{
-				$valjvg = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Västgöta Nation'";
+				$valjvg = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Vastgota Nation'";
 				$hamtavg = mysqli_query($conn, $valjvg);
 				$kontrollvg = mysqli_num_rows($hamtavg);
 				if ($kontrollvg > 0)
@@ -743,6 +763,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang på Västgöta just nu";
 					unset($_SESSION['vg']);
 				}
 				
@@ -751,7 +772,7 @@
 			
 			else if (isset($_SESSION['vdala']))
 			{
-				$valjvdala = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'VästmanlandsDala Nation'";
+				$valjvdala = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Vastmanlands-Dala Nation'";
 				$hamtavdala = mysqli_query($conn, $valjvdala);
 				$kontrollvdala = mysqli_num_rows($hamtavdala);
 				if ($kontrollvdala > 0)
@@ -773,6 +794,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang på Västmanland-Dala just nu";
 					unset($_SESSION['vdala']);
 				}
 				
@@ -781,7 +803,7 @@
 			
 			else if (isset($_SESSION['og']))
 			{
-				$valjog = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Östgöta Nation'";
+				$valjog = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Ostgota Nation'";
 				$hamtaog = mysqli_query($conn, $valjog);
 				$kontrollog = mysqli_num_rows($hamtaog);
 				if ($kontrollog > 0)
@@ -803,6 +825,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang på Östgöta just nu";
 					unset($_SESSION['og']);
 				}
 				
@@ -818,7 +841,7 @@
 		 <!--Denna div (nationsMeny) listar alla nationer vertikalt för filtrering.-->
         <div class="bakgrundmeny">
             <div class="nationsMeny">
-				<form method="POST" action="filtreraNation.php">
+				<form method="POST" action="process/filtreraNation-process.php">
 					<ul>
 						<li id="nationsattr"><input type="submit" name="gotlandsKnapp" id="gotlandsKnapp" value="Gotlands Nation"></li>
 						<li id="nationsattr"><input type="submit" name="ghKnapp" id="ghKnapp" value="Gästrike-Hälsinge Nation"></li>
