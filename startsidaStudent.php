@@ -64,10 +64,12 @@
                 </ul>
             </div>
         </div> 
+		
 		<div align="center">	
 		<?php
             /*om ingea session är set, alltså om inget har filtreras görs detta*/
-			if (!isset($_SESSION['pub']) && !isset($_SESSION['klubb']) && !isset($_SESSION['lunch']) && !isset($_SESSION['frukost']) && !isset($_SESSION['restaurang']) && !isset($_SESSION['brunch']) && !isset($_SESSION['slapp']) && !isset($_SESSION['gasque']) && !isset($_SESSION['konsert']) && !isset($_SESSION['ovrigt']) && !isset($_SESSION['allaevenemang']))
+			if (!isset($_SESSION['pub']) && !isset($_SESSION['klubb']) && !isset($_SESSION['lunch']) && !isset($_SESSION['frukost']) && !isset($_SESSION['restaurang']) && !isset($_SESSION['brunch']) && !isset($_SESSION['slapp']) && !isset($_SESSION['gasque']) && !isset($_SESSION['konsert']) && !isset($_SESSION['ovrigt']) && !isset($_SESSION['allaevenemang'])
+				 && !isset($_SESSION['gotland']) && !isset($_SESSION['gh']) && !isset($_SESSION['gbg']) && !isset($_SESSION['kalmar']) && !isset($_SESSION['norrland']) && !isset($_SESSION['smaland']) && !isset($_SESSION['stocken']) && !isset($_SESSION['snerike']) && !isset($_SESSION['upland']) && !isset($_SESSION['varmland']) && !isset($_SESSION['vg']) && !isset($_SESSION['vdala']) && !isset($_SESSION['og']))
 			{
 				$valjevenemang = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang";
 				$hamtaevenemang = mysqli_query($conn, $valjevenemang);
@@ -419,12 +421,401 @@
 				}
                 
             }
+			else if (isset($_SESSION['gotland']))
+			{
+				$valjgotland = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Gotlands Nation'";
+				$hamtagotland = mysqli_query($conn, $valjgotland);
+				$kontrollgotland = mysqli_num_rows($hamtagotland);
+				if ($kontrollgotland > 0)
+				{
+					while ($row = mysqli_fetch_assoc($hamtagotland))
+					{
+						echo "titel: ".$row['titel'];
+						echo "typ: ".$row['typ'];
+						echo "från: ".$row['fran'];
+						echo "till: ".$row['till'];
+						echo "datum: ".$row['datum'];
+						echo "krav: ".$row['krav'];
+						echo "beskrivning: ".$row['beskrivning'];
+						echo "plats: ".$row['plats'];
+						echo "nation: ".$row['nation'];
+						unset($_SESSION['gotland']);
+				
+					}
+				}
+				else
+				{
+					unset($_SESSION['gotland']);
+				}
+				
+				
+			}
+			
+			else if (isset($_SESSION['gh']))
+			{
+				$valjgh = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'GästrikeHälsinge Nation'";
+				$hamtagh = mysqli_query($conn, $valjgh);
+				$kontrollgh = mysqli_num_rows($hamtagh);
+				if ($kontrollgh > 0)
+				{
+					while ($row = mysqli_fetch_assoc($hamtagh))
+					{
+						echo "titel: ".$row['titel'];
+						echo "typ: ".$row['typ'];
+						echo "från: ".$row['fran'];
+						echo "till: ".$row['till'];
+						echo "datum: ".$row['datum'];
+						echo "krav: ".$row['krav'];
+						echo "beskrivning: ".$row['beskrivning'];
+						echo "plats: ".$row['plats'];
+						echo "nation: ".$row['nation'];
+						unset($_SESSION['gh']);
+				
+					}
+				}
+				else
+				{
+					unset($_SESSION['gh']);
+				}
+				
+				
+			}
+			
+			else if (isset($_SESSION['gbg']))
+			{
+				$valjgbg = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Göteborgs Nation'";
+				$hamtagbg = mysqli_query($conn, $valjgbg);
+				$kontrollgbg = mysqli_num_rows($hamtagbg);
+				if ($kontrollgbg > 0)
+				{
+					while ($row = mysqli_fetch_assoc($hamtagbg))
+					{
+						echo "titel: ".$row['titel'];
+						echo "typ: ".$row['typ'];
+						echo "från: ".$row['fran'];
+						echo "till: ".$row['till'];
+						echo "datum: ".$row['datum'];
+						echo "krav: ".$row['krav'];
+						echo "beskrivning: ".$row['beskrivning'];
+						echo "plats: ".$row['plats'];
+						echo "nation: ".$row['nation'];
+						unset($_SESSION['gbg']);
+				
+					}
+				}
+				else
+				{
+					unset($_SESSION['gbg']);
+				}
+				
+				
+			}
+			
+			else if (isset($_SESSION['kalmar']))
+			{
+				$valjkalmar = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Kalmars Nation'";
+				$hamtakalmar = mysqli_query($conn, $valjkalmar);
+				$kontrollkalmar = mysqli_num_rows($hamtakalmar);
+				if ($kontrollkalmar > 0)
+				{
+					while ($row = mysqli_fetch_assoc($hamtakalmar))
+					{
+						echo "titel: ".$row['titel'];
+						echo "typ: ".$row['typ'];
+						echo "från: ".$row['fran'];
+						echo "till: ".$row['till'];
+						echo "datum: ".$row['datum'];
+						echo "krav: ".$row['krav'];
+						echo "beskrivning: ".$row['beskrivning'];
+						echo "plats: ".$row['plats'];
+						echo "nation: ".$row['nation'];
+						unset($_SESSION['kalmar']);
+				
+					}
+				}
+				else
+				{
+					unset($_SESSION['kalmar']);
+				}
+				
+				
+			}
+			
+			else if (isset($_SESSION['norrland']))
+			{
+				$valjnorrland = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Norrlandss Nation'";
+				$hamtanorrland = mysqli_query($conn, $valjnorrland);
+				$kontrollnorrland = mysqli_num_rows($hamtanorrland);
+				if ($kontrollnorrland > 0)
+				{
+					while ($row = mysqli_fetch_assoc($hamtanorrland))
+					{
+						echo "titel: ".$row['titel'];
+						echo "typ: ".$row['typ'];
+						echo "från: ".$row['fran'];
+						echo "till: ".$row['till'];
+						echo "datum: ".$row['datum'];
+						echo "krav: ".$row['krav'];
+						echo "beskrivning: ".$row['beskrivning'];
+						echo "plats: ".$row['plats'];
+						echo "nation: ".$row['nation'];
+						unset($_SESSION['norrland']);
+				
+					}
+				}
+				else
+				{
+					unset($_SESSION['norrland']);
+				}
+				
+				
+			}
+			
+			else if (isset($_SESSION['smaland']))
+			{
+				$valjsmaland = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Smålands Nation'";
+				$hamtasmaland = mysqli_query($conn, $valjsmaland);
+				$kontrollsmaland = mysqli_num_rows($hamtasmaland);
+				if ($kontrollsmaland > 0)
+				{
+					while ($row = mysqli_fetch_assoc($hamtasmaland))
+					{
+						echo "titel: ".$row['titel'];
+						echo "typ: ".$row['typ'];
+						echo "från: ".$row['fran'];
+						echo "till: ".$row['till'];
+						echo "datum: ".$row['datum'];
+						echo "krav: ".$row['krav'];
+						echo "beskrivning: ".$row['beskrivning'];
+						echo "plats: ".$row['plats'];
+						echo "nation: ".$row['nation'];
+						unset($_SESSION['smaland']);
+				
+					}
+				}
+				else
+				{
+					unset($_SESSION['smaland']);
+				}
+				
+				
+			}
+			
+			else if (isset($_SESSION['stocken']))
+			{
+				$valjstocken = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Stockholms Nation'";
+				$hamtastocken = mysqli_query($conn, $valjstocken);
+				$kontrollstocken = mysqli_num_rows($hamtastocken);
+				if ($kontrollstocken > 0)
+				{
+					while ($row = mysqli_fetch_assoc($hamtastocken))
+					{
+						echo "titel: ".$row['titel'];
+						echo "typ: ".$row['typ'];
+						echo "från: ".$row['fran'];
+						echo "till: ".$row['till'];
+						echo "datum: ".$row['datum'];
+						echo "krav: ".$row['krav'];
+						echo "beskrivning: ".$row['beskrivning'];
+						echo "plats: ".$row['plats'];
+						echo "nation: ".$row['nation'];
+						unset($_SESSION['stocken']);
+				
+					}
+				}
+				else
+				{
+					unset($_SESSION['stocken']);
+				}
+			}	
+				
+			else if (isset($_SESSION['snerike']))
+			{
+				$valjsnerike = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'SödermanlandsNerikes Nation'";
+				$hamtasnerike = mysqli_query($conn, $valjsnerike);
+				$kontrollsnerike = mysqli_num_rows($hamtasnerike);
+				if ($kontrollsnerike > 0)
+				{
+					while ($row = mysqli_fetch_assoc($hamtasnerike))
+					{
+						echo "titel: ".$row['titel'];
+						echo "typ: ".$row['typ'];
+						echo "från: ".$row['fran'];
+						echo "till: ".$row['till'];
+						echo "datum: ".$row['datum'];
+						echo "krav: ".$row['krav'];
+						echo "beskrivning: ".$row['beskrivning'];
+						echo "plats: ".$row['plats'];
+						echo "nation: ".$row['nation'];
+						unset($_SESSION['snerike']);
+				
+					}
+				}
+				else
+				{
+					unset($_SESSION['snerike']);
+				}
+				
+				
+			}
+			
+			else if (isset($_SESSION['upland']))
+			{
+				$valjupland = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Uplands Nation'";
+				$hamtaupland = mysqli_query($conn, $valjupland);
+				$kontrollupland = mysqli_num_rows($hamtaupland);
+				if ($kontrollupland > 0)
+				{
+					while ($row = mysqli_fetch_assoc($hamtaupland))
+					{
+						echo "titel: ".$row['titel'];
+						echo "typ: ".$row['typ'];
+						echo "från: ".$row['fran'];
+						echo "till: ".$row['till'];
+						echo "datum: ".$row['datum'];
+						echo "krav: ".$row['krav'];
+						echo "beskrivning: ".$row['beskrivning'];
+						echo "plats: ".$row['plats'];
+						echo "nation: ".$row['nation'];
+						unset($_SESSION['upland']);
+				
+					}
+				}
+				else
+				{
+					unset($_SESSION['upland']);
+				}
+				
+				
+			}
+			
+			else if (isset($_SESSION['varmland']))
+			{
+				$valjvarmland = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Värmlands Nation'";
+				$hamtavarmland = mysqli_query($conn, $valjvarmland);
+				$kontrollvarmland = mysqli_num_rows($hamtavarmland);
+				if ($kontrollvarmland > 0)
+				{
+					while ($row = mysqli_fetch_assoc($hamtavarmland))
+					{
+						echo "titel: ".$row['titel'];
+						echo "typ: ".$row['typ'];
+						echo "från: ".$row['fran'];
+						echo "till: ".$row['till'];
+						echo "datum: ".$row['datum'];
+						echo "krav: ".$row['krav'];
+						echo "beskrivning: ".$row['beskrivning'];
+						echo "plats: ".$row['plats'];
+						echo "nation: ".$row['nation'];
+						unset($_SESSION['varmland']);
+				
+					}
+				}
+				else
+				{
+					unset($_SESSION['varmland']);
+				}
+				
+				
+			}
+			
+			else if (isset($_SESSION['vg']))
+			{
+				$valjvg = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Västgöta Nation'";
+				$hamtavg = mysqli_query($conn, $valjvg);
+				$kontrollvg = mysqli_num_rows($hamtavg);
+				if ($kontrollvg > 0)
+				{
+					while ($row = mysqli_fetch_assoc($hamtavg))
+					{
+						echo "titel: ".$row['titel'];
+						echo "typ: ".$row['typ'];
+						echo "från: ".$row['fran'];
+						echo "till: ".$row['till'];
+						echo "datum: ".$row['datum'];
+						echo "krav: ".$row['krav'];
+						echo "beskrivning: ".$row['beskrivning'];
+						echo "plats: ".$row['plats'];
+						echo "nation: ".$row['nation'];
+						unset($_SESSION['vg']);
+				
+					}
+				}
+				else
+				{
+					unset($_SESSION['vg']);
+				}
+				
+				
+			}
+			
+			else if (isset($_SESSION['vdala']))
+			{
+				$valjvdala = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'VästmanlandsDala Nation'";
+				$hamtavdala = mysqli_query($conn, $valjvdala);
+				$kontrollvdala = mysqli_num_rows($hamtavdala);
+				if ($kontrollvdala > 0)
+				{
+					while ($row = mysqli_fetch_assoc($hamtavdala))
+					{
+						echo "titel: ".$row['titel'];
+						echo "typ: ".$row['typ'];
+						echo "från: ".$row['fran'];
+						echo "till: ".$row['till'];
+						echo "datum: ".$row['datum'];
+						echo "krav: ".$row['krav'];
+						echo "beskrivning: ".$row['beskrivning'];
+						echo "plats: ".$row['plats'];
+						echo "nation: ".$row['nation'];
+						unset($_SESSION['vdala']);
+				
+					}
+				}
+				else
+				{
+					unset($_SESSION['vdala']);
+				}
+				
+				
+			}
+			
+			else if (isset($_SESSION['og']))
+			{
+				$valjog = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Östgöta Nation'";
+				$hamtaog = mysqli_query($conn, $valjog);
+				$kontrollog = mysqli_num_rows($hamtaog);
+				if ($kontrollog > 0)
+				{
+					while ($row = mysqli_fetch_assoc($hamtaog))
+					{
+						echo "titel: ".$row['titel'];
+						echo "typ: ".$row['typ'];
+						echo "från: ".$row['fran'];
+						echo "till: ".$row['till'];
+						echo "datum: ".$row['datum'];
+						echo "krav: ".$row['krav'];
+						echo "beskrivning: ".$row['beskrivning'];
+						echo "plats: ".$row['plats'];
+						echo "nation: ".$row['nation'];
+						unset($_SESSION['og']);
+				
+					}
+				}
+				else
+				{
+					unset($_SESSION['og']);
+				}
+				
+				
+			}
+				
+				
+			
 
 		?>
 		</div>
-      
-
-        <!--Denna div (nationsMeny) listar alla nationer vertikalt för filtrering.-->
+		
+		 <!--Denna div (nationsMeny) listar alla nationer vertikalt för filtrering.-->
         <div class="bakgrundmeny">
             <div class="nationsMeny">
 				<form method="POST" action="filtreraNation.php">
@@ -436,7 +827,7 @@
 						<li id="nationsattr"><input type="submit" name="norrlandsKnapp" id="norrlandsKnapp" value="Norrlands Nation"></li>
 						<li id="nationsattr"><input type="submit" name="smalandsKnapp" id="smalandsKnapp" value="Smålands Nation"></li>
 						<li id="nationsattr"><input type="submit" name="stockenKnapp" id="stockenKnapp" value="Stockholms Nation"></li>
-						<li id="nationsattr"><input type="submit" name="snerikesKnapp" id="snerikessKnapp" value="Södermanlands-Nerikes Nation"></li>
+						<li id="nationsattr"><input type="submit" name="snerikesKnapp" id="snerikesKnapp" value="Södermanlands-Nerikes Nation"></li>
 						<li id="nationsattr"><input type="submit" name="uplandsKnapp" id="uplandsKnapp" value="Uplands Nation"></li>
 						<li id="nationsattr"><input type="submit" name="varmlandsKnapp" id="varmlandsKnapp" value="Värmlands Nation"></li>
 						<li id="nationsattr"><input type="submit" name="vgKnapp" id="vgKnapp" value="Västgöta Nation"></li>
@@ -446,6 +837,9 @@
 				</form>		
             </div>
         </div>
+      
+
+       
 
 
         <?php
