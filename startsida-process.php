@@ -1,8 +1,7 @@
 <?php
 
-include('connection.php');
+include('process/connection.php');
 
-session_start();
 
             /*om ingea session är set, alltså om inget har filtreras görs detta*/
 			if (!isset($_SESSION['pub']) && !isset($_SESSION['klubb']) && !isset($_SESSION['lunch']) && !isset($_SESSION['frukost']) && !isset($_SESSION['restaurang']) && !isset($_SESSION['brunch']) && !isset($_SESSION['slapp']) && !isset($_SESSION['gasque']) && !isset($_SESSION['konsert']) && !isset($_SESSION['ovrigt']) && !isset($_SESSION['allaevenemang'])
@@ -12,16 +11,7 @@ session_start();
 				$hamtaevenemang = mysqli_query($conn, $valjevenemang);
 				while ($row = mysqli_fetch_assoc($hamtaevenemang))
 				{
-					echo "titel: ".$row['titel'];
-					echo "typ: ".$row['typ'];
-					echo "från: ".$row['fran'];
-					echo "till: ".$row['till'];
-					echo "datum: ".$row['datum'];
-					echo "krav: ".$row['krav'];
-					echo "beskrivning: ".$row['beskrivning'];
-					echo "plats: ".$row['plats'];
-					echo "nation: ".$row['nation'];
-				
+					include('includeecho-filtrering-process.php');
 				}
 			}
 			
@@ -34,25 +24,14 @@ session_start();
 				{
 					while ($row = mysqli_fetch_assoc($hamtaevenemang))
 					{
-						echo "titel: ".$row['titel'];
-						echo "typ: ".$row['typ'];
-						echo "från: ".$row['fran'];
-						echo "till: ".$row['till'];
-						echo "datum: ".$row['datum'];
-						echo "krav: ".$row['krav'];
-						echo "beskrivning: ".$row['beskrivning'];
-						echo "plats: ".$row['plats'];
-						echo "nation: ".$row['nation'];
+						include('includeecho-filtrering-process.php');
 						unset($_SESSION['allaevenemang']);
-				
 					}
 				}
 				else
 				{
 					unset($_SESSION['allaevenemang']);
 				}
-				
-				
 			}
 				
 			/*om pub väljs att filtrera görs detta*/
@@ -67,16 +46,7 @@ session_start();
 					while ($row = mysqli_fetch_assoc($hamtapub))
 					{
 					
-						echo "titel: ".$row['titel'];
-						echo "typ: ".$row['typ'];
-						echo "från: ".$row['fran'];
-						echo "till: ".$row['till'];
-						echo "datum: ".$row['datum'];
-						echo "krav: ".$row['krav'];
-						echo "beskrivning: ".$row['beskrivning'];
-						echo "plats: ".$row['plats'];
-						echo "nation: ".$row['nation'];
-						//unsetar sessionen för pub
+						include('includeecho-filtrering-process.php');
 						unset($_SESSION['pub']);
 					
 					}
@@ -99,27 +69,17 @@ session_start();
 				{ 
 					while ($row = mysqli_fetch_assoc($hamtaklubb))
 					{
-						echo "titel: ".$row['titel'];
-						echo "typ: ".$row['typ'];
-						echo "från: ".$row['fran'];
-						echo "till: ".$row['till'];
-						echo "datum: ".$row['datum'];
-						echo "krav: ".$row['krav'];
-						echo "beskrivning: ".$row['beskrivning'];
-						echo "plats: ".$row['plats'];
-						echo "nation: ".$row['nation'];
-						//unsetar session klubb
+						include('includeecho-filtrering-process.php');
 						unset($_SESSION['klubb']);                    
 					}
-					
 				}
 				else
 				{
 					echo "Det finns inga evenemang av typen: Klubb";
 					unset($_SESSION['klubb']);
 				}
-              
-            }
+			}
+			
             /*om lunch väljs att filtrera görs detta*/
             else if (isset($_SESSION['lunch']))
             {
@@ -131,16 +91,7 @@ session_start();
 				{
 					while ($row = mysqli_fetch_assoc($hamtalunch))
 					{
-						echo "titel: ".$row['titel'];
-						echo "typ: ".$row['typ'];
-						echo "från: ".$row['fran'];
-						echo "till: ".$row['till'];
-						echo "datum: ".$row['datum'];
-						echo "krav: ".$row['krav'];
-						echo "beskrivning: ".$row['beskrivning'];
-						echo "plats: ".$row['plats'];
-						echo "nation: ".$row['nation'];
-						//unsetar session lunch
+						include('includeecho-filtrering-process.php');
 						unset($_SESSION['lunch']);                    
 					}
 				}
@@ -148,9 +99,9 @@ session_start();
 				{
 					echo "Det finns inga evenemang av typen: Lunch";
 					unset($_SESSION['lunch']);
-				}
-                
-            }
+				}    
+			}
+			
             /*om frukost väljs att filtrera görs detta*/
             else if (isset($_SESSION['frukost']))
             {
@@ -162,16 +113,7 @@ session_start();
 				{
 					while ($row = mysqli_fetch_assoc($hamtafrukost))
 					{
-						echo "titel: ".$row['titel'];
-						echo "typ: ".$row['typ'];
-						echo "från: ".$row['fran'];
-						echo "till: ".$row['till'];
-						echo "datum: ".$row['datum'];
-						echo "krav: ".$row['krav'];
-						echo "beskrivning: ".$row['beskrivning'];
-						echo "plats: ".$row['plats'];
-						echo "nation: ".$row['nation'];
-						//unsetar session frukost
+						include('includeecho-filtrering-process.php');
 						unset($_SESSION['frukost']);                    
 					}
 				}
@@ -179,9 +121,9 @@ session_start();
 				{
 					echo "Det finns inga evenemang av typen: Frukost";
 					unset($_SESSION['frukost']);
-				}
-                
-            }
+				}  
+			}
+			
             /*om restaurang väljs att filtrera görs detta*/
             else if (isset($_SESSION['restaurang']))
             {
@@ -193,16 +135,7 @@ session_start();
 				{
 					while ($row = mysqli_fetch_assoc($hamtarestaurang))
 					{
-						echo "titel: ".$row['titel'];
-						echo "typ: ".$row['typ'];
-						echo "från: ".$row['fran'];
-						echo "till: ".$row['till'];
-						echo "datum: ".$row['datum'];
-						echo "krav: ".$row['krav'];
-						echo "beskrivning: ".$row['beskrivning'];
-						echo "plats: ".$row['plats'];
-						echo "nation: ".$row['nation'];
-						//unsetar session restaurang
+						include('includeecho-filtrering-process.php');
 						unset($_SESSION['restaurang']);                    
 					}
 				}
@@ -210,9 +143,9 @@ session_start();
 				{
 					echo "Det finns inga evenemang av typen: Restaurang";
 					unset($_SESSION['restaurang']);
-				}
-                
-            }
+				}   
+			}
+			
             /*om brunch väljs att filtrera görs detta*/
             else if (isset($_SESSION['brunch']))
             {
@@ -224,16 +157,7 @@ session_start();
 				{
 					while ($row = mysqli_fetch_assoc($hamtabrunch))
 					{
-						echo "titel: ".$row['titel'];
-						echo "typ: ".$row['typ'];
-						echo "från: ".$row['fran'];
-						echo "till: ".$row['till'];
-						echo "datum: ".$row['datum'];
-						echo "krav: ".$row['krav'];
-						echo "beskrivning: ".$row['beskrivning'];
-						echo "plats: ".$row['plats'];
-						echo "nation: ".$row['nation'];
-						//unsetar session brunch
+						include('includeecho-filtrering-process.php');
 						unset($_SESSION['brunch']);                    
 					}
 				}
@@ -242,8 +166,8 @@ session_start();
 					echo "Det finns inga evenemang av typen: Brunch";
 					unset($_SESSION['brunch']);
 				}
-                
-            }
+			}
+			
             /*om släpp väljs att filtrera görs detta*/
             else if (isset($_SESSION['slapp']))
             {
@@ -255,16 +179,7 @@ session_start();
 				{
 					while ($row = mysqli_fetch_assoc($hamtaslapp))
 					{
-						echo "titel: ".$row['titel'];
-						echo "typ: ".$row['typ'];
-						echo "från: ".$row['fran'];
-						echo "till: ".$row['till'];
-						echo "datum: ".$row['datum'];
-						echo "krav: ".$row['krav'];
-						echo "beskrivning: ".$row['beskrivning'];
-						echo "plats: ".$row['plats'];
-						echo "nation: ".$row['nation'];
-						//unsetar session släpp
+						include('includeecho-filtrering-process.php');
 						unset($_SESSION['slapp']);                    
 					}
 				}
@@ -272,9 +187,9 @@ session_start();
 				{
 					echo "Det finns inga evenemang av typen: Släpp";
 					unset($_SESSION['slapp']);
-				}
-                
-            }
+				}   
+			}
+			
             /*om Gasque väljs att filtrera görs detta*/
             else if (isset($_SESSION['gasque']))
             {
@@ -286,16 +201,7 @@ session_start();
 				{
 					while ($row = mysqli_fetch_assoc($hamtagasque))
 					{
-						echo "titel: ".$row['titel'];
-						echo "typ: ".$row['typ'];
-						echo "från: ".$row['fran'];
-						echo "till: ".$row['till'];
-						echo "datum: ".$row['datum'];
-						echo "krav: ".$row['krav'];
-						echo "beskrivning: ".$row['beskrivning'];
-						echo "plats: ".$row['plats'];
-						echo "nation: ".$row['nation'];
-						//unsetar session gasque
+						include('includeecho-filtrering-process.php');
 						unset($_SESSION['gasque']);                    
 					}
 				}
@@ -303,9 +209,9 @@ session_start();
 				{
 					echo "Det finns inga evenemang av typen: Gasque";
 					unset($_SESSION['gasque']);
-				}
-                
-            }
+				} 
+			}
+			
             /*om konsert väljs att filtrera görs detta*/
             else if (isset($_SESSION['konsert']))
             {
@@ -317,16 +223,7 @@ session_start();
 				{
 					while ($row = mysqli_fetch_assoc($hamtakonsert))
 					{
-						echo "titel: ".$row['titel'];
-						echo "typ: ".$row['typ'];
-						echo "från: ".$row['fran'];
-						echo "till: ".$row['till'];
-						echo "datum: ".$row['datum'];
-						echo "krav: ".$row['krav'];
-						echo "beskrivning: ".$row['beskrivning'];
-						echo "plats: ".$row['plats'];
-						echo "nation: ".$row['nation'];
-						//unsetar session konsert
+						include('includeecho-filtrering-process.php');
 						unset($_SESSION['konsert']);                    
 					}
 				}
@@ -334,9 +231,9 @@ session_start();
 				{
 					echo "Det finns inga evenemang av typen: Konsert";
 					unset($_SESSION['konsert']);
-				}
-                
-            }
+				}   
+			}
+			
             /*om övrigt väljs att filtrera görs detta*/
             else if (isset($_SESSION['ovrigt']))
             {
@@ -348,16 +245,7 @@ session_start();
 				{
 					while ($row = mysqli_fetch_assoc($hamtaovrigt))
 					{
-						echo "titel: ".$row['titel'];
-						echo "typ: ".$row['typ'];
-						echo "från: ".$row['fran'];
-						echo "till: ".$row['till'];
-						echo "datum: ".$row['datum'];
-						echo "krav: ".$row['krav'];
-						echo "beskrivning: ".$row['beskrivning'];
-						echo "plats: ".$row['plats'];
-						echo "nation: ".$row['nation'];
-						//unsetar session övrigt
+						include('includeecho-filtrering-process.php');
 						unset($_SESSION['ovrigt']);                    
 					}
 				}
@@ -377,17 +265,8 @@ session_start();
 				{
 					while ($row = mysqli_fetch_assoc($hamtagotland))
 					{
-						echo "titel: ".$row['titel'];
-						echo "typ: ".$row['typ'];
-						echo "från: ".$row['fran'];
-						echo "till: ".$row['till'];
-						echo "datum: ".$row['datum'];
-						echo "krav: ".$row['krav'];
-						echo "beskrivning: ".$row['beskrivning'];
-						echo "plats: ".$row['plats'];
-						echo "nation: ".$row['nation'];
+						include('includeecho-filtrering-process.php');
 						unset($_SESSION['gotland']);
-				
 					}
 				}
 				else
@@ -395,8 +274,6 @@ session_start();
 					echo "Det finns inga evenemang på Gotlands just nu";
 					unset($_SESSION['gotland']);
 				}
-				
-				
 			}
 			
 			else if (isset($_SESSION['gh']))
@@ -408,15 +285,7 @@ session_start();
 				{
 					while ($row = mysqli_fetch_assoc($hamtagh))
 					{
-						echo "titel: ".$row['titel'];
-						echo "typ: ".$row['typ'];
-						echo "från: ".$row['fran'];
-						echo "till: ".$row['till'];
-						echo "datum: ".$row['datum'];
-						echo "krav: ".$row['krav'];
-						echo "beskrivning: ".$row['beskrivning'];
-						echo "plats: ".$row['plats'];
-						echo "nation: ".$row['nation'];
+						include('includeecho-filtrering-process.php');
 						unset($_SESSION['gh']);
 				
 					}
@@ -425,9 +294,7 @@ session_start();
 				{
 					echo "Det finns inga evenemang på Gästrike-Hälsinge just nu";
 					unset($_SESSION['gh']);
-				}
-				
-				
+				}	
 			}
 			
 			else if (isset($_SESSION['gbg']))
@@ -439,26 +306,15 @@ session_start();
 				{
 					while ($row = mysqli_fetch_assoc($hamtagbg))
 					{
-						echo "titel: ".$row['titel'];
-						echo "typ: ".$row['typ'];
-						echo "från: ".$row['fran'];
-						echo "till: ".$row['till'];
-						echo "datum: ".$row['datum'];
-						echo "krav: ".$row['krav'];
-						echo "beskrivning: ".$row['beskrivning'];
-						echo "plats: ".$row['plats'];
-						echo "nation: ".$row['nation'];
-						unset($_SESSION['gbg']);
-				
+						include('includeecho-filtrering-process.php');
+						unset($_SESSION['gbg']);				
 					}
 				}
 				else
 				{
 					echo "Det finns inga evenemang på Göteborgs just nu";
 					unset($_SESSION['gbg']);
-				}
-				
-				
+				}	
 			}
 			
 			else if (isset($_SESSION['kalmar']))
@@ -470,26 +326,15 @@ session_start();
 				{
 					while ($row = mysqli_fetch_assoc($hamtakalmar))
 					{
-						echo "titel: ".$row['titel'];
-						echo "typ: ".$row['typ'];
-						echo "från: ".$row['fran'];
-						echo "till: ".$row['till'];
-						echo "datum: ".$row['datum'];
-						echo "krav: ".$row['krav'];
-						echo "beskrivning: ".$row['beskrivning'];
-						echo "plats: ".$row['plats'];
-						echo "nation: ".$row['nation'];
+						include('includeecho-filtrering-process.php');
 						unset($_SESSION['kalmar']);
-				
 					}
 				}
 				else
 				{
 					echo "Det finns inga evenemang på Kalmars just nu";
 					unset($_SESSION['kalmar']);
-				}
-				
-				
+				}	
 			}
 			
 			else if (isset($_SESSION['norrland']))
@@ -501,26 +346,15 @@ session_start();
 				{
 					while ($row = mysqli_fetch_assoc($hamtanorrland))
 					{
-						echo "titel: ".$row['titel'];
-						echo "typ: ".$row['typ'];
-						echo "från: ".$row['fran'];
-						echo "till: ".$row['till'];
-						echo "datum: ".$row['datum'];
-						echo "krav: ".$row['krav'];
-						echo "beskrivning: ".$row['beskrivning'];
-						echo "plats: ".$row['plats'];
-						echo "nation: ".$row['nation'];
+						include('includeecho-filtrering-process.php');
 						unset($_SESSION['norrland']);
-				
 					}
 				}
 				else
 				{
 					echo "Det finns inga evenemang på Norrlands just nu";
 					unset($_SESSION['norrland']);
-				}
-				
-				
+				}	
 			}
 			
 			else if (isset($_SESSION['smaland']))
@@ -532,17 +366,8 @@ session_start();
 				{
 					while ($row = mysqli_fetch_assoc($hamtasmaland))
 					{
-						echo "titel: ".$row['titel'];
-						echo "typ: ".$row['typ'];
-						echo "från: ".$row['fran'];
-						echo "till: ".$row['till'];
-						echo "datum: ".$row['datum'];
-						echo "krav: ".$row['krav'];
-						echo "beskrivning: ".$row['beskrivning'];
-						echo "plats: ".$row['plats'];
-						echo "nation: ".$row['nation'];
+						include('includeecho-filtrering-process.php');
 						unset($_SESSION['smaland']);
-				
 					}
 				}
 				else
@@ -550,8 +375,6 @@ session_start();
 					echo "Det finns inga evenemang på Smålands just nu";
 					unset($_SESSION['smaland']);
 				}
-				
-				
 			}
 			
 			else if (isset($_SESSION['stocken']))
@@ -563,17 +386,8 @@ session_start();
 				{
 					while ($row = mysqli_fetch_assoc($hamtastocken))
 					{
-						echo "titel: ".$row['titel'];
-						echo "typ: ".$row['typ'];
-						echo "från: ".$row['fran'];
-						echo "till: ".$row['till'];
-						echo "datum: ".$row['datum'];
-						echo "krav: ".$row['krav'];
-						echo "beskrivning: ".$row['beskrivning'];
-						echo "plats: ".$row['plats'];
-						echo "nation: ".$row['nation'];
+						include('includeecho-filtrering-process.php');
 						unset($_SESSION['stocken']);
-				
 					}
 				}
 				else
@@ -592,26 +406,15 @@ session_start();
 				{
 					while ($row = mysqli_fetch_assoc($hamtasnerike))
 					{
-						echo "titel: ".$row['titel'];
-						echo "typ: ".$row['typ'];
-						echo "från: ".$row['fran'];
-						echo "till: ".$row['till'];
-						echo "datum: ".$row['datum'];
-						echo "krav: ".$row['krav'];
-						echo "beskrivning: ".$row['beskrivning'];
-						echo "plats: ".$row['plats'];
-						echo "nation: ".$row['nation'];
+						include('includeecho-filtrering-process.php');
 						unset($_SESSION['snerike']);
-				
 					}
 				}
 				else
 				{
 					echo "Det finns inga evenemang på Sodermanlands-Nerikes just nu";
 					unset($_SESSION['snerike']);
-				}
-				
-				
+				}	
 			}
 			
 			else if (isset($_SESSION['upland']))
@@ -623,26 +426,15 @@ session_start();
 				{
 					while ($row = mysqli_fetch_assoc($hamtaupland))
 					{
-						echo "titel: ".$row['titel'];
-						echo "typ: ".$row['typ'];
-						echo "från: ".$row['fran'];
-						echo "till: ".$row['till'];
-						echo "datum: ".$row['datum'];
-						echo "krav: ".$row['krav'];
-						echo "beskrivning: ".$row['beskrivning'];
-						echo "plats: ".$row['plats'];
-						echo "nation: ".$row['nation'];
+						include('includeecho-filtrering-process.php');
 						unset($_SESSION['upland']);
-				
 					}
 				}
 				else
 				{
 					echo "Det finns inga evenemang på Uplands just nu";	
 					unset($_SESSION['upland']);
-				}
-				
-				
+				}	
 			}
 			
 			else if (isset($_SESSION['varmland']))
@@ -654,17 +446,8 @@ session_start();
 				{
 					while ($row = mysqli_fetch_assoc($hamtavarmland))
 					{
-						echo "titel: ".$row['titel'];
-						echo "typ: ".$row['typ'];
-						echo "från: ".$row['fran'];
-						echo "till: ".$row['till'];
-						echo "datum: ".$row['datum'];
-						echo "krav: ".$row['krav'];
-						echo "beskrivning: ".$row['beskrivning'];
-						echo "plats: ".$row['plats'];
-						echo "nation: ".$row['nation'];
+						include('includeecho-filtrering-process.php');
 						unset($_SESSION['varmland']);
-				
 					}
 				}
 				else
@@ -672,8 +455,6 @@ session_start();
 					echo "Det finns inga evenemang på Värmlands just nu";
 					unset($_SESSION['varmland']);
 				}
-				
-				
 			}
 			
 			else if (isset($_SESSION['vg']))
@@ -685,26 +466,15 @@ session_start();
 				{
 					while ($row = mysqli_fetch_assoc($hamtavg))
 					{
-						echo "titel: ".$row['titel'];
-						echo "typ: ".$row['typ'];
-						echo "från: ".$row['fran'];
-						echo "till: ".$row['till'];
-						echo "datum: ".$row['datum'];
-						echo "krav: ".$row['krav'];
-						echo "beskrivning: ".$row['beskrivning'];
-						echo "plats: ".$row['plats'];
-						echo "nation: ".$row['nation'];
+						include('includeecho-filtrering-process.php');
 						unset($_SESSION['vg']);
-				
 					}
 				}
 				else
 				{
 					echo "Det finns inga evenemang på Västgöta just nu";
 					unset($_SESSION['vg']);
-				}
-				
-				
+				}	
 			}
 			
 			else if (isset($_SESSION['vdala']))
@@ -716,17 +486,8 @@ session_start();
 				{
 					while ($row = mysqli_fetch_assoc($hamtavdala))
 					{
-						echo "titel: ".$row['titel'];
-						echo "typ: ".$row['typ'];
-						echo "från: ".$row['fran'];
-						echo "till: ".$row['till'];
-						echo "datum: ".$row['datum'];
-						echo "krav: ".$row['krav'];
-						echo "beskrivning: ".$row['beskrivning'];
-						echo "plats: ".$row['plats'];
-						echo "nation: ".$row['nation'];
+						include('includeecho-filtrering-process.php');
 						unset($_SESSION['vdala']);
-				
 					}
 				}
 				else
@@ -734,8 +495,6 @@ session_start();
 					echo "Det finns inga evenemang på Västmanland-Dala just nu";
 					unset($_SESSION['vdala']);
 				}
-				
-				
 			}
 			
 			else if (isset($_SESSION['og']))
@@ -747,17 +506,8 @@ session_start();
 				{
 					while ($row = mysqli_fetch_assoc($hamtaog))
 					{
-						echo "titel: ".$row['titel'];
-						echo "typ: ".$row['typ'];
-						echo "från: ".$row['fran'];
-						echo "till: ".$row['till'];
-						echo "datum: ".$row['datum'];
-						echo "krav: ".$row['krav'];
-						echo "beskrivning: ".$row['beskrivning'];
-						echo "plats: ".$row['plats'];
-						echo "nation: ".$row['nation'];
+						include('includeecho-filtrering-process.php');
 						unset($_SESSION['og']);
-				
 					}
 				}
 				else
@@ -765,11 +515,5 @@ session_start();
 					echo "Det finns inga evenemang på Östgöta just nu";
 					unset($_SESSION['og']);
 				}
-				
-				
 			}
-				
-				
-			
-
 		?>
