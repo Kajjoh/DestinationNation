@@ -28,7 +28,8 @@ session_start();
             $pwFromDB = $row['losen'];
 
             if ($inputpassword==$pwFromDB)
-            {
+            {	
+				$_SESSION['nation'] = "$namnFromDB";
                 header("Location: ../minaSidorNation.php");
             }
             else
@@ -39,7 +40,7 @@ session_start();
 
         }
 
-        $_SESSION['nation'] = "$namnFromDB";
+        
 
     $conn->close();
     
