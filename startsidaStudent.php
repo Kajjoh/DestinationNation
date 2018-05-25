@@ -453,7 +453,7 @@
 			
 			else if (isset($_SESSION['gh']))
 			{
-				$valjgh = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Gästrike-Hälsinge Nation'";
+				$valjgh = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Gastrike-Halsinge Nation'";
 				$hamtagh = mysqli_query($conn, $valjgh);
 				$kontrollgh = mysqli_num_rows($hamtagh);
 				if ($kontrollgh > 0)
@@ -483,7 +483,7 @@
 			
 			else if (isset($_SESSION['gbg']))
 			{
-				$valjgbg = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Göteborgs Nation'";
+				$valjgbg = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Goteborgs Nation'";
 				$hamtagbg = mysqli_query($conn, $valjgbg);
 				$kontrollgbg = mysqli_num_rows($hamtagbg);
 				if ($kontrollgbg > 0)
@@ -573,7 +573,7 @@
 			
 			else if (isset($_SESSION['smaland']))
 			{
-				$valjsmaland = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Smålands Nation'";
+				$valjsmaland = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Smalands Nation'";
 				$hamtasmaland = mysqli_query($conn, $valjsmaland);
 				$kontrollsmaland = mysqli_num_rows($hamtasmaland);
 				if ($kontrollsmaland > 0)
@@ -631,7 +631,7 @@
 				
 			else if (isset($_SESSION['snerike']))
 			{
-				$valjsnerike = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'SödermanlandsNerikes Nation'";
+				$valjsnerike = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Sodermanlands-Nerikes Nation'";
 				$hamtasnerike = mysqli_query($conn, $valjsnerike);
 				$kontrollsnerike = mysqli_num_rows($hamtasnerike);
 				if ($kontrollsnerike > 0)
@@ -691,7 +691,7 @@
 			
 			else if (isset($_SESSION['varmland']))
 			{
-				$valjvarmland = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Värmlands Nation'";
+				$valjvarmland = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Varmlands Nation'";
 				$hamtavarmland = mysqli_query($conn, $valjvarmland);
 				$kontrollvarmland = mysqli_num_rows($hamtavarmland);
 				if ($kontrollvarmland > 0)
@@ -721,7 +721,7 @@
 			
 			else if (isset($_SESSION['vg']))
 			{
-				$valjvg = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Västgöta Nation'";
+				$valjvg = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Vastgota Nation'";
 				$hamtavg = mysqli_query($conn, $valjvg);
 				$kontrollvg = mysqli_num_rows($hamtavg);
 				if ($kontrollvg > 0)
@@ -751,7 +751,7 @@
 			
 			else if (isset($_SESSION['vdala']))
 			{
-				$valjvdala = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'VästmanlandsDala Nation'";
+				$valjvdala = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Vastmanlands-Dala Nation'";
 				$hamtavdala = mysqli_query($conn, $valjvdala);
 				$kontrollvdala = mysqli_num_rows($hamtavdala);
 				if ($kontrollvdala > 0)
@@ -781,7 +781,7 @@
 			
 			else if (isset($_SESSION['og']))
 			{
-				$valjog = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Östgöta Nation'";
+				$valjog = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Ostgota Nation'";
 				$hamtaog = mysqli_query($conn, $valjog);
 				$kontrollog = mysqli_num_rows($hamtaog);
 				if ($kontrollog > 0)
