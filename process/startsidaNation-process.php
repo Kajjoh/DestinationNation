@@ -22,13 +22,13 @@
 
                 echo "<div> 
                             <br> Evenemangs ID: ". $row["eveID"]."
+                            <br> Nation: ".$row["nation"]."
                             <br> Titel: ". $row["titel"]."
                             <br> Plats: ". $row["plats"]." 
-                            <br> Nation: ".$row["nation"]."
                             <br> Typ: " . $row["typ"]. "
                             <br> Från: " .$row["fran"]."
                             <br> Till: " .$row["till"]."
-                            <br> Tid: " .$row["datum"]."
+                            <br> Datum: " .$row["datum"]."
                             <br> Kräver anmälan: " .$row["krav"]."
                             <br> Beskrivning: " .$row["beskrivning"]."       
                         </div>";
