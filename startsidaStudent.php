@@ -146,6 +146,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang av typen: Pub";
 					unset($_SESSION['pub']);
 				}
 				
@@ -177,6 +178,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang av typen: Klubb";
 					unset($_SESSION['klubb']);
 				}
               
@@ -207,6 +209,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang av typen: Lunch";
 					unset($_SESSION['lunch']);
 				}
                 
@@ -237,6 +240,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang av typen: Frukost";
 					unset($_SESSION['frukost']);
 				}
                 
@@ -267,6 +271,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang av typen: Restaurang";
 					unset($_SESSION['restaurang']);
 				}
                 
@@ -297,6 +302,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang av typen: Brunch";
 					unset($_SESSION['brunch']);
 				}
                 
@@ -327,6 +333,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang av typen: Släpp";
 					unset($_SESSION['slapp']);
 				}
                 
@@ -357,6 +364,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang av typen: Gasque";
 					unset($_SESSION['gasque']);
 				}
                 
@@ -387,6 +395,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang av typen: Konsert";
 					unset($_SESSION['konsert']);
 				}
                 
@@ -417,6 +426,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang av typen: Övrigt";
 					unset($_SESSION['ovrigt']);
 				}
                 
@@ -445,6 +455,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang på Gotlands just nu";
 					unset($_SESSION['gotland']);
 				}
 				
@@ -475,6 +486,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang på Gästrike-Hälsinge just nu";
 					unset($_SESSION['gh']);
 				}
 				
@@ -505,6 +517,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang på Göteborgs just nu";
 					unset($_SESSION['gbg']);
 				}
 				
@@ -535,6 +548,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang på Kalmars just nu";
 					unset($_SESSION['kalmar']);
 				}
 				
@@ -565,6 +579,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang på Norrlands just nu";
 					unset($_SESSION['norrland']);
 				}
 				
@@ -595,6 +610,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang på Smålands just nu";
 					unset($_SESSION['smaland']);
 				}
 				
@@ -625,6 +641,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang på Stockholms just nu";
 					unset($_SESSION['stocken']);
 				}
 			}	
@@ -653,6 +670,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang på Sodermanlands-Nerikes just nu";
 					unset($_SESSION['snerike']);
 				}
 				
@@ -683,6 +701,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang på Uplands just nu";	
 					unset($_SESSION['upland']);
 				}
 				
@@ -713,6 +732,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang på Värmlands just nu";
 					unset($_SESSION['varmland']);
 				}
 				
@@ -743,6 +763,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang på Västgöta just nu";
 					unset($_SESSION['vg']);
 				}
 				
@@ -773,6 +794,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang på Västmanland-Dala just nu";
 					unset($_SESSION['vdala']);
 				}
 				
@@ -803,6 +825,7 @@
 				}
 				else
 				{
+					echo "Det finns inga evenemang på Östgöta just nu";
 					unset($_SESSION['og']);
 				}
 				
