@@ -29,10 +29,16 @@
 					<?php
 						session_start();
 						if (isset($_SESSION['eveIDfel']))
-							{
-								echo $_SESSION['eveIDfel'];
-								unset($_SESSION['eveIDfel']);
-							}
+						{
+							echo $_SESSION['eveIDfel'];
+							unset($_SESSION['eveIDfel']);
+						}
+						else if (isset($_SESSION['felbehorighet']))
+						{
+							echo $_SESSION['felbehorighet'];
+							unset($_SESSION['felbehorighet']);
+						}
+							
 					?>
 						
 				</p>	

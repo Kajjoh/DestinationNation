@@ -12,6 +12,7 @@
 			include('html/sidhuvud.html');
 
 			include('html/menyNation.html');
+			include('process/OmOss-process.php');
 		?>
 				
 		<!-- Här börjar innehållssidan. --> 
