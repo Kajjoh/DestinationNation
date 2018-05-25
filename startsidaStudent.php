@@ -44,7 +44,7 @@
 		
 		<div align="center">	
 			<?php
-				include('startsida-process.php');
+				include('process/startsida-process.php');
 			?>
 		</div>
 		

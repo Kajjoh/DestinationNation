@@ -1,6 +1,6 @@
 <?php
 
-include('process/connection.php');
+include('connection.php');
 
 
             /*om ingea session är set, alltså om inget har filtreras görs detta*/
