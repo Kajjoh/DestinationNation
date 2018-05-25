@@ -427,22 +427,23 @@
         <!--Denna div (nationsMeny) listar alla nationer vertikalt för filtrering.-->
         <div class="bakgrundmeny">
             <div class="nationsMeny">
-				<ul>
-					<li id="nationsattr"><input type="submit" name="gotlandsKnapp" id="gotlandsKnapp" value="Gotlands Nation"></li>
-					<li id="nationsattr"><input type="submit" name="ghKnapp" id="ghKnapp" value="Gästrike-Hälsinge Nation"></li>
-					<li id="nationsattr"><input type="submit" name="gbgKnapp" id="gbgKnapp" value="Göteborgs Nation"></li>
-					<li id="nationsattr"><input type="submit" name="kalmarsKnapp" id="kalmarsKnapp" value="Kalmars Nation"></li>
-					<li id="nationsattr"><input type="submit" name="norrlandsKnapp" id="norrlandsKnapp" value="Norrlands Nation"></li>
-					<li id="nationsattr"><input type="submit" name="smalandsKnapp" id="smalandsKnapp" value="Smålands Nation"></li>
-					<li id="nationsattr"><input type="submit" name="stockenKnapp" id="stockenKnapp" value="Stockholms Nation"></li>
-					<li id="nationsattr"><input type="submit" name="snerikesKnapp" id="snerikessKnapp" value="Södermanlands-Nerikes Nation"></li>
-					<li id="nationsattr"><input type="submit" name="uplandsKnapp" id="uplandsKnapp" value="Uplands Nation"></li>
-					<li id="nationsattr"><input type="submit" name="varmlandsKnapp" id="varmlandsKnapp" value="Värmlands Nation"></li>
-					<li id="nationsattr"><input type="submit" name="vgKnapp" id="vgKnapp" value="Västgöta Nation"></li>
-					<li id="nationsattr"><input type="submit" name="vdalaKnapp" id="vdalaKnapp" value="Västmanland-Dala Nation"></li>
-					<li id="nationsattr"><input type="submit" name="ogKnapp" id="ogKnapp" value="Östgöta Nation"></li>
-					
-				</ul>		
+				<form method="POST" action="filtreraNation.php">
+					<ul>
+						<li id="nationsattr"><input type="submit" name="gotlandsKnapp" id="gotlandsKnapp" value="Gotlands Nation"></li>
+						<li id="nationsattr"><input type="submit" name="ghKnapp" id="ghKnapp" value="Gästrike-Hälsinge Nation"></li>
+						<li id="nationsattr"><input type="submit" name="gbgKnapp" id="gbgKnapp" value="Göteborgs Nation"></li>
+						<li id="nationsattr"><input type="submit" name="kalmarsKnapp" id="kalmarsKnapp" value="Kalmars Nation"></li>
+						<li id="nationsattr"><input type="submit" name="norrlandsKnapp" id="norrlandsKnapp" value="Norrlands Nation"></li>
+						<li id="nationsattr"><input type="submit" name="smalandsKnapp" id="smalandsKnapp" value="Smålands Nation"></li>
+						<li id="nationsattr"><input type="submit" name="stockenKnapp" id="stockenKnapp" value="Stockholms Nation"></li>
+						<li id="nationsattr"><input type="submit" name="snerikesKnapp" id="snerikessKnapp" value="Södermanlands-Nerikes Nation"></li>
+						<li id="nationsattr"><input type="submit" name="uplandsKnapp" id="uplandsKnapp" value="Uplands Nation"></li>
+						<li id="nationsattr"><input type="submit" name="varmlandsKnapp" id="varmlandsKnapp" value="Värmlands Nation"></li>
+						<li id="nationsattr"><input type="submit" name="vgKnapp" id="vgKnapp" value="Västgöta Nation"></li>
+						<li id="nationsattr"><input type="submit" name="vdalaKnapp" id="vdalaKnapp" value="Västmanland-Dala Nation"></li>
+						<li id="nationsattr"><input type="submit" name="ogKnapp" id="ogKnapp" value="Östgöta Nation"></li>
+					</ul>
+				</form>		
             </div>
         </div>
 
