@@ -19,7 +19,7 @@
 	}
 	else 
 	{
-		$sql = "DELETE * FROM registrering WHERE mail = '$mail'";
+		$sql = "DELETE FROM registrering WHERE mail = '$mail'";
 		$conn->query($sql);
 		header('Location: ../startsidaTjanstelev.php');
 	}

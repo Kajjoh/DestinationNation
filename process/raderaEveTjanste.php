@@ -19,7 +19,7 @@
 	}
 	else 
 	{
-		$sql = "DELETE *FROM evenemang WHERE eveID = '$eveID'";
+		$sql = "DELETE FROM evenemang WHERE eveID = '$eveID'";
 		$conn->query($sql);
 		header('Location: ../startsidaTjanstelev.php');
 	}
