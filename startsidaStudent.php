@@ -48,7 +48,7 @@
           <div id="filter">
                 <ul id="filterlista">
                     <!--Här är vår filtreringslista-->
-					<form method="POST" action="filtreraEvenemang.php">
+					<form method="POST" action="process/filtreraEvenemang-process.php">
 						<li id="aktiviteter"><input type="submit" name="allaEvKnapp" id="allaEvKnapp" value="Alla evenemang"></li>
 						<li id="aktiviteter"><input type="submit" name="pubKnapp" id="pubKnapp" value="Pub"></li>
 						<li id="aktiviteter"><input type="submit" name="klubbKnapp" id="klubbKnapp" value="Klubb"></li>
@@ -841,7 +841,7 @@
 		 <!--Denna div (nationsMeny) listar alla nationer vertikalt för filtrering.-->
         <div class="bakgrundmeny">
             <div class="nationsMeny">
-				<form method="POST" action="filtreraNation.php">
+				<form method="POST" action="process/filtreraNation-process.php">
 					<ul>
 						<li id="nationsattr"><input type="submit" name="gotlandsKnapp" id="gotlandsKnapp" value="Gotlands Nation"></li>
 						<li id="nationsattr"><input type="submit" name="ghKnapp" id="ghKnapp" value="Gästrike-Hälsinge Nation"></li>
