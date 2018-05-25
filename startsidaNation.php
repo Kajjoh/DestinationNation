@@ -17,7 +17,7 @@
     <?php
         include('html/sidhuvud.html');
 
-        include('html/menyStudent.html');
+        include('html/menyNation.html');
     ?>
         
           <!--denna div (filter) listar horisontellt alla aktiviteter för nationer för filtrering.-->
