@@ -9,7 +9,7 @@
 	<body>
 		<?php
 			include('html/sidhuvud.html');
-			include ('html/menyLeverantor.html')
+			include ('html/menyMedlemmar.html');
 		?>
 	</body>
 </html>
