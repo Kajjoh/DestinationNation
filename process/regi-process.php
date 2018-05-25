@@ -131,7 +131,7 @@
 		VALUES ('$prnr', '$stid', '$name', '$mail', '$adress', '$ort', '$pstnr', '$hash', '$salt')";
 		$conn->query($sql);
 
-		header('Location: loginStud.php');
+		header('Location: ../loginStud.php');
 	}
 	
 	
