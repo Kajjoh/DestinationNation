@@ -92,17 +92,21 @@
 				$hamtapub = mysqli_query($conn, $valjpub);
 				while ($row = mysqli_fetch_assoc($hamtapub))
 				{
-					echo "titel: ".$row['titel'];
-					echo "typ: ".$row['typ'];
-					echo "från: ".$row['fran'];
-					echo "till: ".$row['till'];
-					echo "datum: ".$row['datum'];
-					echo "krav: ".$row['krav'];
-					echo "beskrivning: ".$row['beskrivning'];
-					echo "plats: ".$row['plats'];
-					echo "nation: ".$row['nation'];
-                    //unsetar sessionen för pub
-					unset($_SESSION['pub']);
+					if(!empty($row.['typ']))
+					{
+						echo "titel: ".$row['titel'];
+						echo "typ: ".$row['typ'];
+						echo "från: ".$row['fran'];
+						echo "till: ".$row['till'];
+						echo "datum: ".$row['datum'];
+						echo "krav: ".$row['krav'];
+						echo "beskrivning: ".$row['beskrivning'];
+						echo "plats: ".$row['plats'];
+						echo "nation: ".$row['nation'];
+						//unsetar sessionen för pub
+						unset($_SESSION['pub']);
+					}
+					
 				}
 				
 			}

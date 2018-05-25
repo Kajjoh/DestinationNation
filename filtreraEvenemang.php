@@ -12,6 +12,8 @@ $dbname = "projekt";
     {
         die("Connection failed: " . $conn->connect_error);
     }
+
+	
 	
     //om  pubKnapp är set, alltså vald 
 	if (isset($_POST['pubKnapp']))
@@ -32,7 +34,7 @@ $dbname = "projekt";
 	}
 	 //om  lunchKnapp är set, alltså vald 
 	else if (isset($_POST['lunchKnapp']))
-	{
+	{	
 		session_start();
 		$_SESSION['lunch'] = 'lunch'; // då startas sessionen lunch
 		header("Location: startsidaStudent.php");
