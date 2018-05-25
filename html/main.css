@@ -448,13 +448,14 @@ h4 {
     border-radius: 2em;
     margin-left: 30%;
     margin-top: 2%;
-    overflow: auto;
+
     width: 40%;
 }
 
 #minasidorNflode{
     border: solid #C00000;
     margin: 4%;
+    width: 50%;
     height: 500px;
     border-radius: 2em;
     overflow: scroll;
