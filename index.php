@@ -12,12 +12,12 @@
         include('html/sidhuvud.html');
     ?>
 
-        <h2> Välkommen till DestinationNation!</h2>
-        
         <div id="loginAdm">
-            <p class="loggain"><a href="index.php" >Logga in</a></p>
+            <p class="loggain"><a href="index.php" >Administratör</a></p>
         </div>
 
+        <h2> Välkommen till DestinationNation!</h2>
+        
         <p class="student-nation" id="nationsKnapp"><a href="loginNat.php" >Logga in som Nation!</a></p>
 
         <p class="student-nation" id="studentKnapp"><a href="loginStud.php" >Logga in som Student!</a></p>
