@@ -15,22 +15,25 @@
 			include('html/menyNation.html');
 		?>
 
-		<div id="sessionMessage">
-			<?php
-				if (isset($_SESSION['nation']))
-				{
-					echo $_SESSION['nation'] ."!";
-				}
-			?>
-        </div>
-		
-		<div id="persuppgMSN">
-			<?php
-				include('process/mSN-process.php');
-			?>
+		<div id="minasidorNflode">
+			<div id="sessionMessage">
+				<?php
+					if (isset($_SESSION['nation']))
+					{
+						echo $_SESSION['nation'] ."!";
+					}
+				?>
+			</div>
+			
+			<div id="persuppgMSN">
+				<?php
+					include('process/mSN-process.php');
+				?>
+			</div>
 		</div>
-
+		
 		<a id="evKnapp" onscroll=""href="skapaEv.php"><button>Skapa Evenemang</button></a>
+
 		<?php
 			include('html/sidfot.html');
 		?>
