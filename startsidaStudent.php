@@ -92,7 +92,7 @@
 				$hamtapub = mysqli_query($conn, $valjpub);
 				while ($row = mysqli_fetch_assoc($hamtapub))
 				{
-					if(!empty($row.['typ']))
+					if(!empty($row['typ']))
 					{
 						echo "titel: ".$row['titel'];
 						echo "typ: ".$row['typ'];
