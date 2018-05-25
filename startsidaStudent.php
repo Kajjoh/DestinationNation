@@ -49,16 +49,17 @@
                 <ul id="filterlista">
                     <!--Här är vår filtreringslista-->
 					<form method="POST" action="filtreraEvenemang.php">
-                    <li id="aktiviteter"><input type="submit" name="pubKnapp" id="pubKnapp" value="Pub"></li>
-                    <li id="aktiviteter"><input type="submit" name="klubbKnapp" id="klubbKnapp" value="Klubb"></li>
-                    <li id="aktiviteter"><input type="submit" name="lunchKnapp" id="lunchKnapp" value ="Lunch"></li>
-                    <li id="aktiviteter"><input type="submit" name="frukostKnapp" id="frukostKnapp" value="Frukost"></li>
-                    <li id="aktiviteter"><input type="submit" name="restaurangKnapp" id="restaurangKnapp" value="Restaurang"></li>
-                    <li id="aktiviteter"><input type="submit" name="brunchKnapp" id="brunchKnapp" value="Brunch"></li>
-                    <li id="aktiviteter"><input type="submit" name="slappKnapp" id="slappKnapp" value="Släpp"></li>
-                    <li id="aktiviteter"><input type="submit" name="gasqueKnapp" id="gasqueKnapp" value="Gasque"></li>
-                    <li id="aktiviteter"><input type="submit" name="konsertKnapp" id="konsertKnapp" value="Konsert"></li>
-                    <li id="aktiviteter"><input type="submit" name="ovrigtKnapp" id="ovrigtKnapp" value="Övrigt"></li>
+						<li id="aktiviteter"><input type="submit" name="allaEvKnapp" id="allaEvKnapp" value="Alla evenemang"></li>
+						<li id="aktiviteter"><input type="submit" name="pubKnapp" id="pubKnapp" value="Pub"></li>
+						<li id="aktiviteter"><input type="submit" name="klubbKnapp" id="klubbKnapp" value="Klubb"></li>
+						<li id="aktiviteter"><input type="submit" name="lunchKnapp" id="lunchKnapp" value ="Lunch"></li>
+						<li id="aktiviteter"><input type="submit" name="frukostKnapp" id="frukostKnapp" value="Frukost"></li>
+						<li id="aktiviteter"><input type="submit" name="restaurangKnapp" id="restaurangKnapp" value="Restaurang"></li>
+						<li id="aktiviteter"><input type="submit" name="brunchKnapp" id="brunchKnapp" value="Brunch"></li>
+						<li id="aktiviteter"><input type="submit" name="slappKnapp" id="slappKnapp" value="Släpp"></li>
+						<li id="aktiviteter"><input type="submit" name="gasqueKnapp" id="gasqueKnapp" value="Gasque"></li>
+						<li id="aktiviteter"><input type="submit" name="konsertKnapp" id="konsertKnapp" value="Konsert"></li>
+						<li id="aktiviteter"><input type="submit" name="ovrigtKnapp" id="ovrigtKnapp" value="Övrigt"></li>
 					</form>
                 </ul>
             </div>
@@ -66,7 +67,7 @@
 		<div align="center">	
 		<?php
             /*om ingea session är set, alltså om inget har filtreras görs detta*/
-			if (!isset($_SESSION['pub']) && !isset($_SESSION['klubb']) && !isset($_SESSION['lunch']) && !isset($_SESSION['frukost']) && !isset($_SESSION['restaurang']) && !isset($_SESSION['brunch']) && !isset($_SESSION['slapp']) && !isset($_SESSION['gasque']) && !isset($_SESSION['konsert']) && !isset($_SESSION['ovrigt']))
+			if (!isset($_SESSION['pub']) && !isset($_SESSION['klubb']) && !isset($_SESSION['lunch']) && !isset($_SESSION['frukost']) && !isset($_SESSION['restaurang']) && !isset($_SESSION['brunch']) && !isset($_SESSION['slapp']) && !isset($_SESSION['gasque']) && !isset($_SESSION['konsert']) && !isset($_SESSION['ovrigt']) && !isset($_SESSION['allaevenemang']))
 			{
 				$valjevenemang = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang";
 				$hamtaevenemang = mysqli_query($conn, $valjevenemang);
@@ -84,6 +85,37 @@
 				
 				}
 			}
+			
+			else if (isset($_SESSION['allaevenemang']))
+			{
+				$valjevenemang = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang";
+				$hamtaevenemang = mysqli_query($conn, $valjevenemang);
+				$kontrollalla = mysqli_num_rows($hamtaevenemang);
+				if ($kontrollalla > 0)
+				{
+					while ($row = mysqli_fetch_assoc($hamtaevenemang))
+					{
+						echo "titel: ".$row['titel'];
+						echo "typ: ".$row['typ'];
+						echo "från: ".$row['fran'];
+						echo "till: ".$row['till'];
+						echo "datum: ".$row['datum'];
+						echo "krav: ".$row['krav'];
+						echo "beskrivning: ".$row['beskrivning'];
+						echo "plats: ".$row['plats'];
+						echo "nation: ".$row['nation'];
+						unset($_SESSION['allaevenemang']);
+				
+					}
+				}
+				else
+				{
+					unset($_SESSION['allaevenemang']);
+				}
+				
+				
+			}
+				
 			/*om pub väljs att filtrera görs detta*/
 			else if (isset($_SESSION['pub']))
 			{
