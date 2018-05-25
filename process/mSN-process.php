@@ -1,4 +1,6 @@
 <?php
+$nation = $_SESSION['nation'];
+
 $servername = "localhost";
 $dbusername = "root";
 $dbpassword = "";
@@ -13,7 +15,9 @@ $dbname = "projekt";
         die("Connection failed: " . $conn->connect_error);
     } 
 
-	$sql = "SELECT * FROM evenemang";
+    $nation = $_SESSION['nation'];
+    
+	$sql = "SELECT * FROM evenemang WHERE (nation = '$nation')";
     $result = $conn->query($sql);
 
     if($result->num_rows > 0)
