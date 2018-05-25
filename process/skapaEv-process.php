@@ -1,5 +1,7 @@
 <?php
 
+    session_start();
+
     include('connection.php');
 
     $evTitel = mysqli_real_escape_string($conn, trim($_POST['Titel']));
