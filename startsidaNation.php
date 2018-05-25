@@ -832,20 +832,6 @@
             </div>
         </div>
 
-
-        <!--<div class ="startnationFlode">
-            <div class = "innernationflode">
-                <h3 id = "startnatioRubrik">Evenemang</h3>
-
-                <div id="startsidaEv">
-                <?php
-                    //include('process/startsidaNation-process.php');
-                ?>
-                </div>
-
-            </div>
-        </div>-->
-
         <?php
             include('html/sidfot.html');
         ?>
