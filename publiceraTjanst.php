@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -7,16 +11,18 @@
     </head>	
 	
 	<body>
+	<?php
+		include('html/sidhuvud.html');
+		include ('html/menyMedlemmar.html');
+	?>
 	<div class = "helaPublicera">
-		<?php
-			include('html/sidhuvud.html');
-			include ('html/menyMedlemmar.html');
-		?>
+		
 		<div id="rubrikPublicera">
 				<h3>Publicera Meddelande</h3>
-			</div>
+		</div>
+
 		<div class="formular">
-			<form id ="publicera" name="publicera" method="POST" action="process/publiceraTjanst-process.php" onsubmit="return (validateEv())">
+			<form id ="publicera" name="publicera" method="POST" action="process/publiceraTjanst-process.php">
 
 					<label for="Titel">Titel</label><br>
 						<input type="text" id="Titel" name="Titel"><br>
@@ -29,14 +35,15 @@
 							}
 							?>
                     	</div><br>
+
                     	<label for="Tid">Tid</label><br>
 						<input type="text" id="Tid" name="Tid" placeholder="--:--"><br>
 						<div class="errorMessage">
 							<?php
-							if (isset($_SESSION['felmeddelande']))
+							if (isset($_SESSION['felTid']))
 							{
-								echo $_SESSION['felmeddelande'];
-								unset ($_SESSION['felmeddelande']);
+								echo $_SESSION['felTid'];
+								unset ($_SESSION['felTid']);
 							}
 							?>
                     	</div><br>
@@ -44,10 +51,10 @@
 						<input type="text" id="Datum" name="Datum" placeholder="--:--"><br>
 						<div class="errorMessage">
 							<?php
-							if (isset($_SESSION['felmeddelande']))
+							if (isset($_SESSION['felDatum']))
 							{
-								echo $_SESSION['felmeddelande'];
-								unset ($_SESSION['felmeddelande']);
+								echo $_SESSION['felDatum'];
+								unset ($_SESSION['felDatum']);
 							}
 							?>
                     	</div><br>
