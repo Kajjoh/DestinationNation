@@ -7,6 +7,7 @@
     </head>	
 	
 	<body>
+	<div class = "helaPublicera">
 		<?php
 			include('html/sidhuvud.html');
 			include ('html/menyMedlemmar.html');
@@ -65,6 +66,7 @@
                     	<input type="submit" value="Publicera meddelande!" id="publiceraBtn">
             </form>
 		</div>
+	</div>
 		 <script src="java/publicera.js"></script>	
 	</body>
 </html>
