@@ -67,6 +67,9 @@
             </form>
 		</div>
 	</div>
+		<?php
+			include('html/sidfot.html');
+		?>
 		 <script src="java/publicera.js"></script>	
 	</body>
 </html>
