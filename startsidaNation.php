@@ -21,7 +21,15 @@
     ?>
         
           <!--denna div (filter) listar horisontellt alla aktiviteter för nationer för filtrering.-->
-		  <div class="back">  
+		<div class="back">
+		<div id="nationsession">
+			<?php
+				if (isset($_SESSION['nation']))
+				{
+					echo "Inloggad som: " . $_SESSION['nation'];
+				}
+			?>
+		</div>	
           	<div id="filter">
 					<form method="POST" action="process/filtreraEvenemangNation-process.php">
 						<p id="aktiviteter"><input type="submit" name="allaEvKnapp" class="knappAktmeny" value="Alla evenemang"></p>
@@ -37,9 +45,10 @@
 						<p id="aktiviteter"><input type="submit" name="ovrigtKnapp" class="knappAktmeny" value="Övrigt"></p>
 					</form>
             </div>
-        </div> 
+        </div>
 		
-		<div class="eventFlode">	
+		<div class="eventFlode">
+			
 			<h2>Evenemangsflöde</h2>
 			<?php
 				include('process/startsida-process.php');

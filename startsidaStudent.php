@@ -22,7 +22,15 @@
         
           <!--denna div (filter) listar horisontellt alla aktiviteter för nationer för filtrering.-->
 		<div class="back">
-          <div id="filter">
+		<div id="studentsession">
+			<?php
+				if (isset($_SESSION['user']))
+				{
+					echo "Inloggad som: " . $_SESSION['user'];
+				}
+			?>
+		</div>	
+            <div id="filter">
 					<form method="POST" action="process/filtreraEvenemang-process.php">
 						<p id="aktiviteter"><input type="submit" name="allaEvKnapp" class="knappAktmeny" value="Alla evenemang"></p>
 						<p id="aktiviteter"><input type="submit" name="pubKnapp" class="knappAktmeny" value="Pub"></p>
