@@ -48,8 +48,9 @@
 							}
 							?>
                     	</div><br>
+
                     	<label for="Datum">Datum</label><br>
-						<input type="text" id="Datum" name="Datum" placeholder="--:--"><br>
+						<input type="text" id="Datum" name="Datum" placeholder="xxxx-xx-xx"><br>
 						<div class="errorMessage">
 							<?php
 							if (isset($_SESSION['felDatum']))
@@ -59,6 +60,7 @@
 							}
 							?>
                     	</div><br>
+
                     	<label for="Meddelande">Meddelande</label><br>
 						<textarea id="Meddelande" name="Meddelande" placeholder="Publicering av meddelande"></textarea><br>
 						<div class="errorMessage">
@@ -75,9 +77,11 @@
             </form>
 		</div>
 	</div>
+
 		<?php
 			include('html/sidfot.html');
 		?>
-		 <script src="java/publicera.js"></script>	
+
 	</body>
+	<script src="java/publicera.js"></script>	
 </html>
