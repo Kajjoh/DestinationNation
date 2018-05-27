@@ -12,7 +12,6 @@
 			include('html/sidhuvud.html');
 
 			include('html/menyNation.html');
-			include('process/OmOss-process.php');
 		?>
 				
 		<!-- Här börjar innehållssidan. --> 
@@ -21,7 +20,9 @@
 			<div id="rubrikOmOss">
 				<h3>Om Oss</h3>
 			</div>
-		
+			<?php
+			include('process/OmOss-process.php');
+			?>
 			<div id="innehallOmOss">
 				<p>
 					DestinationNation erbjuder en tjänst för att öka spridningen av nationsevenemang vilket gynnar både 
