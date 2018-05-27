@@ -250,6 +250,15 @@ h4 {
 /*---------------------------------------------------------------------------------*/
 /* OMOSS.HTML*/
 
+#display
+{
+    margin-top: 2%;
+    border: 0.2em solid purple;
+    width: 59%;
+    margin-bottom: 2%;
+    margin-left:20%;
+    overflow:scroll;
+}
 #divOmOss {
     border: 0.10em solid #C00000;
 }
@@ -273,6 +282,7 @@ h4 {
     font-style: italic;
 
 }
+
 
 /*---------------------------------------------------------------------------------*/
 /* STARTSIDASTUDENT.HTML*/
