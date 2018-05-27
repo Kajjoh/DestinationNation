@@ -107,8 +107,8 @@
 
 					<label for="Kravanmälan">Kräver detta evenemang en anmälan?</label><br>
 					<select name="krav">
-						<option value="nej">Nej</option>
-						<option value="ja">Ja</option>
+						<option value="Nej">Nej</option>
+						<option value="Ja">Ja</option>
 					</select><br>
 
 					<label for="Beskrivning">Beskrivning</label><br>

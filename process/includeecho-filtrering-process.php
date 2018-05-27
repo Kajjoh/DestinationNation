@@ -2,14 +2,13 @@
 
 include('process/connection.php');
 
-        echo "titel: ".$row['titel'];
-					echo "typ: ".$row['typ'];
-					echo "<br> från: ".$row['fran'];
-					echo "<br>till: ".$row['till'];
-					echo "<br>datum: ".$row['datum'];
-					echo "<br>krav: ".$row['krav'];
-					echo "<br>beskrivning: ".$row['beskrivning'];
-					echo "<br>plats: ".$row['plats'];
-                    echo "<br>nation: ".$row['nation'] ."<br>";
+		echo " <div class=evenemang> <br> <div class=titelEv> ".$row['titel']  ." </div>
+		<br> ".$row['typ'] ." 
+		<br> Nation: ".$row['nation'] ." 
+		<br> Tid: ".$row['fran'] ." - ".$row['till'] ."
+		<br> Datum: ".$row['datum'] ."
+		<br> Plats: ".$row['plats'] ."
+		<br> Krävs anmälan? ".$row['krav'] ."
+        <br> ".$row['beskrivning'] ." <br> </div>";
                     
 ?>

@@ -291,18 +291,21 @@ h4 {
 #filter{
     margin-left: 17.2%;
     padding: 1%;
-    border-bottom: 0.1em solid #C00000
+    border-bottom: 0.1em solid #C00000;
 }
 
+/* För att få hela bakgrunden i aktivitetsmenyn grå (även vänstra hörnet) */
 .back{
     background-color: #E8E8E8;
 }
 
+/* Aktivitetsmenyn*/
 #aktiviteter{
     display: inline;
     margin-left: 1%;
 }
 
+/* Knapparna i aktivitetsmenyn*/
 .knappAktmeny{
     padding: 0.5% 1%;
 }
@@ -316,16 +319,37 @@ h4 {
     border-right: 0.1em solid #C00000;
 }
 
+/* Knapparna i nationsmenyn */
 .knappNationsmeny {
     width: 95%;
     padding: 2%;
 }
 
+/* Diven som evenemangsflödet ligger i */
 .eventFlode{
-    margin-top: 5%;
-    border: 0.2em solid purple;
-    width: 80%;
+    margin-top: 2%; 
+    margin-right: 2%;
+    border: 0.2em solid #C00000;
+    border-radius: 2em;
+    width: 75%;
     float: right;
+    height: 35em;
+    overflow: auto;
+}
+
+/* De små rutorna för varje enskilt evenemang*/
+.evenemang {
+    border: 0.1em solid #C00000;
+    border-radius: 2em;
+    width: 60%;
+    margin: 2% 20%;
+    padding-left: 2%;
+    padding-bottom: 1%;
+}
+
+/* Gör att kunn göra titeln på varje evenemang större */
+.titelEv {
+    font-size: 1.3em;
 }
 
 
