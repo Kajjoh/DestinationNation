@@ -473,3 +473,26 @@ h4 {
     margin-left: 25%;
     margin-top: 5%;
 }
+/*-------------------------------------------------------*/
+/* hanteraEvenemang.php*/
+
+#raderaEvenemangNation{
+	border: 2px solid #C00000;
+    border-radius: 20px;
+    width: 40%;
+    margin-left: 5%;
+    margin-top: 5%;
+	float: left;
+}
+#raderaEvNat{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+#helaRedigeraEvenemang{
+	border: 2px solid #C00000;
+    border-radius: 20px;
+	width: 40%;
+    margin-right: 5%;
+    margin-top: 5%;
+	float: right;
+}
