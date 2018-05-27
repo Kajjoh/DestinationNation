@@ -18,6 +18,7 @@
                 while($row=$result->fetch_assoc())
                 {
                     echo "<div> 
+                            <br> Meddelanden från tjänsteleverantör:
                             <br> Titel: ". $row["Titel"]."
                             <br> Tid: ".$row["Tid"]."
                             <br> Datum: ". $row["Datum"]."
