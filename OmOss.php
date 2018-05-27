@@ -13,7 +13,7 @@
 
 			include('html/menyStudent.html');
 
-			include('process/OmOss-process.php');
+			//include('process/OmOss-process.php');
 		
 		?>
 				
@@ -23,6 +23,9 @@
 			<div id="rubrikOmOss">
 				<h3>Om Oss</h3>
 			</div>
+			<?php
+			include('process/OmOss-process.php');
+			?>
 		
 			<div id="innehallOmOss">
 				<p>
