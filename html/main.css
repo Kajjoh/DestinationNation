@@ -257,7 +257,7 @@ h4 {
     width: 59%;
     margin-bottom: 2%;
     margin-left:20%;
-    overflow:scroll;
+    overflow-y:scroll;
 }
 #divOmOss {
     border: 0.10em solid #C00000;
