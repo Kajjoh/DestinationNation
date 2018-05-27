@@ -13,7 +13,7 @@
     ?>
 
         <div id="loginAdm">
-            <p class="loggain"><a href="index.php" >Administratör</a></p>
+            <p class="loggain"><a href="loginAdm.php" >Administratör</a></p>
         </div>
 
         <h2> Välkommen till DestinationNation!</h2>

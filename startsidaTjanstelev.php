@@ -16,57 +16,52 @@
         include('html/sidhuvud.html');
 		include ('html/menyLeverantor.html')
         
-    ?>
+	?>
+	
 	 <!--denna div (filter) listar horisontellt alla aktiviteter för nationer för filtrering.-->
-        <div class="backgrundMeny">   
+	 <div class="back">
           <div id="filter">
-                <ul id="filterlista">
-                    <!--Här är vår filtreringslista-->
-					<form method="POST" action="process/filtreraEvenemangTjanstelev-process.php">
-						<li id="aktiviteter"><input type="submit" name="allaEvKnapp" id="allaEvKnapp" value="Alla evenemang"></li>
-						<li id="aktiviteter"><input type="submit" name="pubKnapp" id="pubKnapp" value="Pub"></li>
-						<li id="aktiviteter"><input type="submit" name="klubbKnapp" id="klubbKnapp" value="Klubb"></li>
-						<li id="aktiviteter"><input type="submit" name="lunchKnapp" id="lunchKnapp" value ="Lunch"></li>
-						<li id="aktiviteter"><input type="submit" name="frukostKnapp" id="frukostKnapp" value="Frukost"></li>
-						<li id="aktiviteter"><input type="submit" name="restaurangKnapp" id="restaurangKnapp" value="Restaurang"></li>
-						<li id="aktiviteter"><input type="submit" name="brunchKnapp" id="brunchKnapp" value="Brunch"></li>
-						<li id="aktiviteter"><input type="submit" name="slappKnapp" id="slappKnapp" value="Släpp"></li>
-						<li id="aktiviteter"><input type="submit" name="gasqueKnapp" id="gasqueKnapp" value="Gasque"></li>
-						<li id="aktiviteter"><input type="submit" name="konsertKnapp" id="konsertKnapp" value="Konsert"></li>
-						<li id="aktiviteter"><input type="submit" name="ovrigtKnapp" id="ovrigtKnapp" value="Övrigt"></li>
-					</form>
-                </ul>
+				<form method="POST" action="process/filtreraEvenemangTjanstelev-process.php">
+					<p id="aktiviteter"><input type="submit" name="allaEvKnapp" class="knappAktmeny" value="Alla evenemang"></p>
+					<p id="aktiviteter"><input type="submit" name="pubKnapp" class="knappAktmeny" value="Pub"></p>
+					<p id="aktiviteter"><input type="submit" name="klubbKnapp" class="knappAktmeny" value="Klubb"></p>
+					<p id="aktiviteter"><input type="submit" name="lunchKnapp" class="knappAktmeny" value ="Lunch"></p>
+					<p id="aktiviteter"><input type="submit" name="frukostKnapp" class="knappAktmeny" value="Frukost"></p>
+					<p id="aktiviteter"><input type="submit" name="restaurangKnapp" class="knappAktmeny" value="Restaurang"></p>
+					<p id="aktiviteter"><input type="submit" name="brunchKnapp" class="knappAktmeny" value="Brunch"></p>
+					<p id="aktiviteter"><input type="submit" name="slappKnapp" class="knappAktmeny" value="Släpp"></p>
+					<p id="aktiviteter"><input type="submit" name="gasqueKnapp" class="knappAktmeny" value="Gasque"></p>
+					<p id="aktiviteter"><input type="submit" name="konsertKnapp" class="knappAktmeny" value="Konsert"></p>
+					<p id="aktiviteter"><input type="submit" name="ovrigtKnapp" class="knappAktmeny" value="Övrigt"></p>
+				</form>
             </div>
-        </div> 
+		</div>
 		
-		<div align="center">	
+		<div class="eventFlode">	
+			<h2>Evenemangsflöde</h2>
 			<?php
 				include('process/startsida-process.php');
 			?>
 		</div>
 		
 		 <!--Denna div (nationsMeny) listar alla nationer vertikalt för filtrering.-->
-        <div class="bakgrundmeny">
-            <div class="nationsMeny">
+		 	<div class="nationsMeny">
 				<form method="POST" action="process/filtreraNationTjanstelev-process.php">
-					<ul>
-						<li id="nationsattr"><input type="submit" name="gotlandsKnapp" id="gotlandsKnapp" value="Gotlands Nation"></li>
-						<li id="nationsattr"><input type="submit" name="ghKnapp" id="ghKnapp" value="Gästrike-Hälsinge Nation"></li>
-						<li id="nationsattr"><input type="submit" name="gbgKnapp" id="gbgKnapp" value="Göteborgs Nation"></li>
-						<li id="nationsattr"><input type="submit" name="kalmarsKnapp" id="kalmarsKnapp" value="Kalmars Nation"></li>
-						<li id="nationsattr"><input type="submit" name="norrlandsKnapp" id="norrlandsKnapp" value="Norrlands Nation"></li>
-						<li id="nationsattr"><input type="submit" name="smalandsKnapp" id="smalandsKnapp" value="Smålands Nation"></li>
-						<li id="nationsattr"><input type="submit" name="stockenKnapp" id="stockenKnapp" value="Stockholms Nation"></li>
-						<li id="nationsattr"><input type="submit" name="snerikesKnapp" id="snerikesKnapp" value="Södermanlands-Nerikes Nation"></li>
-						<li id="nationsattr"><input type="submit" name="uplandsKnapp" id="uplandsKnapp" value="Uplands Nation"></li>
-						<li id="nationsattr"><input type="submit" name="varmlandsKnapp" id="varmlandsKnapp" value="Värmlands Nation"></li>
-						<li id="nationsattr"><input type="submit" name="vgKnapp" id="vgKnapp" value="Västgöta Nation"></li>
-						<li id="nationsattr"><input type="submit" name="vdalaKnapp" id="vdalaKnapp" value="Västmanland-Dala Nation"></li>
-						<li id="nationsattr"><input type="submit" name="ogKnapp" id="ogKnapp" value="Östgöta Nation"></li>
-					</ul>
+					<div class="nationsattr"><input type="submit" name="gotlandsKnapp" class="knappNationsmeny" value="Gotlands Nation"></div>
+					<div class="nationsattr"><input type="submit" name="ghKnapp" class="knappNationsmeny" value="Gästrike-Hälsinge Nation"></div>
+					<div class="nationsattr"><input type="submit" name="gbgKnapp" class="knappNationsmeny" value="Göteborgs Nation"></div>
+					<div class="nationsattr"><input type="submit" name="kalmarsKnapp" class="knappNationsmeny" value="Kalmars Nation"></div>
+					<div class="nationsattr"><input type="submit" name="norrlandsKnapp" class="knappNationsmeny" value="Norrlands Nation"></div>
+					<div class="nationsattr"><input type="submit" name="smalandsKnapp" class="knappNationsmeny" value="Smålands Nation"></div>
+					<div class="nationsattr"><input type="submit" name="stockenKnapp" class="knappNationsmeny" value="Stockholms Nation"></div>
+					<div class="nationsattr"><input type="submit" name="snerikesKnapp" class="knappNationsmeny" value="Södermanlands-Nerikes Nation"></div>
+					<div class="nationsattr"><input type="submit" name="uplandsKnapp" class="knappNationsmeny" value="Uplands Nation"></div>
+					<div class="nationsattr"><input type="submit" name="varmlandsKnapp" class="knappNationsmeny" value="Värmlands Nation"></div>
+					<div class="nationsattr"><input type="submit" name="vgKnapp" class="knappNationsmeny" value="Västgöta Nation"></div>
+					<div class="nationsattr"><input type="submit" name="vdalaKnapp" class="knappNationsmeny" value="Västmanland-Dala Nation"></div>
+					<div class="nationsattr"><input type="submit" name="ogKnapp" class="knappNationsmeny" value="Östgöta Nation"></div>
 				</form>		
             </div>
-        </div>
 
         <?php
             include('html/sidfot.html');
