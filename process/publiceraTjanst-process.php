@@ -36,12 +36,12 @@
         $felmeddelande;
         header("Location: ../publiceraTjanst.php");
     }
-   else if (!(preg_match($timeMatch, $pubTid)))
+   else if ((!preg_match($timeMatch, $pubTid)))
     {
         $_SESSION['felTid'] = "Tiden ska skrivas som 00:00.";
         header("Location: ../publiceraTjanst.php");
     } 
-    else if (!(preg_match($dateMatch, $pubDatum)))
+    else if ((!preg_match($dateMatch, $pubDatum)))
     {
         $_SESSION['felDatum'] = "Datumet ska skrivas som 2018-01-01.";
         header("Location: ../publiceraTjanst.php");
