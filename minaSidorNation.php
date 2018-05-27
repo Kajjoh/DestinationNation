@@ -17,13 +17,14 @@
 
 		
 		<div id="sessionMessage">
-				<?php
-					if (isset($_SESSION['nation']))
-					{
-						echo $_SESSION['nation'] ."!";
-					}
-				?>
-			</div>
+			<?php
+				if (isset($_SESSION['nation']))
+				{
+					echo $_SESSION['nation'] ."!";
+				}
+			?>
+		</div>
+
 		<div id="minasidorNflode">
 		
 			<div id="persuppgMSN">
