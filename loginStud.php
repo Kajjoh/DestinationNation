@@ -30,7 +30,7 @@
 				</div>	
 
 				<!-- Här börjar formuläret. -->
-				<form id="inlogg" name="loggain" method="POST" action="process/loginStud-process.php">
+				<form id="inlogg" name="loggain" method="POST" action="process/loginStud-process.php" onsubmit="validateInloggning()">
 		
 					<p class="boxes">
 						<label for="email">Email:<br></label>
@@ -49,6 +49,7 @@
 					<p class="boxes">
 						<label for="passwrd">Lösenord:<br></label>
 						<input type="password" placeholder="..." name="pword" id="pw"><br>
+						<div class="errorMessage">
 						<?php
 							if (isset($_SESSION['fellosen']))
 							{
@@ -56,6 +57,7 @@
 								unset($_SESSION['fellosen']);
 							}
 						?>
+						</div>
 					</p>
 					
 					<p>
