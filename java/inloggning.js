@@ -11,10 +11,10 @@ function validateInloggning (event)
 		event.preventDefault(); /* om det i if-satsen inte stämmer skickas aldrig data, 
 			man preventar default vilket är att skicka data*/
 		alert('Du måste fylla i fältet för logga in');
+		die();
 	}
 	else
 	{
-		alert('Nu har du loggat in');
 		header('inloggning.php');
 	}
 }

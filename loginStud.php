@@ -35,6 +35,7 @@
 					<p class="boxes">
 						<label for="email">Email:<br></label>
 						<input type="text" placeholder="email@exempel.com" name="email" id="email"><br>
+						<div class="errorMessage">
 						<?php
 							if (isset($_SESSION['felmail']))
 							{
@@ -42,6 +43,7 @@
 								unset($_SESSION['felmail']);
 							}
 						?>
+						</div>
 					</p>	
 					
 					<p class="boxes">
