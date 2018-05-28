@@ -21,9 +21,17 @@
     ?>
         
           <!--denna div (filter) listar horisontellt alla aktiviteter för nationer för filtrering.-->
-		  <div class="back">  
+		<div class="back">
+		<div id="nationsession">
+			<?php
+				if (isset($_SESSION['nation']))
+				{
+					echo "Inloggad som: " . $_SESSION['nation'];
+				}
+			?>
+		</div>	
           	<div id="filter">
-					<form method="POST" action="process/filtreraEvenemang-process.php">
+					<form method="POST" action="process/filtreraEvenemangNation-process.php">
 						<p id="aktiviteter"><input type="submit" name="allaEvKnapp" class="knappAktmeny" value="Alla evenemang"></p>
 						<p id="aktiviteter"><input type="submit" name="pubKnapp" class="knappAktmeny" value="Pub"></p>
 						<p id="aktiviteter"><input type="submit" name="klubbKnapp" class="knappAktmeny" value="Klubb"></p>
@@ -37,9 +45,10 @@
 						<p id="aktiviteter"><input type="submit" name="ovrigtKnapp" class="knappAktmeny" value="Övrigt"></p>
 					</form>
             </div>
-        </div> 
+        </div>
 		
-		<div class="eventFlode">	
+		<div class="eventFlode">
+			
 			<h2>Evenemangsflöde</h2>
 			<?php
 				include('process/startsida-process.php');
@@ -48,7 +57,7 @@
 		
 		 <!--Denna div (nationsMeny) listar alla nationer vertikalt för filtrering.-->
 			<div class="nationsMeny">
-				<form method="POST" action="process/filtreraNation-process.php">
+				<form method="POST" action="process/filtreraNationNation-process.php">
 					<div class="nationsattr"><input type="submit" name="gotlandsKnapp" class="knappNationsmeny" value="Gotlands Nation"></div>
 					<div class="nationsattr"><input type="submit" name="ghKnapp" class="knappNationsmeny" value="Gästrike-Hälsinge Nation"></div>
 					<div class="nationsattr"><input type="submit" name="gbgKnapp" class="knappNationsmeny" value="Göteborgs Nation"></div>

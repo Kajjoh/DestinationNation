@@ -10,7 +10,7 @@
 	<body>
 	<?php
 			include('html/sidhuvud.html');
-			include('html/menyMedlemmar.html');
+			include('html/menyraderaMedEv.html');
 	?>
 	</body>
 	

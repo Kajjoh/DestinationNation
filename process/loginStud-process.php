@@ -1,5 +1,7 @@
 <?php
 
+    session_start();
+
     include('connection.php');
 
     // Get values from login.php
@@ -43,6 +45,7 @@
 	}
              
     $_SESSION['student'] = "$mailFromDB";
+    $_SESSION['studentNamn'] = "$namnFromDB";
 
     $conn->close();
 

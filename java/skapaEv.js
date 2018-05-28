@@ -1,5 +1,5 @@
-var skapaEv = document.getElementById('skapaEv'); //hämtar genom class Meny
-skapaEv.addEventListener("submit", validateEv);
+/*var skapaEv = document.getElementById('skapaEv'); //hämtar genom class Meny
+skapaEv.addEventListener("submit", validateEv);*/
 
 function validateEv (event) /*första funktionen*/
 	{
@@ -17,7 +17,8 @@ function validateEv (event) /*första funktionen*/
 			man preventar default vilket är att skicka data*/
 			alert('Du måste fylla i alla fält för att kunna skapa ett evenemang');
 		}
-		else{
+		else
+		{
 			alert("Ditt evenemang är nu skapat!");
 		}
 	}
