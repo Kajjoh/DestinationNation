@@ -258,7 +258,7 @@ include('connection.php');
             }
 			else if (isset($_SESSION['gotland']))
 			{
-				$valjgotland = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Gotlands Nation'";
+				$valjgotland = "SELECT eveID, titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Gotlands Nation'";
 				$hamtagotland = mysqli_query($conn, $valjgotland);
 				$kontrollgotland = mysqli_num_rows($hamtagotland);
 				if ($kontrollgotland > 0)
@@ -278,7 +278,7 @@ include('connection.php');
 			
 			else if (isset($_SESSION['gh']))
 			{
-				$valjgh = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Gästrike-Hälsinge Nation'";
+				$valjgh = "SELECT eveID, titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Gästrike-Hälsinge Nation'";
 				$hamtagh = mysqli_query($conn, $valjgh);
 				$kontrollgh = mysqli_num_rows($hamtagh);
 				if ($kontrollgh > 0)
