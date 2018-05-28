@@ -9,58 +9,60 @@
 		<meta charset="UTF-8">
     </head>
 	
-	
 	<body>
+
 	<?php
-			include('html/sidhuvud.html');
-			include('html/menyhanteraEv.html');
+		include('html/sidhuvud.html');
+		include('html/menyhanteraEv.html');
 	?>
+
 	</body>
 	
 		<div class="formular" id="raderaEvenemangNation">
 	
-			
 			<h2>Ta bort evenemang</h2>
+			
 			<!-- Här börjar formuläret. -->
 			<div id="tabortevnation">	
 				<form name="tabortmedlem" method="POST" action="process/hanteraEvenemang-process.php">
 		
-				
 					<label for="evenemangsid">Evenemangs ID:<br></label>
-					<input type="text" placeholder="****" name="evenemangsid" id="tabortevenemangnat"><br>
-					<div class="errorMessage">
-					<?php
-						
-						if (isset($_SESSION['eveIDfel']))
-						{
-							echo $_SESSION['eveIDfel'];
-							unset($_SESSION['eveIDfel']);
-						}
-						else if (isset($_SESSION['felbehorighet']))
-						{
-							echo $_SESSION['felbehorighet'];
-							unset($_SESSION['felbehorighet']);
-						}
-						
-					?>
-					</div>
+						<input type="text" placeholder="****" name="evenemangsid" id="tabortevenemangnat"><br>
+					
+						<div class="errorMessage">
+							<?php
+								
+								if (isset($_SESSION['eveIDfel']))
+								{
+									echo $_SESSION['eveIDfel'];
+									unset($_SESSION['eveIDfel']);
+								}
+								else if (isset($_SESSION['felbehorighet']))
+								{
+									echo $_SESSION['felbehorighet'];
+									unset($_SESSION['felbehorighet']);
+								}
+							?>
+						</div>
+
 					<input type="submit" value="Ta bort evenemang" id="raderaEvNat" class="button">
-						
-						
+							
 				</form>
 			</div>
-		</div>	
+		</div>
+
 		<div id="helaRedigeraEvenemang">
 		
 			<div id="rubrikSkapaEv">
 				<h3>Redigera Evenemang</h3>
 			</div>
 
-			<!--formular (byta namn på formulären?) har samma struktur som de andra formulären. -->
-			<div class="formular">
+			
+			<div class="formHant">
 			<form id ="redigeraEv" name="redigeraEven" method="POST" action="process/redigeraEvenemang-process.php" onsubmit="return (validateEv())">
 					<label for="evenemangsid">Evenemangs ID:<br></label>
 					<input type="text" placeholder="****" name="evenemangsid" id="tabortevenemangnat"><br>
+					
 					<div class="errorMessage">
 						<?php
 							
@@ -177,10 +179,19 @@
 		
 			
 		</div>
+<<<<<<< HEAD
 	<div id="footern">
 	<?php
 		include('html/sidfot.html');
 	?>
 	</div>
+=======
+		
+		<div class="sidfotPlats">
+			<?php
+				include('html/sidfot.html');
+			?>
+		</div>
+>>>>>>> cef4e274dac6498748d8e16a65952dad27cb5b5c
 				
 </html>
