@@ -15,14 +15,17 @@
 		{
 			$studid = $row['studID'];
 		}
-		$sql = "SELECT titel, typ, nation, datum, fran, till, krav, plats FROM sparaevenemang WHERE studID = '$studid'";
-		$result = $conn->query($sql);
+		
+	}
+	$sql = "SELECT titel, typ, nation, datum, fran, till, krav, plats FROM sparaevenemang WHERE studID = '$studid'";
+	$result = mysqli_query($conn, $sql);
+	$resultkontroll = mysqli_num_rows($result);
 	
-		if($result->num_rows > 0)
+	if($resultkontroll > 0)
+	{
+		while($row=$result->fetch_assoc())
 		{
-			while($row=$result->fetch_assoc())
-			{
-				echo "<div> 
+			echo "<div> 
                     <br> Titel: ". $row["titel"]."
                     <br> Typ: " . $row["typ"]. "
                     <br> Nation: ".$row["nation"]."
@@ -31,10 +34,9 @@
                     <br> Från: " .$row["fran"]."
                     <br> Till: " .$row["till"]."
                     <br> Krävs anmälan? " .$row["krav"]."
-                </div>";
-			}
-		} 
-	}
+				  </div>";
+		}
+	} 
  
 	
 		
