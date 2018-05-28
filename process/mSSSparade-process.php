@@ -1,10 +1,25 @@
 <?php
  
     include('connection.php');
-
-    $sql = "SELECT titel, typ, nation, datum, fran, till, krav FROM sparaevenemang a, evenemang b WHERE a.eveID=b.eveID";
+	
+	$anvandare = $_SESSION['student'];
+	$valjstudid = "SELECT studID FROM registrering WHERE mail = '$anvandare'";
+	$hamtastudid = mysqli_query($conn, $valjstudid);
+	$kontrollstudid = mysqli_num_rows($hamtastudid);
+	$studid = "";
+    
+	
+	if ($kontrollstudid > 0)
+	{
+		while ($row = mysqli_fetch_assoc($hamtastudid))
+		{
+			$studid = $row['studID'];
+		}
+	}
+	
+	$sql = "SELECT titel, typ, nation, datum, fran, till, krav, plats FROM sparaevenemang WHERE studID = '$studid'";
     $result = $conn->query($sql);
-
+	
     if($result->num_rows > 0)
     {
         while($row=$result->fetch_assoc())
