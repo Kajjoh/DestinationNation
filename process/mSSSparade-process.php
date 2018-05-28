@@ -15,16 +15,14 @@
 		{
 			$studid = $row['studID'];
 		}
-	}
+		$sql = "SELECT titel, typ, nation, datum, fran, till, krav, plats FROM sparaevenemang WHERE studID = '$studid'";
+		$result = $conn->query($sql);
 	
-	$sql = "SELECT titel, typ, nation, datum, fran, till, krav, plats FROM sparaevenemang WHERE studID = '$studid'";
-    $result = $conn->query($sql);
-	
-    if($result->num_rows > 0)
-    {
-        while($row=$result->fetch_assoc())
-        {
-            echo "<div> 
+		if($result->num_rows > 0)
+		{
+			while($row=$result->fetch_assoc())
+			{
+				echo "<div> 
                     <br> Titel: ". $row["titel"]."
                     <br> Typ: " . $row["typ"]. "
                     <br> Nation: ".$row["nation"]."
@@ -34,8 +32,14 @@
                     <br> Till: " .$row["till"]."
                     <br> Krävs anmälan? " .$row["krav"]."
                 </div>";
-        }
-    }      
+			}
+		} 
+	}
+ 
+	
+		
+	
+	     
     else
     {
         echo "Du har inga sparade evenemang!";
