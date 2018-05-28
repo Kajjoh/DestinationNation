@@ -3,25 +3,23 @@
 h1{
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 40px;
+    font-size: 3.5em;
     color: #C00000;
-    padding: 0px;
 }
 
 h2{
     text-align: center;
     font-family: Palatino Linotype, italic;
-    font-size: 30px;
+    font-size: 1.5em;
     color: black;
-    padding: 0px;
 }
 
 h3 {
-    font-size: 30px;
+    font-size: 2.5em;
 }
 
 h4 {
-    font-size: 20px;
+    font-size: 1.5em;
 }
 
 /* Det som följer tillhör vårt sidhuvud */
@@ -31,8 +29,7 @@ h4 {
     background-color: #E8E8E8;
     height: 200px;
     border-bottom: #C00000 solid;
-    padding-top: 5px;
-    padding-bottom: 10px; 
+    padding-bottom: 0.7%; 
     margin: auto;
 }
 
@@ -46,7 +43,7 @@ h4 {
 /* Vår sidfot. */
 #sidfot {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 3%;
 }
 
 /* Ska göra alla sessionsfelmeddelanden röda */
@@ -65,9 +62,9 @@ h4 {
 
 /* Menyn för student */
 .huvudMeny{
-    border: 2px solid #C00000;
+    border: 0.1em solid #C00000;
     background-color:  #E8E8E8;
-    font-size: 20px;
+    font-size: 1.3em;
     font-weight: bold;
     color: black;
 }
@@ -77,6 +74,7 @@ h4 {
     display: inline;
     background-color: #E8E8E8;
     text-align: center;
+    padding-right: 2%;
 }
 
 /* Ser till att man ser vilken knapp man är över i menyn */
@@ -91,6 +89,7 @@ h4 {
 }	
 
 /*----------------------------------------------------------------------------*/
+/* ---------------------------------------------INTE KOLLAD---------------------------------------------------*/
 /* ANMALANEV.HTML */
 
 .divAnmalan {
@@ -232,6 +231,7 @@ h4 {
 /*---------------------------------------------------------------------------------*/
 /* OMOSS.HTML*/
 
+/* Meddelandediven*/
 #display
 {
     margin-top: 2%;
@@ -341,7 +341,9 @@ h4 {
     font-size: 1.3em;
 }
 
+
 /*--------------------------------------------------------------*/
+/*------------------------------------------------ INTE KOLLAD-----------------------------------------------*/
 /* SkapaEv.php */
 
 #rubrikSkapaEv {
@@ -356,6 +358,7 @@ h4 {
 }
 
 /*-----------------------------------------------------------------*/
+/*------------------------------------------------ INTE KOLLAD-----------------------------------------------*/
 /*registrering.php*/
 
 #rubrikRegistrering{
@@ -426,6 +429,7 @@ h4 {
 }
 
 /*------------------------------------------------------*/
+/*------------------------------------------------ INTE KOLLAD-----------------------------------------------*/
 /* publiceraTjanst.php */
 
 #rubrikPublicera {
@@ -440,6 +444,7 @@ h4 {
 }
 
 /*-------------------------------------------------------*/
+/*------------------------------------------------ INTE KOLLAD-----------------------------------------------*/
 /* hanteraEvenemang.php*/
 
 #raderaEvenemangNation{
