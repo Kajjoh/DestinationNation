@@ -8,7 +8,14 @@
     </head>
     
     <body>
-	<div class="formular" id="sparaEv">
+	
+	<?php
+        include('html/sidhuvud.html');
+
+        include('html/menyTillbakaStudent.html');
+    ?>
+	
+		<div class="formular" id="sparaEv">
 	
 			
 			<h2>Spara Evenemang</h2>
@@ -40,5 +47,9 @@
 				</form>
 			</div>
 		</div>
+	<?php
+		include('html/sidfot.html');
+	?>	
+		
 	</body>
 </html>	
