@@ -26,14 +26,14 @@
 			<form id ="publicera" name="publicera" method="POST" action="process/publiceraTjanst-process.php" onsubmit="return(validatepub())">
 
 					<label for="Titel">Titel</label><br>
-						<input type="text" id="Titel" name="Titel" class="regFält"><br>
+						<input type="text" id="Titel" name="Titel" class="regFält"><br><br>
 						<div class="errorMessage">
 							<?php
-							if (isset($_SESSION['felmeddelande']))
-							{
-								echo $_SESSION['felmeddelande'];
-								unset ($_SESSION['felmeddelande']);
-							}
+								if (isset($_SESSION['felmeddelande']))
+								{
+									echo $_SESSION['felmeddelande'];
+									unset($_SESSION['felmeddelande']);
+								}
 							?>
                     	</div><br>
 
@@ -44,7 +44,7 @@
 							if (isset($_SESSION['felTid']))
 							{
 								echo $_SESSION['felTid'];
-								unset ($_SESSION['felTid']);
+								unset($_SESSION['felTid']);
 							}
 							?>
                     	</div><br>

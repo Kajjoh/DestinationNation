@@ -32,7 +32,7 @@
                     <br> Datum: " .$row["datum"]." 
                     <br> Från: " .$row["fran"]."
                     <br> Till: " .$row["till"]."
-                    <br> Till: " .$row["krav"]."
+                    <br> Krävs anmälan? " .$row["krav"]."
                 </div>";
         }
     }      

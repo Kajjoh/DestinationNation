@@ -1,8 +1,9 @@
 <?php
 
-    session_start();
+    
 
     include('connection.php');
+	session_start();
 
     $pubTitel = mysqli_real_escape_string($conn, trim($_POST['Titel']));
     $pubTid = mysqli_real_escape_string($conn, trim($_POST['Tid']));
@@ -15,23 +16,23 @@
     
   
 
-    if ($pubTitel=="")
+    if (empty($pubTitel))
     {
         $_SESSION['felmeddelande'] = "Du måste fylla i alla fält!";
         header("Location: ../publiceraTjanst.php");
     }
-    else if ($pubTid=="")
+    else if (empty($pubTid))
     {
         $_SESSION['felmeddelande'] = "Du måste fylla i alla fält!";
         header("Location: ../publiceraTjanst.php");
 
     }
-    else if ($pubDatum=="")
+    else if (empty($pubDatum))
     {
         $_SESSION['felmeddelande'] = "Du måste fylla i alla fält!";
         header("Location: ../publiceraTjanst.php");
     }
-    else if ($pubMeddelande=="") 
+    else if (empty($pubMeddelande)) 
     {
         $_SESSION['felmeddelande'] = "Du måste fylla i alla fält!";
         header("Location: ../publiceraTjanst.php");

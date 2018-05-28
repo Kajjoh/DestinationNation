@@ -10,7 +10,7 @@ function validatepub()
 
 	if(Titel == "" || (Tid == "") || (Datum == "") || (Meddelande==""))
 	{
-		event.preventDefault();
+		
 		alert('Vänligen fyll i alla fält för publicera ett meddelande');
 	}
 	else
