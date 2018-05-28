@@ -493,29 +493,43 @@ h4 {
 /*-------------------------------------------------------*/
 /* raderaEv.php */
 
+/* Div för att radera evenemang */
 .raderaEv {
     text-align: center;
-    width: 40%;
+    width: 35%;
+    margin-left: 8%;
+    margin-top: 2%;
+    padding-bottom: 2%;
     float: left;
-    border: 0.5em solid black;
+    border: 0.2em solid #C00000;
+    border-radius: 2em;
 }
 
-/* Varje box för input */
+/* Inputbox i radera evenemang */
 .radFält {
     width: 40%;
     padding: 0.5%;
 }
 
+/* Knappar för att skicka formulären */
 #logBtn {
     padding: 1%;
 }
 
+/* Div för redigera evenemang */
 .redigeraEv {
     float: right;
     border: 0.2em solid #C00000;
     border-radius: 2em;
     padding: 2%;
     text-align: center;
-    width: 40%;
+    width: 35%;
     margin-right: 8%;
+    margin-top: 2%;
+}
+
+/* Så att sidfoten ska ligga snyggt */
+.sidfotRadera{
+    width: 100%;
+    float:right;
 }
