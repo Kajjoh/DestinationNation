@@ -7,7 +7,7 @@ include('connection.php');
 			if (!isset($_SESSION['pub']) && !isset($_SESSION['klubb']) && !isset($_SESSION['lunch']) && !isset($_SESSION['frukost']) && !isset($_SESSION['restaurang']) && !isset($_SESSION['brunch']) && !isset($_SESSION['slapp']) && !isset($_SESSION['gasque']) && !isset($_SESSION['konsert']) && !isset($_SESSION['ovrigt']) && !isset($_SESSION['allaevenemang'])
 				 && !isset($_SESSION['gotland']) && !isset($_SESSION['gh']) && !isset($_SESSION['gbg']) && !isset($_SESSION['kalmar']) && !isset($_SESSION['norrland']) && !isset($_SESSION['smaland']) && !isset($_SESSION['stocken']) && !isset($_SESSION['snerike']) && !isset($_SESSION['upland']) && !isset($_SESSION['varmland']) && !isset($_SESSION['vg']) && !isset($_SESSION['vdala']) && !isset($_SESSION['og']))
 			{
-				$valjevenemang = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang";
+				$valjevenemang = "SELECT eveID, titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang";
 				$hamtaevenemang = mysqli_query($conn, $valjevenemang);
 				while ($row = mysqli_fetch_assoc($hamtaevenemang))
 				{
@@ -17,7 +17,7 @@ include('connection.php');
 			
 			else if (isset($_SESSION['allaevenemang']))
 			{
-				$valjevenemang = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang";
+				$valjevenemang = "SELECT eveID, titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang";
 				$hamtaevenemang = mysqli_query($conn, $valjevenemang);
 				$kontrollalla = mysqli_num_rows($hamtaevenemang);
 				if ($kontrollalla > 0)
@@ -38,7 +38,7 @@ include('connection.php');
 			else if (isset($_SESSION['pub']))
 			{
 				/*hämtar ut allt från evenemang som stämmer in på typen pub*/
-				$valjpub = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE typ = 'Pub'";
+				$valjpub = "SELECT eveID, titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE typ = 'Pub'";
 				$hamtapub = mysqli_query($conn, $valjpub);
 				$pubkontroll = mysqli_num_rows($hamtapub);
 				if ($pubkontroll > 0)
@@ -62,7 +62,7 @@ include('connection.php');
             else if (isset($_SESSION['klubb']))
             {
                 /*hämtar ut allt från evenemang som stämmer in på typen klubb*/
-                $valjklubb = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE typ = 'Klubb'";
+                $valjklubb = "SELECT eveID, titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE typ = 'Klubb'";
                 $hamtaklubb = mysqli_query($conn, $valjklubb);
 				$klubbkontroll = mysqli_num_rows($hamtaklubb);
 				if ($klubbkontroll > 0)
@@ -84,7 +84,7 @@ include('connection.php');
             else if (isset($_SESSION['lunch']))
             {
                 /*hämtar ut allt från evenemang som stämmer in på typen lunch*/
-                $valjlunch = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE typ = 'Lunch'";
+                $valjlunch = "SELECT eveID, titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE typ = 'Lunch'";
                 $hamtalunch = mysqli_query($conn, $valjlunch);
 				$lunchkontroll = mysqli_num_rows($hamtalunch);
 				if ($lunchkontroll > 0)
@@ -106,7 +106,7 @@ include('connection.php');
             else if (isset($_SESSION['frukost']))
             {
                 /*hämtar ut allt från evenemang som stämmer in på typen frukost*/
-                $valjfrukost = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE typ = 'Frukost'";
+                $valjfrukost = "SELECT eveID, titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE typ = 'Frukost'";
                 $hamtafrukost = mysqli_query($conn, $valjfrukost);
 				$frukostkontroll = mysqli_num_rows($hamtafrukost);
 				if ($frukostkontroll > 0)
@@ -128,7 +128,7 @@ include('connection.php');
             else if (isset($_SESSION['restaurang']))
             {
                 /*hämtar ut allt från evenemang som stämmer in på typen restaurang*/
-                $valjrestaurang = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE typ = 'Restaurang'";
+                $valjrestaurang = "SELECT eveID, titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE typ = 'Restaurang'";
                 $hamtarestaurang = mysqli_query($conn, $valjrestaurang);
 				$restaurangkontroll = mysqli_num_rows($hamtarestaurang);
 				if ($restaurangkontroll > 0)
@@ -150,7 +150,7 @@ include('connection.php');
             else if (isset($_SESSION['brunch']))
             {
                 /*hämtar ut allt från evenemang som stämmer in på typen brunch*/
-                $valjbrunch = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE typ = 'Brunch'";
+                $valjbrunch = "SELECT eveID, titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE typ = 'Brunch'";
                 $hamtabrunch = mysqli_query($conn, $valjbrunch);
 				$brunchkontroll = mysqli_num_rows($hamtabrunch);
 				if ($brunchkontroll > 0)
@@ -172,7 +172,7 @@ include('connection.php');
             else if (isset($_SESSION['slapp']))
             {
                 /*hämtar ut allt från evenemang som stämmer in på typen släpp*/
-                $valjslapp = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE typ = 'Släpp'";
+                $valjslapp = "SELECT eveID, titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE typ = 'Släpp'";
                 $hamtaslapp = mysqli_query($conn, $valjslapp);
 				$slappkontroll = mysqli_num_rows($hamtaslapp);
 				if ($slappkontroll > 0)
@@ -194,7 +194,7 @@ include('connection.php');
             else if (isset($_SESSION['gasque']))
             {
                 /*hämtar ut allt från evenemang som stämmer in på typen gasque*/
-                $valjgasque = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE typ = 'Gasque'";
+                $valjgasque = "SELECT eveID, titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE typ = 'Gasque'";
                 $hamtagasque = mysqli_query($conn, $valjgasque);
 				$gasquekontroll = mysqli_num_rows($hamtagasque);
 				if ($gasquekontroll > 0)
@@ -216,7 +216,7 @@ include('connection.php');
             else if (isset($_SESSION['konsert']))
             {
                 /*hämtar ut allt från evenemang som stämmer in på typen konsert*/
-                $valjkonsert = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE typ = 'Konsert'";
+                $valjkonsert = "SELECT eveID, titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE typ = 'Konsert'";
                 $hamtakonsert = mysqli_query($conn, $valjkonsert);
 				$konsertkontroll = mysqli_num_rows($hamtakonsert);
 				if ($konsertkontroll > 0)
@@ -238,7 +238,7 @@ include('connection.php');
             else if (isset($_SESSION['ovrigt']))
             {
                 /*hämtar ut allt från evenemang som stämmer in på typen övrigt*/
-                $valjovrigt = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE typ = 'Övrigt'";
+                $valjovrigt = "SELECT eveID, titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE typ = 'Övrigt'";
                 $hamtaovrigt = mysqli_query($conn, $valjovrigt);
 				$ovrigtkontroll = mysqli_num_rows($hamtaovrigt);
 				if ($ovrigtkontroll > 0)
@@ -299,7 +299,7 @@ include('connection.php');
 			
 			else if (isset($_SESSION['gbg']))
 			{
-				$valjgbg = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Göteborgs Nation'";
+				$valjgbg = "SELECT eveID, titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Göteborgs Nation'";
 				$hamtagbg = mysqli_query($conn, $valjgbg);
 				$kontrollgbg = mysqli_num_rows($hamtagbg);
 				if ($kontrollgbg > 0)
@@ -319,7 +319,7 @@ include('connection.php');
 			
 			else if (isset($_SESSION['kalmar']))
 			{
-				$valjkalmar = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Kalmars Nation'";
+				$valjkalmar = "SELECT eveID, titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Kalmars Nation'";
 				$hamtakalmar = mysqli_query($conn, $valjkalmar);
 				$kontrollkalmar = mysqli_num_rows($hamtakalmar);
 				if ($kontrollkalmar > 0)
@@ -339,7 +339,7 @@ include('connection.php');
 			
 			else if (isset($_SESSION['norrland']))
 			{
-				$valjnorrland = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Norrlands Nation'";
+				$valjnorrland = "SELECT eveID, titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Norrlands Nation'";
 				$hamtanorrland = mysqli_query($conn, $valjnorrland);
 				$kontrollnorrland = mysqli_num_rows($hamtanorrland);
 				if ($kontrollnorrland > 0)
@@ -359,7 +359,7 @@ include('connection.php');
 			
 			else if (isset($_SESSION['smaland']))
 			{
-				$valjsmaland = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Smålands Nation'";
+				$valjsmaland = "SELECT eveID, titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Smålands Nation'";
 				$hamtasmaland = mysqli_query($conn, $valjsmaland);
 				$kontrollsmaland = mysqli_num_rows($hamtasmaland);
 				if ($kontrollsmaland > 0)
@@ -379,7 +379,7 @@ include('connection.php');
 			
 			else if (isset($_SESSION['stocken']))
 			{
-				$valjstocken = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Stockholms Nation'";
+				$valjstocken = "SELECT eveID, titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Stockholms Nation'";
 				$hamtastocken = mysqli_query($conn, $valjstocken);
 				$kontrollstocken = mysqli_num_rows($hamtastocken);
 				if ($kontrollstocken > 0)
@@ -399,7 +399,7 @@ include('connection.php');
 				
 			else if (isset($_SESSION['snerike']))
 			{
-				$valjsnerike = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Södermanlands-Nerikes Nation'";
+				$valjsnerike = "SELECT eveID, titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Södermanlands-Nerikes Nation'";
 				$hamtasnerike = mysqli_query($conn, $valjsnerike);
 				$kontrollsnerike = mysqli_num_rows($hamtasnerike);
 				if ($kontrollsnerike > 0)
@@ -419,7 +419,7 @@ include('connection.php');
 			
 			else if (isset($_SESSION['upland']))
 			{
-				$valjupland = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Uplands Nation'";
+				$valjupland = "SELECT eveID, titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Uplands Nation'";
 				$hamtaupland = mysqli_query($conn, $valjupland);
 				$kontrollupland = mysqli_num_rows($hamtaupland);
 				if ($kontrollupland > 0)
@@ -439,7 +439,7 @@ include('connection.php');
 			
 			else if (isset($_SESSION['varmland']))
 			{
-				$valjvarmland = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Värmlands Nation'";
+				$valjvarmland = "SELECT eveID, titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Värmlands Nation'";
 				$hamtavarmland = mysqli_query($conn, $valjvarmland);
 				$kontrollvarmland = mysqli_num_rows($hamtavarmland);
 				if ($kontrollvarmland > 0)
@@ -459,7 +459,7 @@ include('connection.php');
 			
 			else if (isset($_SESSION['vg']))
 			{
-				$valjvg = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Västgöta Nation'";
+				$valjvg = "SELECT eveID, titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Västgöta Nation'";
 				$hamtavg = mysqli_query($conn, $valjvg);
 				$kontrollvg = mysqli_num_rows($hamtavg);
 				if ($kontrollvg > 0)
@@ -479,7 +479,7 @@ include('connection.php');
 			
 			else if (isset($_SESSION['vdala']))
 			{
-				$valjvdala = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Västmanlands-Dala Nation'";
+				$valjvdala = "SELECT eveID, titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'Västmanlands-Dala Nation'";
 				$hamtavdala = mysqli_query($conn, $valjvdala);
 				$kontrollvdala = mysqli_num_rows($hamtavdala);
 				if ($kontrollvdala > 0)
@@ -499,7 +499,7 @@ include('connection.php');
 			
 			else if (isset($_SESSION['og']))
 			{
-				$valjog = "SELECT titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'ÖstgÖta Nation'";
+				$valjog = "SELECT eveID, titel, typ, fran, till, datum, krav, beskrivning, plats, nation FROM evenemang WHERE nation = 'ÖstgÖta Nation'";
 				$hamtaog = mysqli_query($conn, $valjog);
 				$kontrollog = mysqli_num_rows($hamtaog);
 				if ($kontrollog > 0)
