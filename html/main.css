@@ -461,11 +461,17 @@ h4 {
 /*-------------------------------------------------------*/
 /* hanteraEvenemang.php*/
 
-.formHant {
-    border: 2px solid #C00000;
-    border-radius: 2em;
-    float: left;
+#raderaEvenemangNation{
+	border: 2px solid #C00000;
+    border-radius: 20px;
+    width: 40%;
+    margin-left: 5%;
+    margin-top: 5%;
+	float: left;
+}
 
+.formHant {
+    
 }
 
 #raderaEvNat{
