@@ -6,7 +6,7 @@
 	
 	<head>
 		<title>AnmalanEv</title>
-		<meta charset="utf-8">
+		<meta charset="UTF-8">
 		<link href="html/main.css" rel="stylesheet">
 	</head>
 	
