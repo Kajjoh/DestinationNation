@@ -176,22 +176,13 @@
 				
 			</form>
 			</div>
-		
 			
 		</div>
-<<<<<<< HEAD
+
 	<div id="footern">
-	<?php
-		include('html/sidfot.html');
-	?>
+		<?php
+			include('html/sidfot.html');
+		?>
 	</div>
-=======
-		
-		<div class="sidfotPlats">
-			<?php
-				include('html/sidfot.html');
-			?>
-		</div>
->>>>>>> cef4e274dac6498748d8e16a65952dad27cb5b5c
 				
 </html>
