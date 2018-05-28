@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -14,37 +17,58 @@
 	?>
 	</body>
 	
-		<div class="formular" id="hanteraMedlem">
+		<div class="formular" id="hanteraStudent">
 	
-			<div class="rubrikMedlem">
-					<h2>Ta bort medlem</h2>
-			</div>	
-
-				<!-- Här börjar formuläret. -->
-			<form name="tabortmedlem" method="POST" action="process/raderaMed-process.php">
+			
+			<h2>Ta bort student</h2>
+			<div id="tabortstudtjanste">			
+			<!-- Här börjar formuläret. -->
+				<form name="tabortmedlem" method="POST" action="process/raderaMed-process.php">
 		
-				<p class="boxes">
+				
 					<label for="email">Email:<br></label>
 					<input type="text" placeholder="email@exempel.com" name="email" id="email"><br>
-					<?php
-						session_start();
-						if (isset($_SESSION['emailfel']))
+					<div class="errorMessage">
+						<?php
+							
+							if (isset($_SESSION['emailfel']))
 							{
 								echo $_SESSION['emailfel'];
 								unset($_SESSION['emailfel']);
 							}
-					?>
-						
-				</p>	
-					
-					
-				<p>
-					<input type="submit" value="Ta bort medlem" id="logInBtn" class="button">
-				</p>
+						?>
+					</div>					
+					<input type="submit" value="Ta bort sudent" id="raderaStud" class="button">
 				
-			</form>
-			
+				</form>
+			</div>
 		</div>	
+		
+		<div class="formular" id="hanteraNation">
 	
+			
+			<h2>Ta bort nation</h2>
+			<div id="tabortNattjanste">			
+			<!-- Här börjar formuläret. -->
+				<form name="tabortnation" method="POST" action="process/raderaNat-process.php">
+		
+				
+					<label for="email">Nation:<br></label>
+					<input type="text" placeholder="..." name="radNat" id="radNat"><br>
+					<div class="errorMessage">
+						<?php
+							
+							if (isset($_SESSION['felnation']))
+							{
+								echo $_SESSION['felnation'];
+								unset($_SESSION['felnation']);
+							}
+						?>
+					</div>					
+					<input type="submit" value="Ta bort nation" id="raderaNat" class="button">
+				
+				</form>
+			</div>
+		</div>	
 				
 </html>	
