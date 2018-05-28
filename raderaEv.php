@@ -161,15 +161,16 @@
 							?>
                     	</div><br>
 
-					<input type="submit" value="Redigera evenemang!" id="redigeraEvBtn">
+					<input type="submit" value="Redigera evenemang!" id="logBtn">
 				
 			</form>
 			</div>
 		</div>
 
-		<div 
-		<?php
-			include('html/sidfot.html');
-		?>
+		<div class="sidfotRadera">
+			<?php
+				include('html/sidfot.html');
+			?>
+		</div>
 			
 </html>
