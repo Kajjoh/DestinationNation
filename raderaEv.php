@@ -167,7 +167,7 @@
 			</div>
 		</div>
 
-		<div class="sidfotRadera">
+		<div class="sidfotPlats">
 			<?php
 				include('html/sidfot.html');
 			?>
