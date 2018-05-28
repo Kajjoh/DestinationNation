@@ -12,28 +12,28 @@
     $timeMatch = "/^([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/";
     $dateMatch = "/([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/";
     $tjanst = $_SESSION['admin'];
-    $_SESSION['felmeddelande'] = "Du måste fylla i alla fält!";
-    $felmeddelande = $_SESSION['felmeddelande'];
+    
+  
 
     if ($pubTitel=="")
     {
-         $felmeddelande;
+        $_SESSION['felmeddelande'] = "Du måste fylla i alla fält!";
         header("Location: ../publiceraTjanst.php");
     }
     else if ($pubTid=="")
     {
-        $felmeddelande;
+        $_SESSION['felmeddelande'] = "Du måste fylla i alla fält!";
         header("Location: ../publiceraTjanst.php");
 
     }
     else if ($pubDatum=="")
     {
-        $felmeddelande;
+        $_SESSION['felmeddelande'] = "Du måste fylla i alla fält!";
         header("Location: ../publiceraTjanst.php");
     }
     else if ($pubMeddelande=="") 
     {
-        $felmeddelande;
+        $_SESSION['felmeddelande'] = "Du måste fylla i alla fält!";
         header("Location: ../publiceraTjanst.php");
     }
    else if ((!preg_match($timeMatch, $pubTid)))

@@ -85,10 +85,10 @@
 						<input type="text" placeholder="--:--" id="Till" name="Till"><br>
 						<div class="errorMessage">
 							<?php
-							if (isset($_SESSION['felTid']))
+							if (isset($_SESSION['felTid2']))
 							{
-								echo $_SESSION['felTid'];
-								unset ($_SESSION['felTid']);
+								echo $_SESSION['felTid2'];
+								unset ($_SESSION['felTid2']);
 							}
 							?>
                     	</div><br>

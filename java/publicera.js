@@ -1,7 +1,7 @@
-var publicera = document.getElementById('publicera');
-publicera.addEventListener("submit", validatepub);
+/*var publicera = document.getElementById('publicera');
+publicera.addEventListener("submit", validatepub);*/
 
-function validatepub(event)
+function validatepub()
 {
 	var Titel = document.publicera.Titel.value.trim();
 	var Tid = document.publicera.Titel.value.trim();

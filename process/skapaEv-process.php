@@ -60,7 +60,7 @@
     }
     else if (!(preg_match($timeMatch, $tidTill)))
     {
-        $_SESSION['felTid'] = "Tiden ska skrivas som 00:00.";
+        $_SESSION['felTid2'] = "Tiden ska skrivas som 00:00.";
         header("Location: ../skapaEv.php");
     }    
     else if (!(preg_match($dateMatch, $evDatum)))

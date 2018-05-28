@@ -23,7 +23,7 @@
 		</div>
 
 		<div class="formular">
-			<form id ="publicera" name="publicera" method="POST" action="process/publiceraTjanst-process.php">
+			<form id ="publicera" name="publicera" method="POST" action="process/publiceraTjanst-process.php" onsubmit="return(validatepub())">
 
 					<label for="Titel">Titel</label><br>
 						<input type="text" id="Titel" name="Titel"><br>
@@ -63,15 +63,7 @@
 
                     	<label for="Meddelande">Meddelande</label><br>
 						<textarea id="Meddelande" name="Meddelande" placeholder="Publicering av meddelande"></textarea><br>
-						<div class="errorMessage">
-							<?php
-							if (isset($_SESSION['felmeddelande']))
-							{
-								echo $_SESSION['felmeddelande'];
-								unset ($_SESSION['felmeddelande']);
-							}
-							?>
-                    	</div><br>
+						
 
                     	<input type="submit" value="Publicera meddelande!" id="publiceraBtn">
             </form>
