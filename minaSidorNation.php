@@ -38,9 +38,11 @@
 			
 		</div>
 
-		<?php
-			include('html/sidfot.html');
-		?>
+		<div class="sidfotPlats">
+			<?php
+				include('html/sidfot.html');
+			?>
+		</div>
 
 	</body>
 </html>
