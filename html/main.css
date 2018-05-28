@@ -256,10 +256,12 @@ h4 {
 {
     margin-top: 2%;
     border: 0.2em solid #C00000;
-    width: 59%;
-    margin-bottom: 2%;
-    margin-left:20%;
-    overflow-y:scroll;
+    border-radius: 2em;
+    width: 40%;
+    margin-left: 25%;
+    height: 13em;
+    overflow: auto;
+    padding: 1% 4%;
 }
 #divOmOss {
     border: 0.10em solid #C00000;
@@ -287,7 +289,7 @@ h4 {
 
 
 /*---------------------------------------------------------------------------------*/
-/* STARTSIDASTUDENT.HTML*/
+/* STARTSIDA.HTML (gäller alla tre sidorna)*/
 
 /* Diven som aktivitetsmenyn ligger i*/
 #filter{
@@ -354,44 +356,6 @@ h4 {
     font-size: 1.3em;
 }
 
-
-/*----------------------------------------------------------------*/
-/*startsidaNation.php*/
-
-.startnationFlode{
-    border: solid white;
-    text-align: center;
-    width: 85% ;
-    margin-left: auto ;
-    margin-right: auto ;
-    height: 580px;
-}
-
-.innernationflode{
-    border: solid #C00000;
-    margin: 4%;
-    height: 500px;
-    border-radius: 2em;
-}
-#skapaEvNation {
-	margin-top: 10%;
-	text-align: center;
-	
-}
-#skapaEvKnapp {
-	width: 300px;
-	height: 60px;
-    font-size: 30px;
-}
-
-#startsidaEv{
-    overflow: scroll;
-    height: 77.5%;
-}
-
-	
-
-
 /*--------------------------------------------------------------*/
 /* SkapaEv.php */
 
@@ -430,36 +394,52 @@ h4 {
     padding: 1.5%;
 }
 
+/*-----------------------------------------------------------------*/
 /*minaSidorNation.php*/
-#evKnapp
-{
-    margin-left:45%;
-}
 
-#sessionMessage {
+/* Rader där namnet på nationen kommer upp */
+#sessionMessageNation {
     font-size: 2em;
     text-align: center;
 }
 
-#persuppgMSN{
-    margin: 4%;
-    height: 500px;
-    border-radius: 2em;
-    margin-left: 30%;
-    margin-top: 2%;
-
-    width: 40%;
-}
-
+/* Yttre diven där alla evenemang ligger */
 #minasidorNflode{
     border: solid #C00000;
-    margin: 4%;
-    width: 50%;
-    height: 500px;
     border-radius: 2em;
-    overflow: scroll;
-    text-align: center;
+    margin-left: 15%;
+    margin-top: 3%;
+    width: 70%;
+    height: 35em;
+    overflow: auto;
+    margin-bottom: 2%;
 }
+
+/* Div för varje enskilt evenemang */
+#evenemangNation {
+    border: 0.1em solid #C00000;
+    border-radius: 2em;
+    width: 70%;
+    margin: 2% 15%;
+    padding-left: 2%;
+    padding-bottom: 1%;
+}
+
+/* Knappen för att skapa evenemang */
+#evenemangsKnapp {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    color: initial;
+    padding: 1%;
+    width: 20%;
+    margin-left: 40%;
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 3%;
+}
+
 /*------------------------------------------------------*/
 /* publiceraTjanst.php */
 
@@ -473,6 +453,7 @@ h4 {
     margin-left: 25%;
     margin-top: 5%;
 }
+
 /*-------------------------------------------------------*/
 /* hanteraEvenemang.php*/
 

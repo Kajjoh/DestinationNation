@@ -11,7 +11,7 @@
     {
         while($row=$result->fetch_assoc())
         {
-            echo "<div> 
+            echo "<div id=evenemangNation> <br> <div class=titelEv> ".$row['titel']  ." </div> 
                 <br> Evenemangs ID: ". $row["eveID"]."
                 <br> Titel: ". $row["titel"]."
                 <br> Plats: ". $row["plats"]." 
@@ -22,9 +22,11 @@
                 <br> Datum: " .$row["datum"]."
                 <br> Kräver anmälan: " .$row["krav"]."
                 <br> Beskrivning: " .$row["beskrivning"]."       
-            </div>";
+                <br> </div>";
         }
     }
+
+
      
     
     $conn->close();

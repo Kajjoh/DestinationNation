@@ -15,28 +15,28 @@
 			include('html/menyNation.html');
 		?>
 
-		
-		<div id="sessionMessage">
+		<div id="sessionMessageNation">
 			<?php
 				if (isset($_SESSION['nation']))
 				{
-					echo $_SESSION['nation'] ."!";
+					echo $_SESSION['nation'] ."s evenemang!";
 				}
 			?>
 		</div>
-
-		<div id="minasidorNflode">
 		
-			<div id="persuppgMSN">
-				<?php
-					include('process/mSN-process.php');
-				?>
+
+		<a href="skapaEv.php" id="evenemangsKnapp">Skapa evenemang!</a>
+		
+
+		<div id="minasidorNflode">	
+			<div id="eventNation">
+			<?php
+				include('process/mSN-process.php');
+			?>
 			</div>
+		</div>
 			
 		</div>
-
-		
-		<a id="evKnapp" onscroll=""href="skapaEv.php"><button>Skapa Evenemang</button></a>
 
 		<?php
 			include('html/sidfot.html');
