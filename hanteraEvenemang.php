@@ -6,7 +6,7 @@
 	<head>
 		<title>DestinationNation</title>
 		<link href="html/main.css" rel="stylesheet">
-		<meta charset="utf-8">
+		<meta charset="UTF-8">
     </head>
 	
 	
