@@ -1,26 +1,44 @@
 <?php
 
     include('connection.php');
+	
+	$anvandare = $_SESSION['student'];
+	$valjstudid = "SELECT studID FROM registrering WHERE mail = '$anvandare'";
+	$hamtastudid = mysqli_query($conn, $valjstudid);
+	$kontrollstudid = mysqli_num_rows($hamtastudid);
+	$studid = "";
+    
+	
+	if ($kontrollstudid > 0)
+	{
+		while ($row = mysqli_fetch_assoc($hamtastudid))
+		{
+			$studid = $row['studID'];
+		}
+		
+	}
 
-    $sql = "SELECT  titel, typ, nation, fran, till, datum, plats FROM anmalan a, evenemang b WHERE a.eveID=b.eveID";
-    $result = $conn->query($sql);
-
-    if($result->num_rows > 0)
-    {
-        while($row=$result->fetch_assoc())
-        {
-            echo "<div> 
-                    <br> Evenemangs ID: ". $row["eveID"]."
-                    <br> Nation: ".$row["nation"]."
-                    <br> Titel: ". $row["titel"]."
-                    <br> Plats: ". $row["plats"]." 
-                    <br> Typ: " . $row["typ"]. "
-                    <br> Från: " .$row["fran"]."
-                    <br> Till: " .$row["till"]."
-                    <br> Datum: " .$row["datum"]."       
-                </div>";
-        }
-    }      
+    $sql = "SELECT anmID, eveID, namn, mail, kon, mat, allergi, dryck, sallskap FROM anmalan WHERE studID = '$studid'";
+	$result = mysqli_query($conn, $sql);
+	$resultkontroll = mysqli_num_rows($result);
+	
+	if($resultkontroll > 0)
+	{
+		while($row = mysqli_fetch_assoc($result))
+		{
+			echo "<div> 
+                    <br> Anmälnings ID: ". $row["anmID"]."
+					<br> Evenemangs ID: ".$row['eveID']."
+                    <br> Namn: " . $row["namn"]. "
+                    <br> Mail: ".$row["mail"]."
+                    <br> Kön: ". $row["kon"]." 
+                    <br> Mat " .$row["mat"]." 
+                    <br> Allergi: " .$row["allergi"]."
+                    <br> Dryck: " .$row["dryck"]."
+                    <br> Sällskap: " .$row["sallskap"]."
+				  </div>";
+		}
+	} 
     else
     {
         echo "Du har inga anmälda evenemang!";

@@ -87,9 +87,9 @@
 						<p class="boxes">
 							<label for="Mat">Matpreferens</label><br>
 							<select name="mat">
-							  <option value="Inga">Inga preferenser</option>
+							  <option value="Inga pref">Inga preferenser</option>
 							  <option value="Vegi">Vegetariskt</option>
-							  <option value="Veg">Vegan</option>
+							  <option value="Vegan">Vegan</option>
 							</select>
 											
 						</p>
@@ -99,10 +99,10 @@
 						<p class="boxes">
 							<label for="Dryck">Måltidsdryck</label><br>
 							<select name="dryck">
-							  <option value="alko">Alkoholfritt</option>
-							  <option value="vin">Vin till maten</option>
-							  <option value="cider">Cider & Vin</option>
-							  <option value="ol">Öl & Vin</option>
+							  <option value="Alkoholfritt">Alkoholfritt</option>
+							  <option value="Vin">Vin till maten</option>
+							  <option value="Cider">Cider & Vin</option>
+							  <option value="Öl">Öl & Vin</option>
 							</select>
 						</p>
 					</div>
