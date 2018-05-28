@@ -177,6 +177,8 @@
 		
 			
 		</div>
-	
+	<?php
+		include('html/sidfot.html');
+	?>
 				
 </html>
