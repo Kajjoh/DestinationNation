@@ -52,9 +52,9 @@ h4 {
 }
 
 .boxes {
-    padding: 10px;
-    margin: 5px;
-    font-size: 14px;
+    padding: 1%;
+    margin: 2%;
+    font-size: 1.1em;
 }
 
 /* -----------------------------------------------------*/
@@ -89,16 +89,17 @@ h4 {
 }	
 
 /*----------------------------------------------------------------------------*/
-/* ---------------------------------------------INTE KOLLAD---------------------------------------------------*/
 /* ANMALANEV.HTML */
 
+/* Yttre div */
 .divAnmalan {
     border: 0.25em solid #C00000;
     border-radius: 10%;
-    height: 95%;
-    margin: 3% 30% 3% 30%;
+    height: 75%;
+    margin: 3% 30%;
 }
 
+/* I den här diven ligger boxarna namn, kön och sällskap */
 .formTop {
     float: left;
     width: 60%;
@@ -106,35 +107,37 @@ h4 {
     text-align: center;
 }
 
+/* I den här diven ligger boxen matpreferenser */
 .formLeft {
     float: left;
     width: 30%;
     margin-left: 20%;
 }
 
+/* I den här diven ligger boxen måltidsdryck */
 .formRight {
     float: left;
     width: 35%;
     margin-right: 15%;
 }
 
+/* I den här diven ligger Alelrgier och skickaknappen */
 .formBottom {
     width: 60%;
     margin-left: 20%;
     text-align: center;
 }
 
-#Allergi {
-    resize: none;
-    height: 90%; 
-    width: 320%;
-}
-
+/* Skickaknapp */
 #anmalanSkicka {
-    margin: 10%;
+    margin-top: 5%;
+    width: 120%;
+    height: 0.8em;
+    margin-left: 35%
 }
 
 /*---------------------------------------------------------------------------------*/
+/* ---------------------------------------------INTE KOLLAD---------------------------------------------------*/
 /* MINASIDORSTUDENT.HTML*/
 
 #persuppgMSS {

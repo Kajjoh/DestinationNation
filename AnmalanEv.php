@@ -89,11 +89,11 @@
 							<label for="Allegri">Allergi</label></br>
 								<textarea placeholder="Skriv in eventuella allergier" name="Allergi"></textarea>
 						</div>
-						
-						<div id="anmalanSkicka">
-							<input type="submit" value="Skicka" id="submit">
-						</div>
 							
+					</div>
+
+					<div id="anmalanSkicka">
+						<input type="submit" value="Skicka" id="submit">
 					</div>
 				
 				</form>
