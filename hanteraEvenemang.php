@@ -177,8 +177,10 @@
 		
 			
 		</div>
+	<div id="footern">
 	<?php
 		include('html/sidfot.html');
 	?>
+	</div>
 				
 </html>
