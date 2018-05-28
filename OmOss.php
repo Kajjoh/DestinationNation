@@ -18,9 +18,11 @@
 		<!-- Här börjar innehållssidan. --> 
 		
 		<div id="divOmOss">
+			
 			<div id="rubrikOmOss">
 				<h3>Om Oss</h3>
 			</div>
+			
 			<?php
 			include('process/OmOss-process.php');
 			?>

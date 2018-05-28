@@ -3,101 +3,93 @@
 h1{
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 40px;
+    font-size: 3.5em;
     color: #C00000;
-    padding: 0px;
 }
 
 h2{
     text-align: center;
     font-family: Palatino Linotype, italic;
-    font-size: 30px;
+    font-size: 1.5em;
     color: black;
-    padding: 0px;
 }
 
 h3 {
-    font-size: 30px;
+    font-size: 2.5em;
 }
 
 h4 {
-    font-size: 20px;
+    font-size: 1.5em;
 }
 
 /* Det som följer tillhör vårt sidhuvud */
-#sidhuvud {
-    margin: ;
-}
 
+/* Vårt sidhuvud */
 #header {
     background-color: #E8E8E8;
     height: 200px;
     border-bottom: #C00000 solid;
-    padding-top: 5px;
-    padding-bottom: 10px; 
+    padding-bottom: 0.7%; 
     margin: auto;
 }
 
+/* Styling för vår logga i sidhuvudet */
 .logo {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* Det som följer tillhör menyn som tillhör sidhuvudet. */
-.huvudMeny{
-    border: 2px solid #C00000;
-    background-color:  #E8E8E8;
-    font-size: 20px;
-    font-weight: bold;
-    color: black;
+/* Vår sidfot. */
+#sidfot {
+    text-align: center;
+    margin-top: 3%;
 }
 
-#listaMeny {
-    display: inline;
-    width: 60px;
-    background-color: #E8E8E8;
-    padding: 8px;
-    width: 125px;
-	color: #C00000
-}
-
-#listaMeny:hover{
-    background-color: whitesmoke;
-    color: white;
-}
-
-#sidlankar {
-	color: #010101
-	
-}	
-
+/* Ska göra alla sessionsfelmeddelanden röda */
 .errorMessage {
     color: red;
 }
 
-/* Det här är vår sidfot. */
-#sidfot {
-    text-align: center;
-    margin-top: 40px;
-}
-
-/* Den här är grunden för alla formulär vi gjort. Vi kanske ska döpa om så varje formulär får ett eget namn. */
-.formular {
-	text-align: center;
-}
-
-/* Det här är grunden för alla boxar, vet inte om det ska vara så. */
 .boxes {
     padding: 10px;
     margin: 5px;
     font-size: 14px;
 }
 
+/* -----------------------------------------------------*/
+/* css för de olika menyerna vid sidhuvudet.*/
 
+/* Menyn för student */
+.huvudMeny{
+    border: 0.1em solid #C00000;
+    background-color:  #E8E8E8;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: black;
+}
 
+/* Huvudmenyn för alla nationssidor */
+#listaMeny {
+    display: inline;
+    background-color: #E8E8E8;
+    text-align: center;
+    padding-right: 2%;
+}
+
+/* Ser till att man ser vilken knapp man är över i menyn */
+#listaMeny:hover{
+    background-color: whitesmoke;
+    color: white;
+}
+
+/* Länkarna i alla menyer*/
+#sidlankar {
+	color: #010101
+}	
 
 /*----------------------------------------------------------------------------*/
+/* ---------------------------------------------INTE KOLLAD---------------------------------------------------*/
 /* ANMALANEV.HTML */
 
 .divAnmalan {
@@ -177,6 +169,7 @@ h4 {
 /*------------------------------------------------------------*/
 /* index.php */
 
+/* Utseendet för länkarna till inloggning för nation och student */
 .student-nation {
     border: 0.2em solid #C00000;
     width: 17%;
@@ -189,18 +182,21 @@ h4 {
     font-weight: bold;
 }
 
+/* Knappen för att logga in som nation */
 #nationsKnapp {
     float: left;
     margin-left: 23%;
     margin-right: 5%;
 }
 
+/* Knapp för att logga in som student */
 #studentKnapp {
     float: right;
     margin-right: 23%;
     margin-left: 5%;
 }
 
+/* Länken för att logga in som admin */
 #loginAdm {
     text-align: center;
     width: 10%;
@@ -208,41 +204,24 @@ h4 {
     font-size: 1em;
 }
 
-
 /*---------------------------------------------------------------------------------*/
-
 /* inloggning.php */
 
+/* Formuläret för inloggning */
 #inloggning {
 	border: 0.25em solid #C00000;
 	border-radius: 2em;
-	margin-right: 25%;
-	margin-left: 25%;
-}
-#personnummer {
 	width: 50%;
-    height: 250%;
-    padding: 1%;
+    margin-left: 25%;
+    text-align: center;
 }
 
-#email{
-    width: 30%;
-    height: 250%;
-    padding: 1%;
-}
-
-#pw {
-	width: 30%;
-    height: 250%;
-    padding: 1%;
-}
-.rubrikInloggning {
-	text-align: center;
-}
-
+/* "Välkommen till DestinatioNation" */
 #huvudRubrikInloggning {
 	text-align: center;
 }
+
+/* Knapp för att logga in */
 #logInBtn {
 	width: 15%;
     height: 30%;
@@ -252,6 +231,7 @@ h4 {
 /*---------------------------------------------------------------------------------*/
 /* OMOSS.HTML*/
 
+/* Meddelandediven*/
 #display
 {
     margin-top: 2%;
@@ -263,30 +243,35 @@ h4 {
     overflow: auto;
     padding: 1% 4%;
 }
+
+/* Allra yttersta diven */
 #divOmOss {
     border: 0.10em solid #C00000;
 }
 
+/* Rubrik "Om oss" */
 #rubrikOmOss {
     text-align: center;
 }
 
+/* Diven som handlar om tjänsten */
 #innehallOmOss {
     text-align: center;
-    font-size: 18px;
+    font-size: 1.1em;
     margin-left: 20%;
+    margin-top: 3%;
     width: 60%;
 }
 
+/* Mindre rubriker */
 .h5OmOss {
     font-size: 1em;
 }
 
+/* Viktigt meddelande längst ner */
 #OBS {
     font-style: italic;
-
 }
-
 
 /*---------------------------------------------------------------------------------*/
 /* STARTSIDA.HTML (gäller alla tre sidorna)*/
@@ -356,7 +341,9 @@ h4 {
     font-size: 1.3em;
 }
 
+
 /*--------------------------------------------------------------*/
+/*------------------------------------------------ INTE KOLLAD-----------------------------------------------*/
 /* SkapaEv.php */
 
 #rubrikSkapaEv {
@@ -371,6 +358,7 @@ h4 {
 }
 
 /*-----------------------------------------------------------------*/
+/*------------------------------------------------ INTE KOLLAD-----------------------------------------------*/
 /*registrering.php*/
 
 #rubrikRegistrering{
@@ -441,6 +429,7 @@ h4 {
 }
 
 /*------------------------------------------------------*/
+/*------------------------------------------------ INTE KOLLAD-----------------------------------------------*/
 /* publiceraTjanst.php */
 
 #rubrikPublicera {
@@ -455,6 +444,7 @@ h4 {
 }
 
 /*-------------------------------------------------------*/
+/*------------------------------------------------ INTE KOLLAD-----------------------------------------------*/
 /* hanteraEvenemang.php*/
 
 #raderaEvenemangNation{
