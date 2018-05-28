@@ -23,7 +23,7 @@
 		<div class = "helaEvenemang">
 		
 			<div id="rubrikSkapaEv">
-				<h3>Skapa Evenemang</h3>
+				<h2>Skapa Evenemang</h2>
 			</div>
 
 			<!--formular (byta namn på formulären?) har samma struktur som de andra formulären. -->

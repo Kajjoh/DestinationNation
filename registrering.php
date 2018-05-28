@@ -19,7 +19,7 @@
         <!-- Här börjar innehållet. -->
         <div class = "helaEvenemang">
             <div id="rubrikRegistrering">
-                <h3> Registrera ett konto:</h3>
+                <h2> Registrera ett konto:</h2>
             </div>
 
             <div id="registrationForm">
