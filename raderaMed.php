@@ -17,7 +17,7 @@
 	?>
 	</body>
 	
-		<div class="formular" id="hanteraStudent">
+		<div class="formularMed" id="hanteraStudent">
 	
 			
 			<h2>Ta bort student</h2>
@@ -27,7 +27,7 @@
 		
 				
 					<label for="email">Email:<br></label>
-					<input type="text" placeholder="email@exempel.com" name="email" id="email"><br>
+					<input type="text" placeholder="email@exempel.com" name="email" id="email" class="radFält"><br>
 					<div class="errorMessage">
 						<?php
 							
@@ -37,14 +37,14 @@
 								unset($_SESSION['emailfel']);
 							}
 						?>
-					</div>					
+					</div>	<br>				
 					<input type="submit" value="Ta bort sudent" id="raderaStud" class="button">
 				
 				</form>
 			</div>
 		</div>	
 		
-		<div class="formular" id="hanteraNation">
+		<div class="formularMed" id="hanteraNation">
 	
 			
 			<h2>Ta bort nation</h2>
@@ -54,7 +54,7 @@
 		
 				
 					<label for="email">Nation:<br></label>
-					<input type="text" placeholder="..." name="radNat" id="radNat"><br>
+					<input type="text" placeholder="..." name="radNat" id="radNat" class="radFält"><br>
 					<div class="errorMessage">
 						<?php
 							
@@ -64,11 +64,15 @@
 								unset($_SESSION['felnation']);
 							}
 						?>
-					</div>					
+					</div>	<br>				
 					<input type="submit" value="Ta bort nation" id="raderaNat" class="button">
 				
 				</form>
 			</div>
 		</div>	
+
+		<?php
+			include('html/sidfot.html');
+		?>
 				
 </html>	

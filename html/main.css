@@ -428,22 +428,30 @@ h4 {
 }
 
 /*------------------------------------------------------*/
-/*------------------------------------------------ INTE KOLLAD-----------------------------------------------*/
 /* publiceraTjanst.php */
 
-#rubrikPublicera {
-    text-align: center;
-}
 .helaPublicera {
     border: 2px solid #C00000;
     border-radius: 20px;
-    margin-right: 25%;
-    margin-left: 25%;
-    margin-top: 5%;
+    margin: 2% 25%;
+    text-align: center;
+    padding: 2%;
+}
+
+/* Varje box i formuläret */
+.regFält{
+    width: 30%;
+    height: 250%;
+    padding: 1%;
+}
+
+.regArea {
+    width: 60%;
+    height: 8em;
+    resize: none;
 }
 
 /*-------------------------------------------------------*/
-/*------------------------------------------------ INTE KOLLAD-----------------------------------------------*/
 /* hanteraEvenemang.php*/
 
 #raderaEvenemangNation{
@@ -465,4 +473,49 @@ h4 {
     margin-right: 5%;
     margin-top: 5%;
 	float: right;
+}
+
+/*-------------------------------------------------------*/
+/* raderaMed.php */
+
+/* Utformingen på varje rad */ 
+.formularMed {
+    text-align: center;
+    font-size: 1.1em;
+}
+
+/* Varje box för input */
+.radFält {
+    width: 20%;
+    padding: 0.5%;
+}
+
+/*-------------------------------------------------------*/
+/* raderaEv.php */
+
+.raderaEv {
+    text-align: center;
+    width: 40%;
+    float: left;
+    border: 0.5em solid black;
+}
+
+/* Varje box för input */
+.radFält {
+    width: 40%;
+    padding: 0.5%;
+}
+
+#logBtn {
+    padding: 1%;
+}
+
+.redigeraEv {
+    float: right;
+    border: 0.2em solid #C00000;
+    border-radius: 2em;
+    padding: 2%;
+    text-align: center;
+    width: 40%;
+    margin-right: 8%;
 }

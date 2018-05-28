@@ -14,19 +14,19 @@
 
 	<?php
 		include('html/sidhuvud.html');
-		include ('html/menyraderaMedEv.html');
+		include('html/menyraderaMedEv.html');
 	?>
 	<div class = "helaPublicera">
 		
 		<div id="rubrikPublicera">
-				<h3>Publicera Meddelande</h3>
+				<h2>Publicera Meddelande</h2>
 		</div>
 
 		<div class="formular">
 			<form id ="publicera" name="publicera" method="POST" action="process/publiceraTjanst-process.php" onsubmit="return(validatepub())">
 
 					<label for="Titel">Titel</label><br>
-						<input type="text" id="Titel" name="Titel"><br>
+						<input type="text" id="Titel" name="Titel" class="regFält"><br>
 						<div class="errorMessage">
 							<?php
 							if (isset($_SESSION['felmeddelande']))
@@ -38,7 +38,7 @@
                     	</div><br>
 
                     	<label for="Tid">Tid</label><br>
-						<input type="text" id="Tid" name="Tid" placeholder="--:--"><br>
+						<input type="text" id="Tid" name="Tid" placeholder="--:--" class="regFält"><br>
 						<div class="errorMessage">
 							<?php
 							if (isset($_SESSION['felTid']))
@@ -50,7 +50,7 @@
                     	</div><br>
 
                     	<label for="Datum">Datum</label><br>
-						<input type="text" id="Datum" name="Datum" placeholder="xxxx-xx-xx"><br>
+						<input type="text" id="Datum" name="Datum" placeholder="xxxx-xx-xx" class="regFält"><br>
 						<div class="errorMessage">
 							<?php
 							if (isset($_SESSION['felDatum']))
@@ -62,7 +62,7 @@
                     	</div><br>
 
                     	<label for="Meddelande">Meddelande</label><br>
-						<textarea id="Meddelande" name="Meddelande" placeholder="Publicering av meddelande"></textarea><br>
+						<textarea id="Meddelande" name="Meddelande" placeholder="Publicering av meddelande" class="regArea"></textarea><br><br>
 						
 
                     	<input type="submit" value="Publicera meddelande!" id="publiceraBtn">

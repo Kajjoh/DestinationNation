@@ -6,26 +6,21 @@
 		<meta charset="UTF-8">
     </head>
 	
-	
 	<body>
 		<?php
 				include('html/sidhuvud.html');
 				include('html/menyraderaMedEv.html');
 		?>
 	</body>
-	
-		<div class="formular" id="hanteraMedlem">
-	
-			<div class="rubrikTjanstEve">
-					<h2>Ta bort evenemang</h2>
-			</div>	
-
-				<!-- Här börjar formuläret. -->
-			<form name="tabortmedlem" method="POST" action="process/raderaEveTjanste.php">
-		
-				<p class="boxes">
+			
+			<div class="raderaEv">	
+				<h2>Ta bort evenemang</h2>
+				
+				<form name="tabortmedlem" method="POST" action="process/raderaEveTjanste.php">
+				
 					<label for="evenemangsid">Evenemangs ID:<br></label>
-					<input type="text" placeholder="****" name="evenemangsid" id="evenemangsid"><br>
+					<input type="text" placeholder="****" name="evenemangsid" id="evenemangsid" class="radFält"><br>
+					
 					<?php
 						session_start();
 						if (isset($_SESSION['eveIDfel']))
@@ -33,29 +28,23 @@
 								echo $_SESSION['eveIDfel'];
 								unset($_SESSION['eveIDfel']);
 							}
-					?>
-						
-				</p>	
-					
-					
-				<p>
-					<input type="submit" value="Ta bort evenemang" id="logInBtn" class="button">
-				</p>
+					?><br>
+	
+					<input type="submit" value="Ta bort evenemang" id="logBtn" class="button">
 				
-			</form>
-			
-		</div>	
+				</form>
+			</div>	
 
-		<div class ="formular" id = "editeraMedlem">
-				
-				<div class ="rubrikTjanstEve">
-						<h2>Redigera evenemang</h2>
-				</div>
 
-			<div class="formular">
-			<form id ="redigeraEv" name="redigeraEven" method="POST" action="process/redigeraEveTjanste-process.php" onsubmit="return (validateEv())">
+			<div class="redigeraEv">
+
+				<h2>Redigera evenemang</h2>
+
+				<form id ="redigeraEv" name="redigeraEven" method="POST" action="process/redigeraEveTjanste-process.php" onsubmit="return (validateEv())">
+					
 					<label for="evenemangsid">Evenemangs ID:<br></label>
 					<input type="text" placeholder="****" name="evenemangsid" id="tabortevenemangnat"><br>
+					
 					<div class="errorMessage">
 						<?php
 							
@@ -71,18 +60,20 @@
 							}
 						
 						?>
-					</div><br>	
+					</div><br>
+
 					<label for="Titel">Titel</label><br>
-					<input type="text" id="Titel" name="Titel"><br>
-					<div class="errorMessage">
-						<?php
-							if (isset($_SESSION['tomtitel']))
-							{
-								echo $_SESSION['tomtitel'];
-								unset ($_SESSION['tomtitel']);
-							}
-						?>
-                    </div><br>
+						<input type="text" id="Titel" name="Titel"><br>
+						
+						<div class="errorMessage">
+							<?php
+								if (isset($_SESSION['tomtitel']))
+								{
+									echo $_SESSION['tomtitel'];
+									unset ($_SESSION['tomtitel']);
+								}
+							?>
+						</div><br>
 
 					<label for="Typ">Typ</label><br>
 					<select name="cars">
@@ -100,6 +91,7 @@
 
 					<label for="plats">Plats</label><br>
 						<input type="text" id="plats" name="plats"><br>
+						
 						<div class="errorMessage">
 							<?php
 							if (isset($_SESSION['tomplats']))
@@ -113,6 +105,7 @@
 					Tid & Datum<br>
 					<label for="Fran">Från</label><br>
 						<input type="text" placeholder="--:--" id="Fran" name="Fran"><br>
+						
 						<div class="errorMessage">
 							<?php
 							if (isset($_SESSION['tomtidFran']))
@@ -125,6 +118,7 @@
 					
 					<label for="Till">Till</label><br>
 						<input type="text" placeholder="--:--" id="Till" name="Till"><br>
+						
 						<div class="errorMessage">
 							<?php
 							if (isset($_SESSION['tomtidTill']))
@@ -137,6 +131,7 @@
 					
 					<label for="Datum">Datum</label><br>
 						<input type="text" placeholder="xxxx-xx-xx" id="Datum" name="Datum"><br>
+						
 						<div class="errorMessage">
 							<?php
 							if (isset($_SESSION['tomtdatum']))
@@ -148,13 +143,14 @@
                     	</div><br>
 
 					<label for="Kravanmälan">Kräver detta evenemang en anmälan?</label><br>
-					<select name="krav">
-						<option value="Nej">Nej</option>
-						<option value="Ja">Ja</option>
-					</select><br>
+						<select name="krav">
+							<option value="Nej">Nej</option>
+							<option value="Ja">Ja</option>
+						</select><br>
 
 					<br><label for="Beskrivning">Beskrivning</label><br>
 						<textarea id="Beskrivning" name="Beskrivning" placeholder="Beskrivning av evenemang"></textarea><br>
+						
 						<div class="errorMessage">
 							<?php
 							if (isset($_SESSION['tombeskrivning']))
@@ -170,5 +166,10 @@
 			</form>
 			</div>
 		</div>
+
+		<div 
+		<?php
+			include('html/sidfot.html');
+		?>
 			
 </html>
