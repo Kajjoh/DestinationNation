@@ -44,9 +44,11 @@
 			<br>
 		</div>
 
+		<div id="mssFooter">
 		<?php
 			include('html/sidfot.html');
 		?>
+		</div>
 		
 	    <script src="javaMeny.js"></script>		
 	</body>
