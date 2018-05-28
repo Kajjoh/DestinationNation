@@ -31,6 +31,30 @@
 				<form id="AnmalanEv" name="AnmalanEv" method="Post" action="process/anmalan-process.php" onsubmit="return (validateAnmalan())">
 				
 					<div class="formTop">
+						<label for="evenemang">Evenemangs ID:<br></label>
+						<input type="text" placeholder="..." name="sparaEvenemang" id="sparaEvenemang"><br>
+						<div class="errorMessage">
+						<?php
+							
+							if (isset($_SESSION['tomtevid']))
+							{
+								echo $_SESSION['tomtevid'];
+								unset($_SESSION['tomtevid']);
+							}
+							
+							else if (isset($_SESSION['idfinnsej']))
+							{
+								echo $_SESSION['idfinnsej'];
+								unset($_SESSION['idfinnsej']);
+							}
+							
+							else if (isset($_SESSION['redananmald']))
+							{
+								echo $_SESSION['redananmald'];
+								unset($_SESSION['redananmald']);
+							}
+						?>
+						</div>
 					
 						<p class="boxes"></p>
 							<label for="Namn">Namn</label><br>

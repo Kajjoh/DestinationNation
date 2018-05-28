@@ -29,6 +29,7 @@
     {	
 		session_start();
 		$_SESSION['user'] = "$namnFromDB";
+		$_SESSION['student'] = "$mailFromDB";
         header("Location: ../startsidaStudent.php");
     }
     else if (empty($inputmail) || empty($mailFromDB))
