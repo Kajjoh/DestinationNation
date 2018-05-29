@@ -19,13 +19,7 @@
 			include('html/sidhuvud.html');
 			include('html/menyraderaMedEv.html');
 
-			<div id="sessionMessage">
-			<?php
-			if (!(isset($_SESSION['admin'])))
-					{
-				header('Location: index.php');
-			}
-			?>
+	
 	?>
 	</body>
 	
