@@ -11,7 +11,7 @@
     $pubMeddelande = mysqli_real_escape_string($conn, trim($_POST['Meddelande']));
     
     $timeMatch = "/^([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/";
-    $dateMatch = "/^([0-9]{4})-([0-9]{2})-([0-9]{2})$/";
+    $dateMatch = "/^([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))$/";
     $tjanst = $_SESSION['admin'];
     
   
