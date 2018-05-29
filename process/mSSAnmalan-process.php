@@ -27,7 +27,7 @@
 		while($row = mysqli_fetch_assoc($result))
 		{
 			echo "<div> 
-                    <br> Anmälnings ID: ". $row["anmID"]."
+                    <br>Anmälnings ID: ". $row["anmID"]."
 					<br> Evenemangs ID: ".$row['eveID']."
                     <br> Namn: " . $row["namn"]. "
                     <br> Mail: ".$row["mail"]."
@@ -36,7 +36,7 @@
                     <br> Allergi: " .$row["allergi"]."
                     <br> Dryck: " .$row["dryck"]."
                     <br> Sällskap: " .$row["sallskap"]."
-				  </div>";
+				  <br></div>";
 		}
 	} 
     else
