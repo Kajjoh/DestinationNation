@@ -10,6 +10,9 @@
 	$valjev = "SELECT * FROM evenemang WHERE eveID = '$eveID'";
 	$hamtaev = mysqli_query($conn, $valjev);
 	$kontrollev = mysqli_num_rows($hamtaev);
+	$valjsparat = "SELECT studID, eveID FROM sparaevenemang WHERE studID = '$studidfromdb' AND eveID = '$eveID'";
+	$hamtasparat = mysqli_query($conn, $valjsparat);
+	$kontrollsparat = mysqli_num_rows($hamtasparat);
 	$IDfromdb = "";
 	$titelfromdb = "";
 	$typfromdb = "";
@@ -20,6 +23,11 @@
 	$kravfromdb = "";
 	$beskrivningfromdb = "";
 	$studidfromdb = "";
+	$sparatevid = "";
+	$sparatstudid = "";
+	$valjsparat = "SELECT studID, eveID FROM sparaevenemang WHERE studID = '$studidfromdb' AND eveID = '$eveID'";
+	$hamtasparat = mysqli_query($conn, $valjsparat);
+	$kontrollsparat = mysqli_num_rows($hamtasparat);
 	
 	if ($kontrollev > 0)
 	{
@@ -44,6 +52,21 @@
 			$studidfromdb = $row['studID'];
 		}
 	}
+	
+	$valjsparat = "SELECT studID, eveID FROM sparaevenemang WHERE studID = '$studidfromdb' AND eveID = '$eveID'";
+	$hamtasparat = mysqli_query($conn, $valjsparat);
+	$kontrollsparat = mysqli_num_rows($hamtasparat);
+	if ($kontrollsparat > 0)
+	{
+		while ($row = mysqli_fetch_assoc($hamtasparat))
+		{
+			$sparatstudid = $row['studID'];
+			$sparatevid = $row['eveID'];
+		}
+		
+	}
+		
+	
 	if (empty($eveID))
 	{
 		$_SESSION['tomtevid'] = "Var god fyll i ett evenemangsid";
@@ -52,6 +75,11 @@
 	else if ($eveID != $IDfromdb)
 	{
 		$_SESSION['idfinnsej'] = "Det här evenemanget finns ej";
+		header("Location: ../sparaEvenemang.php");
+	}
+	else if ($eveID == $sparatevid && $studidfromdb == $sparatstudid)
+	{
+		$_SESSION['redansparat'] = "Du har redan sparat det här evenemanget";
 		header("Location: ../sparaEvenemang.php");
 	}
 	
