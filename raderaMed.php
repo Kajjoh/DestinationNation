@@ -36,6 +36,11 @@
 								echo $_SESSION['emailfel'];
 								unset($_SESSION['emailfel']);
 							}
+							else if (isset($_SESSION['emailfel2']))
+							{
+								echo $_SESSION['emailfel2'];
+								unset($_SESSION['emailfel2']);
+							}
 						?>
 					</div>	<br>				
 					<input type="submit" value="Ta bort sudent" id="raderaStud" class="button">
@@ -62,6 +67,11 @@
 							{
 								echo $_SESSION['felnation'];
 								unset($_SESSION['felnation']);
+							}
+							else if (isset($_SESSION['ingennation']))
+							{
+								echo $_SESSION['ingennation'];
+								unset($_SESSION['ingennation']);
 							}
 						?>
 					</div>	<br>				

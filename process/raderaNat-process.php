@@ -1,6 +1,7 @@
 <?php
 	
 	include('connection.php');
+	session_start();
 	
 	$nation = mysqli_real_escape_string($conn, trim($_POST['radNat']));
 	
@@ -13,9 +14,14 @@
 	}
 	if ($nation != $nationfromdb)
 	{
-		session_start();
+		
 		$_SESSION['felnation'] = "Matchar ingen nation i databasen";
 		header("Location: ../raderaMed.php");
+	}
+	else if (empty($nation))
+	{
+		$_SESSION['ingennation'] = "Vänligen skriv in en nation";
+		header("Location: ../raderaMed.php");	
 	}
 	else 
 	{

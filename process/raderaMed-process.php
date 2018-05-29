@@ -1,6 +1,7 @@
 <?php
 	
 	include('connection.php');
+	session_start();
 	
 	$mail = mysqli_real_escape_string($conn, trim($_POST['email']));
 	
@@ -13,8 +14,13 @@
 	}
 	if ($mail != $emailfromdb)
 	{
-		session_start();
+		
 		$_SESSION['emailfel'] = "Matchar ingen email i databasen";
+		header("Location: ../raderaMed.php");
+	}
+	else if (empty($mail))
+	{
+		$_SESSION['emailfel2'] = "Fyll i en mejladress";
 		header("Location: ../raderaMed.php");
 	}
 	else 
