@@ -35,7 +35,7 @@
 		
 					<div class="loginBox">
 						<label for="email">Mejladress:<br></label>
-						<input type="text" placeholder="nation@exempel.com" name="email" id="email">
+						<input type="text" placeholder="nation@exempel.com" name="email" id="email" class="boxes">
 					</div>
 					<div class="errorMessage">
                         <?php
@@ -49,7 +49,7 @@
 					
 					<div class="loginBox">
 						<label for="pw">Lösenord:<br></label>
-						<input type="password" placeholder="..." name="pw" id="pw">
+						<input type="password" placeholder="..." name="pw" id="pw" class="boxes">
 					</div>
 					<div class="errorMessage">
                         <?php

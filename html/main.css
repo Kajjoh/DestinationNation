@@ -111,7 +111,7 @@ h4 {
     border-radius: 10%;
     height: 75%;
     margin: 3% 30%;
-    padding-bottom: 2%;
+    padding-bottom: 5%;
 }
 
 /* I den här diven ligger boxarna namn, kön och sällskap */
@@ -136,7 +136,7 @@ h4 {
     margin-right: 15%;
 }
 
-/* I den här diven ligger Alelrgier och skickaknappen */
+/* I den här diven ligger Allergier och skickaknappen */
 .formBottom {
     width: 60%;
     margin-left: 20%;
