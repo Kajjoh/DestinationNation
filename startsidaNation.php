@@ -1,5 +1,9 @@
 <?php
 	session_start();
+	if (!isset($_SESSION['nation']))
+	{
+		header("Location: index.php");
+	}
 ?>
 
 <!DOCTYPE html>

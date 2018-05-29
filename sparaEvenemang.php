@@ -1,4 +1,12 @@
+<?php
+	session_start();
+	if (!isset($_SESSION['user']))
+	{
+		header("Location: index.php");
+	}
+?>
 <!DOCTYPE html>
+
 <html>
 
     <head>
@@ -28,7 +36,7 @@
 					<input type="text" placeholder="..." name="sparaEvenemang" id="sparaEvenemang"><br>
 					<div class="errorMessage">
 						<?php
-							session_start();
+							
 							if (isset($_SESSION['tomtevid']))
 							{
 								echo $_SESSION['tomtevid'];
