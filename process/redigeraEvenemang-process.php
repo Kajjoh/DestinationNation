@@ -19,6 +19,8 @@
 	$findNation = "SELECT nation from evenemang where eveID = '$eveID'";
 	$hamtaNation = mysqli_query($conn, $findNation);
 	$nationFromDB = "";
+	$timematch = "/^([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/";
+    $datematch = "/^([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))$/";
 	
 	while ($row = mysqli_fetch_assoc($retrieveEveIDfromdb))
 	{
@@ -77,6 +79,30 @@
 		$_SESSION['tombeskrivning'] = "Vänligen lägg till en beskrivning";
 		header("Location: ../hanteraEvenemang.php");
 	}
+	
+		else if (!preg_match($timematch, $tidFran))
+	{	
+		
+		$_SESSION['feltid1'] = "Tiden ska skrivas enligt formatet 00:00";
+		header("Location: ../hanteraEvenemang.php");
+	}
+	
+	else if (!preg_match($timematch, $tidTill))
+	{
+		
+		$_SESSION['feltid2'] = "Tiden ska skrivas enligt formatet 00:00";
+		header("Location: ../hanteraEvenemang.php");
+		
+	}
+	
+	else if (!preg_match($datematch, $evDatum))
+	{
+		
+		$_SESSION['feldatum'] = "Datum ska skrivas enligt formatet ÅÅÅÅ-MM-DD";
+		header("Location: ../hanteraEvenemang.php");
+		
+	}
+	
 	else 
 	{
 		$sql = "UPDATE evenemang SET titel = '$evTitel', typ = '$evTyp', fran = '$tidFran', till = '$tidTill', datum = '$evDatum',
