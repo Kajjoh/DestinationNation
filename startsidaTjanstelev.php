@@ -15,7 +15,17 @@
 	<?php
         include('html/sidhuvud.html');
 		include ('html/menyLeverantor.html')
-        
+
+		<div id="sessionMessage">
+		<?php
+		if (!(isset($_SESSION['admin'])))
+				{
+			header('Location: index.php');
+		}
+		?>
+	</div>
+
+
 	?>
 	
 	 <!--denna div (filter) listar horisontellt alla aktiviteter för nationer för filtrering.-->
