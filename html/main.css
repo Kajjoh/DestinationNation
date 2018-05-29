@@ -175,6 +175,8 @@ h4 {
     margin-right: 7%;
     margin-top: 2%;
     padding: 1% 2%;
+    height: 15em;
+    overflow: auto;
 }
 
 /* Diven som displayar alla sparade evenemang för studenten */
@@ -186,6 +188,8 @@ h4 {
     margin-right: 7%;
     margin-top: 2%;
     padding: 1% 2%;
+    height: 20em;
+    overflow: auto;
 }
 /*Gör så att footern ligger där den ska*/
 #mssFooter{
@@ -499,6 +503,7 @@ h4 {
     margin-top: 5%;
     float: right;
     text-align: center;
+    padding: 2%;
 }
 
 #footern{

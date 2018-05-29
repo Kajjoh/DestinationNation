@@ -25,7 +25,7 @@
 	{
 		while($row=$result->fetch_assoc())
 		{
-			echo "<div> 
+			echo "<div class=displayasparade> 
                     <br> Titel: ". $row["titel"]."
                     <br> Typ: " . $row["typ"]. "
                     <br> Nation: ".$row["nation"]."
