@@ -28,7 +28,8 @@ session_start();
             $pwFromDB = $row['losen'];
 
             if ($inputpassword==$pwFromDB)
-            {
+            {	
+				$_SESSION['admin'] = "$namnFromDB";
                 header("Location: ../startsidaTjanstelev.php");
             }
             else
@@ -39,7 +40,7 @@ session_start();
 
         }
 
-        $_SESSION['admin'] = "$namnFromDB";
+        
 
     $conn->close();
     

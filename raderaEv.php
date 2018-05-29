@@ -1,3 +1,10 @@
+<?php
+	session_start();
+	if(!isset($_SESSION['admin']))
+	{
+		header("Location: index.php");
+	}
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -22,7 +29,7 @@
 					<input type="text" placeholder="****" name="evenemangsid" id="evenemangsid" class="radFält"><br>
 					<div class="errorMessage">
 					<?php
-						session_start();
+						
 						if (isset($_SESSION['eveIDfel']))
 						{
 							echo $_SESSION['eveIDfel'];

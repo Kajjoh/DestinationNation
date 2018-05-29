@@ -1,5 +1,9 @@
 <?php
 	session_start();
+	if(!isset($_SESSION['admin']))
+	{
+		header("Location: index.php");
+	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -16,14 +20,7 @@
         include('html/sidhuvud.html');
 		include ('html/menyLeverantor.html')
 
-		<div id="sessionMessage">
-		<?php
-		if (!(isset($_SESSION['admin'])))
-				{
-			header('Location: index.php');
-		}
-		?>
-	</div>
+
 
 
 	?>
