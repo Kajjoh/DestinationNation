@@ -24,15 +24,15 @@
 					<?php
 						session_start();
 						if (isset($_SESSION['eveIDfel']))
-							{
-								echo $_SESSION['eveIDfel'];
-								unset($_SESSION['eveIDfel']);
-							}
+						{
+							echo $_SESSION['eveIDfel'];
+							unset($_SESSION['eveIDfel']);
+						}
 						else if (isset($_SESSION['tomtfalt']))
-							{
-								echo $_SESSION['tomtfalt'];
-								unset($_SESSION['tomtfalt']);
-							}	
+						{
+							echo $_SESSION['tomtfalt'];
+							unset($_SESSION['tomtfalt']);
+						}	
 					?>
 					</div><br>
 	
@@ -119,6 +119,11 @@
 								echo $_SESSION['tomtidFran'];
 								unset ($_SESSION['tomtidFran']);
 							}
+							else if (isset($_SESSION['feltid1']))
+							{
+								echo $_SESSION['feltid1'];
+								unset ($_SESSION['feltid1']);
+							}
 							?>
                     	</div><br>
 					
@@ -132,6 +137,11 @@
 								echo $_SESSION['tomtidTill'];
 								unset ($_SESSION['tomtidTill']);
 							}
+							else if (isset($_SESSION['feltid2']))
+							{
+								echo $_SESSION['feltid2'];
+								unset ($_SESSION['feltid2']);
+							}
 							?>
                     	</div><br>
 					
@@ -144,6 +154,11 @@
 							{
 								echo $_SESSION['tomtdatum'];
 								unset ($_SESSION['tomtdatum']);
+							}
+							else if (isset($_SESSION['feldatum']))
+							{
+								echo $_SESSION['feldatum'];
+								unset ($_SESSION['feldatum']);
 							}
 							?>
                     	</div><br>
