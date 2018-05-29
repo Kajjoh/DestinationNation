@@ -23,7 +23,7 @@
 		<div class="divAnmalan">
 
 			<div id="rubrikAnmalan">
-				<h2>Anmälan till "Gasque"</h2>
+				<h2>Anmälan till Evenemang</h2>
 			</div>
 
 			<!-- Här följer ett formulär för anmälan till evenemang. --> 

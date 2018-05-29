@@ -19,7 +19,7 @@
 	
 			
 			<h2>Spara Evenemang</h2>
-			<div id="sparaevform">			
+			<div class="midForm">			
 			<!-- Här börjar formuläret. -->
 				<form name="sparaevenemang" method="POST" action="process/sparaev-process.php">
 		
@@ -47,7 +47,7 @@
 							}
 							
 						?>
-					</div>					
+					</div>		<br>			
 					<input type="submit" value="Spara evenemang" id="sparEv" class="button">
 				
 				</form>
