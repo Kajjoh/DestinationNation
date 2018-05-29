@@ -19,6 +19,11 @@
 		$_SESSION['eveIDfel'] = "Det här evenemangsid:et finns inte i databasen";
 		header("Location: ../raderaEv.php");
 	}
+	else if (empty($eveID))
+	{
+		$_SESSION['tomtfalt'] = "Fyll i fältet";
+		header("Location: ../raderaEV.php");
+	}
 
 	else 
 	{

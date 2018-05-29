@@ -20,7 +20,7 @@
 				
 					<label for="evenemangsid">Evenemangs ID:<br></label>
 					<input type="text" placeholder="****" name="evenemangsid" id="evenemangsid" class="radFält"><br>
-					
+					<div class="errorMessage">
 					<?php
 						session_start();
 						if (isset($_SESSION['eveIDfel']))
@@ -28,7 +28,13 @@
 								echo $_SESSION['eveIDfel'];
 								unset($_SESSION['eveIDfel']);
 							}
-					?><br>
+						else if (isset($_SESSION['tomtfalt']))
+							{
+								echo $_SESSION['tomtfalt'];
+								unset($_SESSION['tomtfalt']);
+							}	
+					?>
+					</div><br>
 	
 					<input type="submit" value="Ta bort evenemang" id="logBtn" class="button">
 				
