@@ -57,10 +57,18 @@ h4 {
     color: red;
 }
 
+/* Flertalet inputfält */
 .boxes {
     padding: 1%;
     margin: 2%;
     font-size: 1.1em;
+}
+
+/* För att få enkla forms att hamna i mitten av sidan*/
+.midForm {
+    text-align: center;
+    width: 40%;
+    margin-left: 30%;
 }
 
 /* -----------------------------------------------------*/
@@ -103,6 +111,7 @@ h4 {
     border-radius: 10%;
     height: 75%;
     margin: 3% 30%;
+    padding-bottom: 2%;
 }
 
 /* I den här diven ligger boxarna namn, kön och sällskap */
@@ -117,7 +126,7 @@ h4 {
 .formLeft {
     float: left;
     width: 30%;
-    margin-left: 15%;
+    margin-left: 20%;
 }
 
 /* I den här diven ligger boxen måltidsdryck */
@@ -150,7 +159,7 @@ h4 {
     border: 0.25em solid #C00000;
 	border-radius: 2em;
     float: left;
-    width: 35%;
+    width: 30%;
     margin-left: 7%;
     margin-top: 2%;
     padding-left: 5%;
@@ -165,6 +174,7 @@ h4 {
     width: 40%;
     margin-right: 7%;
     margin-top: 2%;
+    padding: 1% 2%;
 }
 
 /* Diven som displayar alla sparade evenemang för studenten */
@@ -175,6 +185,7 @@ h4 {
     width: 40%;
     margin-right: 7%;
     margin-top: 2%;
+    padding: 1% 2%;
 }
 /*Gör så att footern ligger där den ska*/
 #mssFooter{
@@ -476,10 +487,6 @@ h4 {
     text-align: center;
 }
 
-.formHant {
-    
-}
-
 #raderaEvNat{
 	margin-top: 15px;
 	margin-bottom: 15px;
@@ -551,4 +558,9 @@ h4 {
     margin-right: 8%;
     margin-top: 2%;
 }
+
+/* -------------------------------------------*/
+/* sparaEvenemang.php */
+
+
 

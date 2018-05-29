@@ -31,17 +31,13 @@
 			<?php
 				include('process/mSSAnmalan-process.php');
 			?>
-			<br>
-			<br>
 		</div>
 
 		<div id="sparadeEvMSS">
 			<h4>Sparade evenemang:</h4>
-			<br>
 			<?php
 				include('process/mSSSparade-process.php');
 			?>
-			<br>
 		</div>
 
 		<div id="mssFooter">

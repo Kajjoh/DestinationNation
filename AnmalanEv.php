@@ -32,7 +32,7 @@
 				
 					<div class="formTop">
 						<label for="evenemang">Evenemangs ID:<br></label>
-						<input type="text" placeholder="..." name="sparaEvenemang" id="sparaEvenemang"><br>
+						<input type="text" placeholder="..." name="sparaEvenemang" id="sparaEvenemang" class="boxes"><br>
 						<div class="errorMessage">
 						<?php
 							
@@ -58,7 +58,7 @@
 					
 						<p class="boxes"></p>
 							<label for="Namn">Namn</label><br>
-								<input type="text" name="Namn"><br>
+								<input type="text" name="Namn" class="boxes"><br>
 								<?php
 									if (isset($_SESSION['fyllinamn']))
 									{
@@ -68,18 +68,15 @@
 								?>
 						</p>
 				
-						<p class="boxes"></p>
 							<label for="Kön">Kön</label><br>
 							<select name="kon">
 							  <option value="Man">Man</option>
 							  <option value="Kvinna">Kvinna</option>
-							</select>
-						</p>
+							</select><br>
 
-						<p class="boxes">
 							<label for="Sallskap">Sällskap</label><br>
-								<input type="text" name="Sallskap"><br>
-						</p>
+								<input type="text" name="Sallskap" class="boxes"><br>
+
 					</div>
 					
 					<div class="formLeft">
