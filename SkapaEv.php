@@ -63,6 +63,7 @@
 					<label for="plats">Plats</label><br>
 						<input type="text" id="plats" name="plats"><br>
 						<div class="errorMessage">
+						<div class="errorMessage">
 							<?php
 							if (isset($_SESSION['felmeddelande']))
 							{
@@ -70,6 +71,7 @@
 								unset ($_SESSION['felmeddelande']);
 							}
 							?>
+						</div>	
                     	</div><br>
 
 					Tid & Datum<br>

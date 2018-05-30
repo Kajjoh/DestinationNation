@@ -565,7 +565,9 @@ h4 {
 }
 
 /* -------------------------------------------*/
-/* sparaEvenemang.php */
+.errormessage{
+	color: red;
+}
 
 
 
