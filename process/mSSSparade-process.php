@@ -3,7 +3,7 @@
     include('connection.php');
 	
 	$anvandare = $_SESSION['student'];
-	$valjstudid = "SELECT studID FROM registrering WHERE mail = '$anvandare'";
+	$valjstudid = "SELECT studID FROM student WHERE mail = '$anvandare'";
 	$hamtastudid = mysqli_query($conn, $valjstudid);
 	$kontrollstudid = mysqli_num_rows($hamtastudid);
 	$studid = "";

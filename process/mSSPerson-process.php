@@ -3,7 +3,7 @@
 	
     include('connection.php');
 	$studentmail = $_SESSION['student'];
-    $sql = "SELECT perNr, studID, namn, mail, adress, ort, postNr FROM registrering WHERE mail = '$studentmail'";
+    $sql = "SELECT perNr, studID, namn, mail, adress, ort, postNr FROM student WHERE mail = '$studentmail'";
     $result = $conn->query($sql);
 
     $row=mysqli_fetch_assoc($result);

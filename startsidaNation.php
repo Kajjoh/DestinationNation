@@ -34,6 +34,7 @@
 				}
 			?>
 		</div>	
+		
           	<div id="filter">
 					<form method="POST" action="process/filtreraEvenemangNation-process.php">
 						<p id="aktiviteter"><input type="submit" name="allaEvKnapp" class="knappAktmeny" value="Alla evenemang"></p>
@@ -51,13 +52,16 @@
             </div>
         </div>
 		
+	
+		
 		<div class="eventFlode">
-			
+			<h2>Filtrera på evenemangstyp eller nation</h2>
 			<h2>Evenemangsflöde</h2>
 			<?php
 				include('process/startsidaNatTjanst-process.php');
 			?>
 		</div>
+		
 		
 		 <!--Denna div (nationsMeny) listar alla nationer vertikalt för filtrering.-->
 			<div class="nationsMeny">

@@ -34,7 +34,7 @@
 	
 	
 	//Hämtar ut email från databasen kommer användas sen för att se till att man inte kan använda en redan existerand email
-	$findusermail = "SELECT mail FROM registrering WHERE mail = '$mail'";
+	$findusermail = "SELECT mail FROM student WHERE mail = '$mail'";
 	$retrievemailfromdb = mysqli_query($conn, $findusermail);
 	$emailfromdb = "";
 	while ($row = mysqli_fetch_assoc($retrievemailfromdb))
@@ -114,7 +114,7 @@
 		$hash = hash('sha256', ($salt . $losen));
 
 
-		$sql = "INSERT INTO registrering (perNr, studID, namn, mail, adress, ort, postNr, losen, salt)
+		$sql = "INSERT INTO student (perNr, studID, namn, mail, adress, ort, postNr, losen, salt)
 		VALUES ('$prnr', '$stid', '$name', '$mail', '$adress', '$ort', '$pstnr', '$hash', '$salt')";
 		$conn->query($sql);
 

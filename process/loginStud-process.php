@@ -10,7 +10,7 @@
 	$mailFromDB = "";
 	$namnFromDB = "";
 
-    $sql = "SELECT namn, mail, losen, salt FROM registrering WHERE mail='$inputmail'";
+    $sql = "SELECT namn, mail, losen, salt FROM student WHERE mail='$inputmail'";
 
     $result = mysqli_query($conn, $sql);
 

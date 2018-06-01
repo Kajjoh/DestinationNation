@@ -5,7 +5,7 @@
 	
 	$mail = mysqli_real_escape_string($conn, trim($_POST['email']));
 	
-	$findusermail = "SELECT mail FROM registrering WHERE mail = '$mail'";
+	$findusermail = "SELECT mail FROM student WHERE mail = '$mail'";
 	$retrievemailfromdb = mysqli_query($conn, $findusermail);
 	$emailfromdb = "";
 	while ($row = mysqli_fetch_assoc($retrievemailfromdb))
@@ -25,7 +25,7 @@
 	}
 	else 
 	{
-		$sql = "DELETE FROM registrering WHERE mail = '$mail'";
+		$sql = "DELETE FROM student WHERE mail = '$mail'";
 		$conn->query($sql);
 		header('Location: ../startsidaTjanstelev.php');
 	}

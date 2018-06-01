@@ -44,7 +44,8 @@
             </div>
 		</div>
 		
-		<div class="eventFlode">	
+		<div class="eventFlode">
+			<h2>Filtrera på evenemangstyp eller nation</h2>
 			<h2>Evenemangsflöde</h2>
 			<?php
 				include('process/startsidaNatTjanst-process.php');
